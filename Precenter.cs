@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QuanLyXiNghiepMay
@@ -21,7 +19,7 @@ namespace QuanLyXiNghiepMay
                 dataGridView.DataSource = (from nguyenLieu in nguyenLieus
                                            select new
                                            {
-                                               No = ++i,
+                                               Stt = ++i,
                                                maNguyenLieu = nguyenLieu.maNguyenLieu,
                                                tenNguyenLieu = nguyenLieu.tenNguyenLieu,
                                                ghiChu = nguyenLieu.ghiChu
@@ -48,12 +46,15 @@ namespace QuanLyXiNghiepMay
                                            select new
                                            {
                                                No = ++i,
-                                               maSanPham = dinhMuc.maSanPham,
                                                maNguyenLieu = dinhMuc.maNguyenLieu,
+                                               maSanPham = dinhMuc.maSanPham,
+                                               tenNguyenLieu = dinhMuc.NguyenLieu.tenNguyenLieu,
+                                               tenSanPham = dinhMuc.SanPham.tenSanPham,
                                                donViTinh = dinhMuc.donViTinh,
                                                soLuong = dinhMuc.soLuong
                                            }).ToList();
             }
+            dataGridView.AutoResizeColumns();
         }
     }
 }

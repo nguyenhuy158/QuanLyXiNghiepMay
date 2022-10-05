@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QuanLyXiNghiepMay
@@ -18,7 +11,7 @@ namespace QuanLyXiNghiepMay
             InitializeComponent();
         }
 
-        private void form2ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void Form2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
@@ -53,6 +46,21 @@ namespace QuanLyXiNghiepMay
             FormDinhMuc form = new FormDinhMuc();
             form.MdiParent = this;
             form.Show();
+        }
+
+        private void thôngTinTácGiảToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FormThongTinTacGia formThongTinTacGia = new FormThongTinTacGia();
+            //formThongTinTacGia.MdiParent = this;
+            formThongTinTacGia.Show();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn muốn thoát ứng dụng ?", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1) == DialogResult.OK)
+            {
+                Dispose();
+            }
         }
     }
 }

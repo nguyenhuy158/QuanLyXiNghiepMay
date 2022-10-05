@@ -82,6 +82,12 @@
     <Compile Include="FormDinhMuc.Designer.cs">
       <DependentUpon>FormDinhMuc.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormThongTinTacGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThongTinTacGia.Designer.cs">
+      <DependentUpon>FormThongTinTacGia.cs</DependentUpon>
+    </Compile>
     <Compile Include="Precenter.cs" />
     <Compile Include="CongDoan.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -154,6 +160,9 @@
     <EmbeddedResource Include="FormSanPham.resx">
       <DependentUpon>FormSanPham.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormThongTinTacGia.resx">
+      <DependentUpon>FormThongTinTacGia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -162,6 +171,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -210,6 +220,10 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Content Include="TextFile1.txt" />
+    <None Include="Resources\294878529_809733306942865_5404269185164880146_n.png" />
+    <None Include="Resources\needle-natural-linen-texture-background_73344-2303.jpg" />
+    <None Include="Resources\factory.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
