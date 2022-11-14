@@ -44,7 +44,7 @@
             this.textEditDiaChi = new DevExpress.XtraEditors.TextEdit();
             this.textEditMaPhanXuong = new DevExpress.XtraEditors.TextEdit();
             this.textEditTenPhanXuong = new DevExpress.XtraEditors.TextEdit();
-            this.gridControl11 = new DevExpress.XtraGrid.GridControl();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView11 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumnMaPhanXuong = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumnTenSanPham = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -65,7 +65,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEditDiaChi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditMaPhanXuong.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditTenPhanXuong.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEditRemove)).BeginInit();
@@ -107,6 +107,7 @@
             this.barButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
             this.barButtonItem1.LargeWidth = 70;
             this.barButtonItem1.Name = "barButtonItem1";
+            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
             // barButtonItem2
             // 
@@ -116,6 +117,7 @@
             this.barButtonItem2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
             this.barButtonItem2.LargeWidth = 70;
             this.barButtonItem2.Name = "barButtonItem2";
+            this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
             // 
             // barButtonItem3
             // 
@@ -125,6 +127,7 @@
             this.barButtonItem3.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.LargeImage")));
             this.barButtonItem3.LargeWidth = 70;
             this.barButtonItem3.Name = "barButtonItem3";
+            this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
             // 
             // barButtonItem4
             // 
@@ -134,6 +137,7 @@
             this.barButtonItem4.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.LargeImage")));
             this.barButtonItem4.LargeWidth = 70;
             this.barButtonItem4.Name = "barButtonItem4";
+            this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
             // 
             // barButtonItem5
             // 
@@ -162,6 +166,7 @@
             this.barButtonItem7.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem7.ImageOptions.LargeImage")));
             this.barButtonItem7.LargeWidth = 70;
             this.barButtonItem7.Name = "barButtonItem7";
+            this.barButtonItem7.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem7_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -192,7 +197,7 @@
             this.layoutControl1.Controls.Add(this.textEditDiaChi);
             this.layoutControl1.Controls.Add(this.textEditMaPhanXuong);
             this.layoutControl1.Controls.Add(this.textEditTenPhanXuong);
-            this.layoutControl1.Controls.Add(this.gridControl11);
+            this.layoutControl1.Controls.Add(this.gridControl1);
             this.layoutControl1.Controls.Add(this.textEditSoDienThoai);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 160);
@@ -205,7 +210,6 @@
             // 
             // textEditDiaChi
             // 
-            this.textEditDiaChi.Enabled = false;
             this.textEditDiaChi.Location = new System.Drawing.Point(108, 60);
             this.textEditDiaChi.Name = "textEditDiaChi";
             this.textEditDiaChi.Size = new System.Drawing.Size(534, 20);
@@ -223,25 +227,24 @@
             // 
             // textEditTenPhanXuong
             // 
-            this.textEditTenPhanXuong.Enabled = false;
             this.textEditTenPhanXuong.Location = new System.Drawing.Point(108, 36);
             this.textEditTenPhanXuong.Name = "textEditTenPhanXuong";
             this.textEditTenPhanXuong.Size = new System.Drawing.Size(534, 20);
             this.textEditTenPhanXuong.StyleController = this.layoutControl1;
             this.textEditTenPhanXuong.TabIndex = 4;
             // 
-            // gridControl11
+            // gridControl1
             // 
-            this.gridControl11.DataSource = typeof(QuanLyXiNghiepMay.PhanXuong);
-            this.gridControl11.Location = new System.Drawing.Point(12, 108);
-            this.gridControl11.MainView = this.gridView11;
-            this.gridControl11.Name = "gridControl11";
-            this.gridControl11.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.gridControl1.DataSource = typeof(QuanLyXiNghiepMay.PhanXuong);
+            this.gridControl1.Location = new System.Drawing.Point(12, 108);
+            this.gridControl1.MainView = this.gridView11;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit11,
             this.repositoryItemButtonEditRemove});
-            this.gridControl11.Size = new System.Drawing.Size(630, 289);
-            this.gridControl11.TabIndex = 0;
-            this.gridControl11.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridControl1.Size = new System.Drawing.Size(630, 289);
+            this.gridControl1.TabIndex = 0;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView11});
             // 
             // gridView11
@@ -251,10 +254,11 @@
             this.gridColumnTenSanPham,
             this.gridColumnDiaChi,
             this.gridColumnSoDienThoai});
-            this.gridView11.GridControl = this.gridControl11;
+            this.gridView11.GridControl = this.gridControl1;
             this.gridView11.Name = "gridView11";
             this.gridView11.OptionsBehavior.Editable = false;
             this.gridView11.OptionsView.ShowAutoFilterRow = true;
+            this.gridView11.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridView11_RowCellClick);
             // 
             // gridColumnMaPhanXuong
             // 
@@ -313,7 +317,6 @@
             // 
             // textEditSoDienThoai
             // 
-            this.textEditSoDienThoai.Enabled = false;
             this.textEditSoDienThoai.Location = new System.Drawing.Point(108, 84);
             this.textEditSoDienThoai.Name = "textEditSoDienThoai";
             this.textEditSoDienThoai.Size = new System.Drawing.Size(534, 20);
@@ -358,7 +361,7 @@
             // 
             // layoutControlItem4
             // 
-            this.layoutControlItem4.Control = this.gridControl11;
+            this.layoutControlItem4.Control = this.gridControl1;
             this.layoutControlItem4.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem4.CustomizationFormText = "layoutControlItem1";
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 96);
@@ -400,13 +403,14 @@
             this.Name = "RibbonFormPhanXuong";
             this.Ribbon = this.ribbonControl1;
             this.Text = "Phân Xưởng";
+            this.Load += new System.EventHandler(this.RibbonFormPhanXuong_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.textEditDiaChi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditMaPhanXuong.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditTenPhanXuong.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEditRemove)).EndInit();
@@ -439,7 +443,7 @@
         private DevExpress.XtraEditors.TextEdit textEditDiaChi;
         private DevExpress.XtraEditors.TextEdit textEditMaPhanXuong;
         private DevExpress.XtraEditors.TextEdit textEditTenPhanXuong;
-        private DevExpress.XtraGrid.GridControl gridControl11;
+        private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView11;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumnMaPhanXuong;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumnTenSanPham;

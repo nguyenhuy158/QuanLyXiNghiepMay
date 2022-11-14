@@ -1,16 +1,46 @@
 ﻿using DevExpress.ClipboardSource.SpreadsheetML;
+using DevExpress.XtraEditors;
+using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraVerticalGrid;
+using QuanLyXiNghiepMay.Forms.Form_Tables.Form_Child;
+using QuanLyXiNghiepMay.Forms.Form_Tables.Form_Detail.Form_Phieu_Nhan;
+using QuanLyXiNghiepMay.Forms.Form_Tables.Form_Detail.Form_Phieu_Phan_Cong;
+using QuanLyXiNghiepMay.Forms.Form_Tables.Form_Parent;
 using QuanLyXiNghiepMay.R;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Windows.Forms;
+using ComboBox = System.Windows.Forms.ComboBox;
 
 namespace QuanLyXiNghiepMay
 {
     internal class Precenter
     {
-        private static QuanLyVatTuCuaXiNghiepMayEntities data = new QuanLyVatTuCuaXiNghiepMayEntities();
+        public static QuanLyVatTuCuaXiNghiepMayEntities data = new QuanLyVatTuCuaXiNghiepMayEntities();
+
+        internal static string getMaPhieuPhanCong()
+        {
+            return data.Database.SqlQuery<String>("Select dbo.TaoMaPhieuPhanCong();").FirstOrDefault();
+        }
+
+        internal static string getMaPhieuNhan()
+        {
+            return data.Database.SqlQuery<String>("Select dbo.TaoMaPhieuNhan();").FirstOrDefault();
+        }
+
+        internal static string getMaNguyenLieu()
+        {
+            return data.Database.SqlQuery<String>("Select dbo.TaoMaNguyenLieu();").FirstOrDefault();
+        }
+
+
+        internal static string getMaCongDoan()
+        {
+            return data.Database.SqlQuery<String>("Select dbo.TaoMaCongDoan();").FirstOrDefault();
+        }
 
         internal static string getMaPhanXuong()
         {
@@ -20,6 +50,51 @@ namespace QuanLyXiNghiepMay
         internal static string getMaSanPham()
         {
             return data.Database.SqlQuery<String>("Select dbo.TaoMaSanPham();").FirstOrDefault();
+        }
+
+        internal static void reloadDataSource(RibbonFormPhanXuong ribbonFormPhanXuong, GridControl gridControl1)
+        {
+            gridControl1.DataSource = data.PhanXuongs.ToList();
+        }
+
+        internal static void reloadDataSource(RibbonFormNguyenLieu ribbonFormNguyenLieu, GridControl gridControl1)
+        {
+            gridControl1.DataSource = data.NguyenLieux.ToList();
+        }
+
+        internal static void reloadDataSource(RibbonFormCongDoan ribbonFormCongDoan, GridControl gridControl1)
+        {
+            gridControl1.DataSource = data.CongDoans.ToList();
+        }
+
+        internal static void reloadDataSource(RibbonFormDinhMuc ribbonFormDinhMuc, GridControl gridControl1)
+        {
+            gridControl1.DataSource = data.DinhMucs.ToList();
+        }
+
+        internal static void reloadDataSource(RibbonFormPhieuNhan ribbonFormPhieuNhan, GridControl gridControl1)
+        {
+            gridControl1.DataSource = data.PhieuNhans.ToList();
+        }
+
+        internal static void reloadDataSource(RibbonFormChiTietPhieuNhan ribbonFormChiTietPhieuNhan, GridControl gridControl1)
+        {
+            gridControl1.DataSource = data.ChiTietPhieuNhans.ToList();
+        }
+
+        internal static void reloadDataSource(RibbonFormPhieuPhanCong ribbonFormPhieuPhanCong, GridControl gridControl1)
+        {
+            gridControl1.DataSource = data.PhieuPhanCongs.ToList();
+        }
+
+        internal static void reloadDataSource(RibbonFormChiTietPhieuPhanCong ribbonFormChiTietPhieuPhanCong, GridControl gridControl1)
+        {
+            gridControl1.DataSource = data.ChiTietPhieuPhanCongs.ToList();
+        }
+
+        internal static void reloadDataSource(XtraFormSanPham xtraFormSanPham, GridControl gridControl1)
+        {
+            gridControl1.DataSource = data.SanPhams.ToList();
         }
 
         public void getData(DataGridView dataGridView, string key)
@@ -153,6 +228,32 @@ namespace QuanLyXiNghiepMay
             dataGridView.AutoResizeColumns();
         }
 
-
+        internal static void loadDataSourceComboBox(ComboBox comboBoxEdit, string key)
+        {
+            if (key == Constance.KEY_MA_SAN_PHAM)
+            {
+                comboBoxEdit.DataSource = data.SanPhams.ToList();
+                comboBoxEdit.DisplayMember = "ma";
+                comboBoxEdit.ValueMember = "ma";
+            }
+            if (key == Constance.KEY_TEN_SAN_PHAM)
+            {
+                comboBoxEdit.DataSource = data.SanPhams.ToList();
+                comboBoxEdit.DisplayMember = "ten";
+                comboBoxEdit.ValueMember = "ten";
+            }
+            if (key == Constance.KEY_MA_NGUYEN_LIEU)
+            {
+                comboBoxEdit.DataSource = data.NguyenLieux.ToList();
+                comboBoxEdit.DisplayMember = "ma";
+                comboBoxEdit.ValueMember = "ma";
+            }
+            if (key == Constance.KEY_TEN_NGUYEN_LIEU)
+            {
+                comboBoxEdit.DataSource = data.NguyenLieux.ToList();
+                comboBoxEdit.DisplayMember = "ten";
+                comboBoxEdit.ValueMember = "ten";
+            }
+        }
     }
 }

@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Entity;
+using QuanLyXiNghiepMay.R;
+using DevExpress.Utils;
 
 namespace QuanLyXiNghiepMay.Forms.Form_Tables.Form_Child
 {
@@ -34,6 +36,176 @@ namespace QuanLyXiNghiepMay.Forms.Form_Tables.Form_Child
                 // Bind data to control when loading complete
                 gridControl1.DataSource = dbContext.CongDoans.Local.ToBindingList();
             }, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
+        }
+
+        private void barButtonItem7_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Dispose();
+        }
+
+        private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Precenter.reloadDataSource(this, gridControl1);
+        }
+
+        private void barButtonItem5_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            clearForm();
+        }
+
+        private void clearForm()
+        {
+            String ma = Precenter.getMaCongDoan();
+            textEditSoCongDoan.Text = ma;
+            textEditMucTienLuong.Focus();
+            textEditMucTienLuong.Text = "";
+            textEditYeuCauKyThuat.Text = "";
+            textEditGhiChu.Text = "";
+        }
+
+        private void ribbonControl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RibbonFormCongDoan_Load(object sender, EventArgs e)
+        {
+            clearForm();
+            Precenter.loadDataSourceComboBox(comboBoxMaSanPham, Constance.KEY_MA_SAN_PHAM);
+            Precenter.loadDataSourceComboBox(comboBoxTenSanPham, Constance.KEY_TEN_SAN_PHAM);
+
+        }
+
+        private void comboBoxTenSanPham_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboBoxMaSanPham.SelectedIndex = comboBoxTenSanPham.SelectedIndex;
+        }
+
+        private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (Controler.isMessageBox(TemplateString.MESSAGE_DELETE, TemplateString.TITLE_WARNING))
+            {
+                try
+                {
+                    removeCongDoan();
+                    Precenter.reloadDataSource(this, gridControl1);
+                    clearForm();
+                }
+                catch (Exception)
+                {
+                    if (textEditSoCongDoan.Text == Precenter.getMaSanPham())
+                    {
+                        Controler.messageBoxShow(TemplateString.PICK_ONE_ROW, TemplateString.TITLE_WARNING);
+                    }
+                    else
+                    {
+                        Controler.messageBoxShow(TemplateString.MESSAGE_DELETE_ERROR, TemplateString.TITLE_WARNING);
+                    }
+                }
+            }
+        }
+
+        private void removeCongDoan()
+        {
+            var congDoan = (
+                           from cd in Precenter.data.CongDoans.ToList()
+                           where cd.soCongDoan == textEditSoCongDoan.Text && cd.maSanPham == comboBoxMaSanPham.SelectedValue.ToString()
+                           select cd
+                                 ).SingleOrDefault();
+
+            Precenter.data.CongDoans.Remove(congDoan);
+            Precenter.data.SaveChanges();
+        }
+
+        private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (
+                !Controler.isTextInputValid(textEditGhiChu.Text)
+                || !Controler.isTextInputValid(textEditMucTienLuong.Text)
+                || !Controler.isTextInputValid(textEditYeuCauKyThuat.Text)
+                )
+            {
+                Controler.messageBoxShow(TemplateString.MESSAGE_INPUT_ERROR, TemplateString.TITLE_WARNING);
+            }
+            else
+            {
+                try
+                {
+                    updateCongDoan();
+                    Precenter.reloadDataSource(this, gridControl1);
+                    clearForm();
+                }
+                catch (Exception)
+                {
+                    Controler.messageBoxShow(TemplateString.MESSAGE_UPDATE_ERROR, TemplateString.TITLE_WARNING);
+                    textEditSoCongDoan.Focus();
+                }
+            }
+        }
+
+        private void updateCongDoan()
+        {
+            CongDoan congDoan = (from t in Precenter.data.CongDoans
+                                 where t.soCongDoan == textEditSoCongDoan.Text
+                                 && t.maSanPham == comboBoxMaSanPham.SelectedValue.ToString()
+                                 select t).SingleOrDefault();
+
+            congDoan.yeuCauKyThuat = textEditYeuCauKyThuat.Text.Trim();
+            congDoan.mucTienLuong = int.Parse(textEditMucTienLuong.Text.Trim());
+            congDoan.ghiChu = textEditGhiChu.Text.Trim();
+            Precenter.data.SaveChanges();
+        }
+
+        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (
+                !Controler.isTextInputValid(textEditGhiChu.Text)
+                || !Controler.isTextInputValid(textEditMucTienLuong.Text)
+                || !Controler.isTextInputValid(textEditYeuCauKyThuat.Text)
+                )
+            {
+                Controler.messageBoxShow(TemplateString.MESSAGE_INPUT_ERROR, TemplateString.TITLE_WARNING);
+            }
+            else
+            {
+                try
+                {
+                    addCongDoan();
+                    Precenter.reloadDataSource(this, gridControl1);
+                    clearForm();
+                }
+                catch (Exception)
+                {
+                    Controler.messageBoxShow(TemplateString.MESSAGE_INSERT_ERROR, TemplateString.TITLE_WARNING);
+                    textEditSoCongDoan.Focus();
+                }
+            }
+        }
+
+        private void addCongDoan()
+        {
+            CongDoan congDoan = new CongDoan();
+            congDoan.soCongDoan = textEditSoCongDoan.Text.Trim();
+            congDoan.maSanPham = comboBoxMaSanPham.SelectedValue.ToString();
+            congDoan.yeuCauKyThuat = textEditYeuCauKyThuat.Text.Trim();
+            congDoan.mucTienLuong = int.Parse(textEditMucTienLuong.Text.Trim());
+            congDoan.ghiChu = textEditGhiChu.Text.Trim();
+            Precenter.data.CongDoans.Add(congDoan);
+            Precenter.data.SaveChanges();
+        }
+
+        private void gridView1_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
+        {
+            int rowHandle = e.RowHandle;
+            CongDoan congDoan = (CongDoan)gridView1.GetRow(e.RowHandle);
+
+
+            textEditSoCongDoan.Text = congDoan.soCongDoan;
+            comboBoxMaSanPham.SelectedValue = congDoan.SanPham.ma;
+            comboBoxTenSanPham.SelectedValue = congDoan.SanPham.ten;
+            textEditMucTienLuong.Text = congDoan.mucTienLuong.ToString();
+            textEditYeuCauKyThuat.Text = congDoan.yeuCauKyThuat;
+            textEditGhiChu.Text = congDoan.ghiChu;
         }
     }
 }

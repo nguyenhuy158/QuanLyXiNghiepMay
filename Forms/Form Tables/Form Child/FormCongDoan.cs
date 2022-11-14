@@ -49,7 +49,7 @@ namespace QuanLyXiNghiepMay.Form_Child
                     try
                     {
                         QuanLyVatTuCuaXiNghiepMayEntities data = new QuanLyVatTuCuaXiNghiepMayEntities();
-                        int stt = Convert.ToInt32(Math.Round(numericUpDownSoThuTu.Value, 0));
+                        String stt = Convert.ToString(Math.Round(numericUpDownSoThuTu.Value, 0));
                         CongDoan congDoan = (from t in data.CongDoans
                                              where t.maSanPham == comboBoxMaSanPham.SelectedValue.ToString() &&
                                              t.soCongDoan == stt
@@ -88,7 +88,7 @@ namespace QuanLyXiNghiepMay.Form_Child
                     {
                         CongDoan congDoan = new CongDoan();
                         congDoan.maSanPham = comboBoxMaSanPham.SelectedValue.ToString();
-                        congDoan.soCongDoan = Convert.ToInt32(Math.Round(numericUpDownSoThuTu.Value, 0));
+                        //congDoan.soCongDoan = Convert.ToInt32(Math.Round(numericUpDownSoThuTu.Value, 0));
                         congDoan.yeuCauKyThuat = textBoxYeuCauKyThuat.Text.Trim();
                         congDoan.mucTienLuong = int.Parse(textBoxDinhMucTienLuong.Text.Trim());
                         congDoan.ghiChu = textBoxGhiChu.Text.Trim();
@@ -126,7 +126,7 @@ namespace QuanLyXiNghiepMay.Form_Child
                         var congDoan = new CongDoan
                         {
                             maSanPham = maSanPham,
-                            soCongDoan = int.Parse(sttCongDoan),
+                            //soCongDoan = int.Parse(sttCongDoan),
                             yeuCauKyThuat = yeuCauKyThuat,
                             mucTienLuong = int.Parse(dinhMucTienLuong),
                             ghiChu = ghiChu

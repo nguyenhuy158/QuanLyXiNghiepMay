@@ -30,7 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RibbonFormDinhMuc));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.comboBoxEditMaNguyenLieu = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.comboBoxTenNguyenLieu = new System.Windows.Forms.ComboBox();
+            this.comboBoxMaNguyenLieu = new System.Windows.Forms.ComboBox();
+            this.comboBoxTenSanPham = new System.Windows.Forms.ComboBox();
+            this.comboBoxMaSanPham = new System.Windows.Forms.ComboBox();
+            this.textEditSoLuong = new DevExpress.XtraEditors.TextEdit();
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
@@ -41,10 +45,6 @@
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.comboBoxEditMaSanPham = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxEditTenNguyenLieu = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxEditTenSanPham = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.textEditSoLuong = new DevExpress.XtraEditors.TextEdit();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumnMaSanPham = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -53,65 +53,98 @@
             this.gridColumnTenNguyenLieu = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumnDonViTinh = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumnSoLuong = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.comboBoxEditDonViTinh = new DevExpress.XtraEditors.ComboBoxEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.comboBoxEditDonViTinh = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditMaNguyenLieu.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditMaSanPham.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditTenNguyenLieu.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditTenSanPham.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditSoLuong.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditDonViTinh.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditDonViTinh.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
-            this.layoutControl1.Controls.Add(this.comboBoxEditMaNguyenLieu);
-            this.layoutControl1.Controls.Add(this.comboBoxEditMaSanPham);
-            this.layoutControl1.Controls.Add(this.comboBoxEditTenNguyenLieu);
-            this.layoutControl1.Controls.Add(this.comboBoxEditTenSanPham);
+            this.layoutControl1.Controls.Add(this.comboBoxTenNguyenLieu);
+            this.layoutControl1.Controls.Add(this.comboBoxMaNguyenLieu);
+            this.layoutControl1.Controls.Add(this.comboBoxTenSanPham);
+            this.layoutControl1.Controls.Add(this.comboBoxMaSanPham);
             this.layoutControl1.Controls.Add(this.textEditSoLuong);
             this.layoutControl1.Controls.Add(this.gridControl1);
             this.layoutControl1.Controls.Add(this.comboBoxEditDonViTinh);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 160);
             this.layoutControl1.Name = "layoutControl1";
-            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(375, 328, 650, 400);
+            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(491, 166, 650, 400);
             this.layoutControl1.Root = this.Root;
             this.layoutControl1.Size = new System.Drawing.Size(563, 378);
             this.layoutControl1.TabIndex = 2;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // comboBoxEditMaNguyenLieu
+            // comboBoxTenNguyenLieu
             // 
-            this.comboBoxEditMaNguyenLieu.Enabled = false;
-            this.comboBoxEditMaNguyenLieu.Location = new System.Drawing.Point(106, 36);
-            this.comboBoxEditMaNguyenLieu.MenuManager = this.ribbon;
-            this.comboBoxEditMaNguyenLieu.Name = "comboBoxEditMaNguyenLieu";
-            this.comboBoxEditMaNguyenLieu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEditMaNguyenLieu.Size = new System.Drawing.Size(121, 20);
-            this.comboBoxEditMaNguyenLieu.StyleController = this.layoutControl1;
-            this.comboBoxEditMaNguyenLieu.TabIndex = 13;
+            this.comboBoxTenNguyenLieu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxTenNguyenLieu.FormattingEnabled = true;
+            this.comboBoxTenNguyenLieu.Location = new System.Drawing.Point(349, 37);
+            this.comboBoxTenNguyenLieu.Name = "comboBoxTenNguyenLieu";
+            this.comboBoxTenNguyenLieu.Size = new System.Drawing.Size(202, 21);
+            this.comboBoxTenNguyenLieu.TabIndex = 17;
+            this.comboBoxTenNguyenLieu.SelectedIndexChanged += new System.EventHandler(this.comboBoxTenNguyenLieu_SelectedIndexChanged);
+            // 
+            // comboBoxMaNguyenLieu
+            // 
+            this.comboBoxMaNguyenLieu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMaNguyenLieu.Enabled = false;
+            this.comboBoxMaNguyenLieu.FormattingEnabled = true;
+            this.comboBoxMaNguyenLieu.Location = new System.Drawing.Point(106, 37);
+            this.comboBoxMaNguyenLieu.Name = "comboBoxMaNguyenLieu";
+            this.comboBoxMaNguyenLieu.Size = new System.Drawing.Size(145, 21);
+            this.comboBoxMaNguyenLieu.TabIndex = 16;
+            // 
+            // comboBoxTenSanPham
+            // 
+            this.comboBoxTenSanPham.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxTenSanPham.FormattingEnabled = true;
+            this.comboBoxTenSanPham.Location = new System.Drawing.Point(349, 12);
+            this.comboBoxTenSanPham.Name = "comboBoxTenSanPham";
+            this.comboBoxTenSanPham.Size = new System.Drawing.Size(202, 21);
+            this.comboBoxTenSanPham.TabIndex = 15;
+            this.comboBoxTenSanPham.SelectedIndexChanged += new System.EventHandler(this.comboBoxTenSanPham_SelectedIndexChanged);
+            // 
+            // comboBoxMaSanPham
+            // 
+            this.comboBoxMaSanPham.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMaSanPham.Enabled = false;
+            this.comboBoxMaSanPham.FormattingEnabled = true;
+            this.comboBoxMaSanPham.Location = new System.Drawing.Point(106, 12);
+            this.comboBoxMaSanPham.Name = "comboBoxMaSanPham";
+            this.comboBoxMaSanPham.Size = new System.Drawing.Size(145, 21);
+            this.comboBoxMaSanPham.TabIndex = 14;
+            // 
+            // textEditSoLuong
+            // 
+            this.textEditSoLuong.Location = new System.Drawing.Point(106, 86);
+            this.textEditSoLuong.MenuManager = this.ribbon;
+            this.textEditSoLuong.Name = "textEditSoLuong";
+            this.textEditSoLuong.Size = new System.Drawing.Size(445, 20);
+            this.textEditSoLuong.StyleController = this.layoutControl1;
+            this.textEditSoLuong.TabIndex = 7;
             // 
             // ribbon
             // 
@@ -167,6 +200,7 @@
             this.barButtonItem4.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.LargeImage")));
             this.barButtonItem4.Name = "barButtonItem4";
             this.barButtonItem4.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText;
+            this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
             // 
             // barButtonItem5
             // 
@@ -212,57 +246,14 @@
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "Nâng Cao";
             // 
-            // comboBoxEditMaSanPham
-            // 
-            this.comboBoxEditMaSanPham.Enabled = false;
-            this.comboBoxEditMaSanPham.Location = new System.Drawing.Point(106, 12);
-            this.comboBoxEditMaSanPham.MenuManager = this.ribbon;
-            this.comboBoxEditMaSanPham.Name = "comboBoxEditMaSanPham";
-            this.comboBoxEditMaSanPham.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEditMaSanPham.Size = new System.Drawing.Size(121, 20);
-            this.comboBoxEditMaSanPham.StyleController = this.layoutControl1;
-            this.comboBoxEditMaSanPham.TabIndex = 12;
-            // 
-            // comboBoxEditTenNguyenLieu
-            // 
-            this.comboBoxEditTenNguyenLieu.Location = new System.Drawing.Point(325, 36);
-            this.comboBoxEditTenNguyenLieu.MenuManager = this.ribbon;
-            this.comboBoxEditTenNguyenLieu.Name = "comboBoxEditTenNguyenLieu";
-            this.comboBoxEditTenNguyenLieu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEditTenNguyenLieu.Size = new System.Drawing.Size(226, 20);
-            this.comboBoxEditTenNguyenLieu.StyleController = this.layoutControl1;
-            this.comboBoxEditTenNguyenLieu.TabIndex = 11;
-            // 
-            // comboBoxEditTenSanPham
-            // 
-            this.comboBoxEditTenSanPham.Location = new System.Drawing.Point(325, 12);
-            this.comboBoxEditTenSanPham.MenuManager = this.ribbon;
-            this.comboBoxEditTenSanPham.Name = "comboBoxEditTenSanPham";
-            this.comboBoxEditTenSanPham.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEditTenSanPham.Size = new System.Drawing.Size(226, 20);
-            this.comboBoxEditTenSanPham.StyleController = this.layoutControl1;
-            this.comboBoxEditTenSanPham.TabIndex = 10;
-            // 
-            // textEditSoLuong
-            // 
-            this.textEditSoLuong.Location = new System.Drawing.Point(106, 84);
-            this.textEditSoLuong.MenuManager = this.ribbon;
-            this.textEditSoLuong.Name = "textEditSoLuong";
-            this.textEditSoLuong.Size = new System.Drawing.Size(445, 20);
-            this.textEditSoLuong.StyleController = this.layoutControl1;
-            this.textEditSoLuong.TabIndex = 7;
-            // 
             // gridControl1
             // 
             this.gridControl1.DataSource = typeof(QuanLyXiNghiepMay.DinhMuc);
-            this.gridControl1.Location = new System.Drawing.Point(12, 108);
+            this.gridControl1.Location = new System.Drawing.Point(12, 110);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.MenuManager = this.ribbon;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(539, 258);
+            this.gridControl1.Size = new System.Drawing.Size(539, 256);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -278,6 +269,7 @@
             this.gridColumnSoLuong});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridView1_RowCellClick);
             // 
             // gridColumnMaSanPham
             // 
@@ -333,88 +325,9 @@
             this.gridColumnSoLuong.Visible = true;
             this.gridColumnSoLuong.VisibleIndex = 5;
             // 
-            // Root
-            // 
-            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.Root.GroupBordersVisible = false;
-            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem2,
-            this.layoutControlItem4,
-            this.layoutControlItem5,
-            this.layoutControlItem8,
-            this.layoutControlItem9,
-            this.layoutControlItem10,
-            this.layoutControlItem11});
-            this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(563, 378);
-            this.Root.TextVisible = false;
-            // 
-            // layoutControlItem2
-            // 
-            this.layoutControlItem2.Control = this.gridControl1;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 96);
-            this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(543, 262);
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem2.TextVisible = false;
-            // 
-            // layoutControlItem4
-            // 
-            this.layoutControlItem4.Control = this.comboBoxEditDonViTinh;
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 48);
-            this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(543, 24);
-            this.layoutControlItem4.Text = "Đơn vị tính";
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(82, 13);
-            // 
-            // layoutControlItem5
-            // 
-            this.layoutControlItem5.Control = this.textEditSoLuong;
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 72);
-            this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(543, 24);
-            this.layoutControlItem5.Text = "Số Lượng";
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(82, 13);
-            // 
-            // layoutControlItem8
-            // 
-            this.layoutControlItem8.Control = this.comboBoxEditTenSanPham;
-            this.layoutControlItem8.Location = new System.Drawing.Point(219, 0);
-            this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(324, 24);
-            this.layoutControlItem8.Text = "Tên sản phẩm";
-            this.layoutControlItem8.TextSize = new System.Drawing.Size(82, 13);
-            // 
-            // layoutControlItem9
-            // 
-            this.layoutControlItem9.Control = this.comboBoxEditTenNguyenLieu;
-            this.layoutControlItem9.Location = new System.Drawing.Point(219, 24);
-            this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(324, 24);
-            this.layoutControlItem9.Text = "Tên nguyên liệu";
-            this.layoutControlItem9.TextSize = new System.Drawing.Size(82, 13);
-            // 
-            // layoutControlItem10
-            // 
-            this.layoutControlItem10.Control = this.comboBoxEditMaSanPham;
-            this.layoutControlItem10.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(219, 24);
-            this.layoutControlItem10.Text = "Mã sản phẩm";
-            this.layoutControlItem10.TextSize = new System.Drawing.Size(82, 13);
-            // 
-            // layoutControlItem11
-            // 
-            this.layoutControlItem11.Control = this.comboBoxEditMaNguyenLieu;
-            this.layoutControlItem11.Location = new System.Drawing.Point(0, 24);
-            this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(219, 24);
-            this.layoutControlItem11.Text = "Mã nguyên liệu";
-            this.layoutControlItem11.TextSize = new System.Drawing.Size(82, 13);
-            // 
             // comboBoxEditDonViTinh
             // 
-            this.comboBoxEditDonViTinh.Location = new System.Drawing.Point(106, 60);
+            this.comboBoxEditDonViTinh.Location = new System.Drawing.Point(106, 62);
             this.comboBoxEditDonViTinh.MenuManager = this.ribbon;
             this.comboBoxEditDonViTinh.Name = "comboBoxEditDonViTinh";
             this.comboBoxEditDonViTinh.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -429,6 +342,89 @@
             this.comboBoxEditDonViTinh.StyleController = this.layoutControl1;
             this.comboBoxEditDonViTinh.TabIndex = 6;
             // 
+            // Root
+            // 
+            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.Root.GroupBordersVisible = false;
+            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem2,
+            this.layoutControlItem4,
+            this.layoutControlItem5,
+            this.layoutControlItem1,
+            this.layoutControlItem3,
+            this.layoutControlItem6,
+            this.layoutControlItem7});
+            this.Root.Name = "Root";
+            this.Root.Size = new System.Drawing.Size(563, 378);
+            this.Root.TextVisible = false;
+            // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.Control = this.gridControl1;
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 98);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(543, 260);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem2.TextVisible = false;
+            // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.Control = this.comboBoxEditDonViTinh;
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 50);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(543, 24);
+            this.layoutControlItem4.Text = "Đơn vị tính";
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(82, 13);
+            // 
+            // layoutControlItem5
+            // 
+            this.layoutControlItem5.Control = this.textEditSoLuong;
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 74);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.Size = new System.Drawing.Size(543, 24);
+            this.layoutControlItem5.Text = "Số Lượng";
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(82, 13);
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.comboBoxMaSanPham;
+            this.layoutControlItem1.CustomizationFormText = "Mã sản phẩm";
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(243, 25);
+            this.layoutControlItem1.Text = "Mã sản phẩm";
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(82, 13);
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.comboBoxTenSanPham;
+            this.layoutControlItem3.CustomizationFormText = "Tên sản phẩm";
+            this.layoutControlItem3.Location = new System.Drawing.Point(243, 0);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(300, 25);
+            this.layoutControlItem3.Text = "Tên sản phẩm";
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(82, 13);
+            // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.Control = this.comboBoxMaNguyenLieu;
+            this.layoutControlItem6.CustomizationFormText = "Mã nguyên liệu";
+            this.layoutControlItem6.Location = new System.Drawing.Point(0, 25);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(243, 25);
+            this.layoutControlItem6.Text = "Mã nguyên liệu";
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(82, 13);
+            // 
+            // layoutControlItem7
+            // 
+            this.layoutControlItem7.Control = this.comboBoxTenNguyenLieu;
+            this.layoutControlItem7.CustomizationFormText = "Tên nguyên liệu";
+            this.layoutControlItem7.Location = new System.Drawing.Point(243, 25);
+            this.layoutControlItem7.Name = "layoutControlItem7";
+            this.layoutControlItem7.Size = new System.Drawing.Size(300, 25);
+            this.layoutControlItem7.Text = "Tên nguyên liệu";
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(82, 13);
+            // 
             // RibbonFormDinhMuc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -439,25 +435,22 @@
             this.Name = "RibbonFormDinhMuc";
             this.Ribbon = this.ribbon;
             this.Text = "Định Mức";
+            this.Load += new System.EventHandler(this.RibbonFormDinhMuc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditMaNguyenLieu.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditMaSanPham.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditTenNguyenLieu.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditTenSanPham.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditSoLuong.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditDonViTinh.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditDonViTinh.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -474,16 +467,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumnTenNguyenLieu;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumnDonViTinh;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumnSoLuong;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEditMaNguyenLieu;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEditMaSanPham;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEditTenNguyenLieu;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEditTenSanPham;
         private DevExpress.XtraEditors.TextEdit textEditSoLuong;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbon;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
@@ -497,5 +482,13 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumnMaSanPham;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumnMaNguyenLieu;
         private DevExpress.XtraEditors.ComboBoxEdit comboBoxEditDonViTinh;
+        private System.Windows.Forms.ComboBox comboBoxTenNguyenLieu;
+        private System.Windows.Forms.ComboBox comboBoxMaNguyenLieu;
+        private System.Windows.Forms.ComboBox comboBoxTenSanPham;
+        private System.Windows.Forms.ComboBox comboBoxMaSanPham;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
     }
 }

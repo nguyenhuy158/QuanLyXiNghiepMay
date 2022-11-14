@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Entity;
+using DevExpress.ClipboardSource.SpreadsheetML;
+using QuanLyXiNghiepMay.R;
 
 namespace QuanLyXiNghiepMay.Forms.Form_Tables.Form_Parent
 {
@@ -24,8 +26,149 @@ namespace QuanLyXiNghiepMay.Forms.Form_Tables.Form_Parent
             dbContext.NguyenLieux.LoadAsync().ContinueWith(loadTask =>
             {
                 // Bind data to control when loading complete
-                gridControl11.DataSource = dbContext.NguyenLieux.Local.ToBindingList();
+                gridControl1.DataSource = dbContext.NguyenLieux.Local.ToBindingList();
             }, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
+        }
+
+        private void barButtonItem5_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            clearForm();
+        }
+
+        private void clearForm()
+        {
+            String ma = Precenter.getMaNguyenLieu();
+            textEditMaNguyenLieu.Text = ma;
+            textEditTenNguyenLieu.Focus();
+            textEditTenNguyenLieu.Text = "";
+            textEditGhiChu.Text = "";
+        }
+
+        private void barButtonItem7_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Dispose();
+        }
+
+        private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Precenter.reloadDataSource(this, gridControl1);
+        }
+
+        private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (Controler.isMessageBox(TemplateString.MESSAGE_DELETE, TemplateString.TITLE_WARNING))
+            {
+                try
+                {
+                    removeNguyenLieu();
+                    Precenter.data.SaveChanges();
+                    Precenter.reloadDataSource(this, gridControl1);
+                    clearForm();
+                }
+                catch (Exception)
+                {
+                    if (textEditMaNguyenLieu.Text == Precenter.getMaNguyenLieu())
+                    {
+                        Controler.messageBoxShow(TemplateString.PICK_ONE_ROW, TemplateString.TITLE_WARNING);
+                    }
+                    else
+                    {
+                        Controler.messageBoxShow(TemplateString.MESSAGE_DELETE_ERROR, TemplateString.TITLE_WARNING);
+                    }
+                }
+            }
+        }
+
+        private void removeNguyenLieu()
+        {
+            var nguyenLieu = (
+                             from nl in Precenter.data.NguyenLieux.ToList()
+                             where nl.ma == textEditMaNguyenLieu.Text
+                             select nl
+                                   ).SingleOrDefault();
+
+            Precenter.data.NguyenLieux.Remove(nguyenLieu);
+        }
+
+        private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (!Controler.isTextInputValid(textEditTenNguyenLieu.Text))
+            {
+                Controler.messageBoxShow(TemplateString.MESSAGE_INPUT_ERROR, TemplateString.TITLE_WARNING);
+            }
+            else
+            {
+                try
+                {
+                    updateNguyenLieu();
+                    Precenter.reloadDataSource(this, gridControl1);
+                    clearForm();
+                }
+                catch (Exception)
+                {
+                    Controler.messageBoxShow(TemplateString.MESSAGE_UPDATE_ERROR, TemplateString.TITLE_WARNING);
+                    textEditTenNguyenLieu.Focus();
+                }
+            }
+        }
+
+        private void updateNguyenLieu()
+        {
+            NguyenLieu nguyenLieu = (from t in Precenter.data.NguyenLieux
+                               where t.ma == textEditMaNguyenLieu.Text
+                               select t).SingleOrDefault();
+
+            nguyenLieu.ten = textEditTenNguyenLieu.Text.Trim();
+            nguyenLieu.ghiChu = textEditGhiChu.Text.Trim();
+            Precenter.data.SaveChanges();
+        }
+
+        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (!Controler.isTextInputValid(textEditTenNguyenLieu.Text))
+            {
+                Controler.messageBoxShow(TemplateString.MESSAGE_INPUT_ERROR, TemplateString.TITLE_WARNING);
+            }
+            else
+            {
+                try
+                {
+                    addNguyenLieu();
+                    Precenter.reloadDataSource(this, gridControl1);
+                    clearForm();
+                }
+                catch (Exception)
+                {
+                    Controler.messageBoxShow(TemplateString.MESSAGE_INSERT_ERROR, TemplateString.TITLE_WARNING);
+                    textEditTenNguyenLieu.Focus();
+                }
+            }
+        }
+
+        private void addNguyenLieu()
+        {
+            NguyenLieu nguyenLieu = new NguyenLieu();
+            nguyenLieu.ma = textEditMaNguyenLieu.Text.Trim();
+            nguyenLieu.ten = textEditTenNguyenLieu.Text.Trim();
+            nguyenLieu.ghiChu = textEditGhiChu.Text.Trim();
+            Precenter.data.NguyenLieux.Add(nguyenLieu);
+            Precenter.data.SaveChanges();
+        }
+
+        private void gridView11_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
+        {
+            int rowHandle = e.RowHandle;
+            NguyenLieu nguyenLieu = (NguyenLieu)gridView11.GetRow(e.RowHandle);
+
+
+            textEditMaNguyenLieu.Text = nguyenLieu.ma;
+            textEditTenNguyenLieu.Text = nguyenLieu.ten;
+            textEditGhiChu.Text = nguyenLieu.ghiChu;
+        }
+
+        private void RibbonFormNguyenLieu_Load(object sender, EventArgs e)
+        {
+            clearForm();
         }
     }
 }

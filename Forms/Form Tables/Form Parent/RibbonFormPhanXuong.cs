@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Entity;
+using DevExpress.ClipboardSource.SpreadsheetML;
+using QuanLyXiNghiepMay.R;
 
 namespace QuanLyXiNghiepMay.Forms.Form_Tables.Form_Parent
 {
@@ -24,7 +26,7 @@ namespace QuanLyXiNghiepMay.Forms.Form_Tables.Form_Parent
             dbContext.PhanXuongs.LoadAsync().ContinueWith(loadTask =>
             {
                 // Bind data to control when loading complete
-                gridControl11.DataSource = dbContext.PhanXuongs.Local.ToBindingList();
+                gridControl1.DataSource = dbContext.PhanXuongs.Local.ToBindingList();
             }, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
         }
 
@@ -36,10 +38,140 @@ namespace QuanLyXiNghiepMay.Forms.Form_Tables.Form_Parent
         private void clearForm()
         {
             String ma = Precenter.getMaPhanXuong();
-            textEditDiaChi.Text = ma;
-            //textEditTenSanPham.Focus();
-            //textEditTenSanPham.Text = "";
-            //textEditGhiChu.Text = "";
+            textEditMaPhanXuong.Text = ma;
+            textEditTenPhanXuong.Focus();
+            textEditTenPhanXuong.Text = "";
+            textEditDiaChi.Text = "";
+            textEditSoDienThoai.Text = "";
+        }
+
+        private void barButtonItem7_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Dispose();
+        }
+
+        private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Precenter.reloadDataSource(this, gridControl1);
+        }
+
+        private void RibbonFormPhanXuong_Load(object sender, EventArgs e)
+        {
+            clearForm();
+        }
+
+        private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (Controler.isMessageBox(TemplateString.MESSAGE_DELETE, TemplateString.TITLE_WARNING))
+            {
+                try
+                {
+                    removePhanXuong();
+                    Precenter.reloadDataSource(this, gridControl1);
+                    clearForm();
+                }
+                catch (Exception)
+                {
+                    if (textEditMaPhanXuong.Text == Precenter.getMaPhanXuong())
+                    {
+                        Controler.messageBoxShow(TemplateString.PICK_ONE_ROW, TemplateString.TITLE_WARNING);
+                    }
+                    else
+                    {
+                        Controler.messageBoxShow(TemplateString.MESSAGE_DELETE_ERROR, TemplateString.TITLE_WARNING);
+                    }
+                }
+            }
+        }
+
+        private void removePhanXuong()
+        {
+            var phanXuong = (
+                           from px in Precenter.data.PhanXuongs.ToList()
+                           where px.ma == textEditMaPhanXuong.Text
+                           select px
+                                 ).SingleOrDefault();
+
+            Precenter.data.PhanXuongs.Remove(phanXuong);
+            Precenter.data.SaveChanges();
+        }
+
+        private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (!Controler.isTextInputValid(textEditTenPhanXuong.Text))
+            {
+                Controler.messageBoxShow(TemplateString.MESSAGE_INPUT_ERROR, TemplateString.TITLE_WARNING);
+            }
+            else
+            {
+                try
+                {
+                    updatePhanXuong();
+                    Precenter.reloadDataSource(this, gridControl1);
+                    clearForm();
+                }
+                catch (Exception)
+                {
+                    Controler.messageBoxShow(TemplateString.MESSAGE_UPDATE_ERROR, TemplateString.TITLE_WARNING);
+                    textEditTenPhanXuong.Focus();
+                }
+            }
+        }
+
+        private void updatePhanXuong()
+        {
+            PhanXuong phanXuong = (from t in Precenter.data.PhanXuongs
+                                   where t.ma == textEditMaPhanXuong.Text
+                                   select t).SingleOrDefault();
+
+            phanXuong.ten = textEditTenPhanXuong.Text.Trim();
+            phanXuong.diaChi = textEditDiaChi.Text.Trim();
+            phanXuong.sdt = textEditSoDienThoai.Text.Trim();
+            Precenter.data.SaveChanges();
+        }
+
+        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (!Controler.isTextInputValid(textEditTenPhanXuong.Text))
+            {
+                Controler.messageBoxShow(TemplateString.MESSAGE_INPUT_ERROR, TemplateString.TITLE_WARNING);
+            }
+            else
+            {
+                try
+                {
+                    addPhanXuong();
+                    Precenter.reloadDataSource(this, gridControl1);
+                    clearForm();
+                }
+                catch (Exception)
+                {
+                    Controler.messageBoxShow(TemplateString.MESSAGE_INSERT_ERROR, TemplateString.TITLE_WARNING);
+                    textEditTenPhanXuong.Focus();
+                }
+            }
+        }
+
+        private void addPhanXuong()
+        {
+            PhanXuong phanXuong = new PhanXuong();
+            phanXuong.ma = textEditMaPhanXuong.Text.Trim();
+            phanXuong.ten = textEditTenPhanXuong.Text.Trim();
+            phanXuong.diaChi = textEditDiaChi.Text.Trim();
+            phanXuong.sdt = textEditSoDienThoai.Text.Trim();
+            Precenter.data.PhanXuongs.Add(phanXuong);
+            Precenter.data.SaveChanges();
+        }
+
+        private void gridView11_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
+        {
+            int rowHandle = e.RowHandle;
+            PhanXuong phanXuong = (PhanXuong)gridView11.GetRow(e.RowHandle);
+
+            textEditMaPhanXuong.Text = phanXuong.ma;
+            textEditTenPhanXuong.Text = phanXuong.ten;
+            textEditDiaChi.Text = phanXuong.diaChi;
+            textEditSoDienThoai.Text = phanXuong.sdt;
         }
     }
 }
