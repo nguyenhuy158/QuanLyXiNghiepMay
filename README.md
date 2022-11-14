@@ -5,4 +5,7 @@ description about application
 
 ## Database Diagrams
 
-![ERD](.\Resources\Screenshot (27).png)
+![ERD](.\Resources\Database_Diagrams.png)
+
+
+<img src="Resources\Database_Diagrams.png" height="400" alt="Screenshot"/>
