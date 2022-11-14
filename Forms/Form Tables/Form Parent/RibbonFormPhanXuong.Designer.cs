@@ -41,9 +41,9 @@
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.textEditMaSanPham = new DevExpress.XtraEditors.TextEdit();
-            this.textEditMaSanPham1 = new DevExpress.XtraEditors.TextEdit();
-            this.textEditMaSanPham2 = new DevExpress.XtraEditors.TextEdit();
+            this.textEditDiaChi = new DevExpress.XtraEditors.TextEdit();
+            this.textEditMaPhanXuong = new DevExpress.XtraEditors.TextEdit();
+            this.textEditTenPhanXuong = new DevExpress.XtraEditors.TextEdit();
             this.gridControl11 = new DevExpress.XtraGrid.GridControl();
             this.gridView11 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumnMaPhanXuong = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -52,7 +52,7 @@
             this.gridColumnSoDienThoai = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemButtonEdit11 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.repositoryItemButtonEditRemove = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.textEditMaSanPham3 = new DevExpress.XtraEditors.TextEdit();
+            this.textEditSoDienThoai = new DevExpress.XtraEditors.TextEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -62,14 +62,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditMaSanPham.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditMaSanPham1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditMaSanPham2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditDiaChi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditMaPhanXuong.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditTenPhanXuong.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEditRemove)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditMaSanPham3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditSoDienThoai.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
@@ -144,6 +144,7 @@
             this.barButtonItem5.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.LargeImage")));
             this.barButtonItem5.Name = "barButtonItem5";
             this.barButtonItem5.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText;
+            this.barButtonItem5.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem5_ItemClick);
             // 
             // barButtonItem6
             // 
@@ -188,11 +189,11 @@
             // 
             // layoutControl1
             // 
-            this.layoutControl1.Controls.Add(this.textEditMaSanPham);
-            this.layoutControl1.Controls.Add(this.textEditMaSanPham1);
-            this.layoutControl1.Controls.Add(this.textEditMaSanPham2);
+            this.layoutControl1.Controls.Add(this.textEditDiaChi);
+            this.layoutControl1.Controls.Add(this.textEditMaPhanXuong);
+            this.layoutControl1.Controls.Add(this.textEditTenPhanXuong);
             this.layoutControl1.Controls.Add(this.gridControl11);
-            this.layoutControl1.Controls.Add(this.textEditMaSanPham3);
+            this.layoutControl1.Controls.Add(this.textEditSoDienThoai);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 160);
             this.layoutControl1.Name = "layoutControl1";
@@ -202,32 +203,32 @@
             this.layoutControl1.TabIndex = 2;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // textEditMaSanPham
+            // textEditDiaChi
             // 
-            this.textEditMaSanPham.Enabled = false;
-            this.textEditMaSanPham.Location = new System.Drawing.Point(108, 60);
-            this.textEditMaSanPham.Name = "textEditMaSanPham";
-            this.textEditMaSanPham.Size = new System.Drawing.Size(534, 20);
-            this.textEditMaSanPham.StyleController = this.layoutControl1;
-            this.textEditMaSanPham.TabIndex = 4;
+            this.textEditDiaChi.Enabled = false;
+            this.textEditDiaChi.Location = new System.Drawing.Point(108, 60);
+            this.textEditDiaChi.Name = "textEditDiaChi";
+            this.textEditDiaChi.Size = new System.Drawing.Size(534, 20);
+            this.textEditDiaChi.StyleController = this.layoutControl1;
+            this.textEditDiaChi.TabIndex = 4;
             // 
-            // textEditMaSanPham1
+            // textEditMaPhanXuong
             // 
-            this.textEditMaSanPham1.Enabled = false;
-            this.textEditMaSanPham1.Location = new System.Drawing.Point(108, 12);
-            this.textEditMaSanPham1.Name = "textEditMaSanPham1";
-            this.textEditMaSanPham1.Size = new System.Drawing.Size(534, 20);
-            this.textEditMaSanPham1.StyleController = this.layoutControl1;
-            this.textEditMaSanPham1.TabIndex = 4;
+            this.textEditMaPhanXuong.Enabled = false;
+            this.textEditMaPhanXuong.Location = new System.Drawing.Point(108, 12);
+            this.textEditMaPhanXuong.Name = "textEditMaPhanXuong";
+            this.textEditMaPhanXuong.Size = new System.Drawing.Size(534, 20);
+            this.textEditMaPhanXuong.StyleController = this.layoutControl1;
+            this.textEditMaPhanXuong.TabIndex = 4;
             // 
-            // textEditMaSanPham2
+            // textEditTenPhanXuong
             // 
-            this.textEditMaSanPham2.Enabled = false;
-            this.textEditMaSanPham2.Location = new System.Drawing.Point(108, 36);
-            this.textEditMaSanPham2.Name = "textEditMaSanPham2";
-            this.textEditMaSanPham2.Size = new System.Drawing.Size(534, 20);
-            this.textEditMaSanPham2.StyleController = this.layoutControl1;
-            this.textEditMaSanPham2.TabIndex = 4;
+            this.textEditTenPhanXuong.Enabled = false;
+            this.textEditTenPhanXuong.Location = new System.Drawing.Point(108, 36);
+            this.textEditTenPhanXuong.Name = "textEditTenPhanXuong";
+            this.textEditTenPhanXuong.Size = new System.Drawing.Size(534, 20);
+            this.textEditTenPhanXuong.StyleController = this.layoutControl1;
+            this.textEditTenPhanXuong.TabIndex = 4;
             // 
             // gridControl11
             // 
@@ -310,14 +311,14 @@
             this.repositoryItemButtonEditRemove.Name = "repositoryItemButtonEditRemove";
             this.repositoryItemButtonEditRemove.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
-            // textEditMaSanPham3
+            // textEditSoDienThoai
             // 
-            this.textEditMaSanPham3.Enabled = false;
-            this.textEditMaSanPham3.Location = new System.Drawing.Point(108, 84);
-            this.textEditMaSanPham3.Name = "textEditMaSanPham3";
-            this.textEditMaSanPham3.Size = new System.Drawing.Size(534, 20);
-            this.textEditMaSanPham3.StyleController = this.layoutControl1;
-            this.textEditMaSanPham3.TabIndex = 4;
+            this.textEditSoDienThoai.Enabled = false;
+            this.textEditSoDienThoai.Location = new System.Drawing.Point(108, 84);
+            this.textEditSoDienThoai.Name = "textEditSoDienThoai";
+            this.textEditSoDienThoai.Size = new System.Drawing.Size(534, 20);
+            this.textEditSoDienThoai.StyleController = this.layoutControl1;
+            this.textEditSoDienThoai.TabIndex = 4;
             // 
             // Root
             // 
@@ -335,7 +336,7 @@
             // 
             // layoutControlItem1
             // 
-            this.layoutControlItem1.Control = this.textEditMaSanPham1;
+            this.layoutControlItem1.Control = this.textEditMaPhanXuong;
             this.layoutControlItem1.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem1.CustomizationFormText = "Mã sản phẩm";
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
@@ -346,7 +347,7 @@
             // 
             // layoutControlItem3
             // 
-            this.layoutControlItem3.Control = this.textEditMaSanPham2;
+            this.layoutControlItem3.Control = this.textEditTenPhanXuong;
             this.layoutControlItem3.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem3.CustomizationFormText = "Mã sản phẩm";
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 24);
@@ -369,7 +370,7 @@
             // 
             // layoutControlItem2
             // 
-            this.layoutControlItem2.Control = this.textEditMaSanPham;
+            this.layoutControlItem2.Control = this.textEditDiaChi;
             this.layoutControlItem2.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem2.CustomizationFormText = "Mã sản phẩm";
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 48);
@@ -380,7 +381,7 @@
             // 
             // layoutControlItem5
             // 
-            this.layoutControlItem5.Control = this.textEditMaSanPham3;
+            this.layoutControlItem5.Control = this.textEditSoDienThoai;
             this.layoutControlItem5.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem5.CustomizationFormText = "Mã sản phẩm";
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 72);
@@ -402,14 +403,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.textEditMaSanPham.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditMaSanPham1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditMaSanPham2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditDiaChi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditMaPhanXuong.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditTenPhanXuong.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEditRemove)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditMaSanPham3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditSoDienThoai.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
@@ -435,9 +436,9 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
-        private DevExpress.XtraEditors.TextEdit textEditMaSanPham;
-        private DevExpress.XtraEditors.TextEdit textEditMaSanPham1;
-        private DevExpress.XtraEditors.TextEdit textEditMaSanPham2;
+        private DevExpress.XtraEditors.TextEdit textEditDiaChi;
+        private DevExpress.XtraEditors.TextEdit textEditMaPhanXuong;
+        private DevExpress.XtraEditors.TextEdit textEditTenPhanXuong;
         private DevExpress.XtraGrid.GridControl gridControl11;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView11;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumnMaPhanXuong;
@@ -450,7 +451,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
-        private DevExpress.XtraEditors.TextEdit textEditMaSanPham3;
+        private DevExpress.XtraEditors.TextEdit textEditSoDienThoai;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumnSoDienThoai;
     }

@@ -168,7 +168,7 @@ namespace QuanLyXiNghiepMay.Forms.Form_Tables.Form_Parent
 
         private void barButtonItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            clearForm();
         }
 
         private void barButtonItem6_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

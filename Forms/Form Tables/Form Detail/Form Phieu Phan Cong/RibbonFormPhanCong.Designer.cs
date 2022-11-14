@@ -51,14 +51,16 @@
             this.gridColumnSoDienThoai = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemButtonEdit11 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.repositoryItemButtonEditRemove = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.textEditMaSanPham = new DevExpress.XtraEditors.TextEdit();
-            this.textEditMaSanPham1 = new DevExpress.XtraEditors.TextEdit();
-            this.textEditMaSanPham2 = new DevExpress.XtraEditors.TextEdit();
+            this.textEditSoPhieuPhanCong = new DevExpress.XtraEditors.TextEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.dateEditNgayTao = new DevExpress.XtraEditors.DateEdit();
+            this.comboBoxEditMaPhanXuong = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.comboBoxEditTenPhanXuong = new DevExpress.XtraEditors.ComboBoxEdit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -66,14 +68,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEditRemove)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditMaSanPham.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditMaSanPham1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditMaSanPham2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditSoPhieuPhanCong.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditNgayTao.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditNgayTao.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditMaPhanXuong.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditTenPhanXuong.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl1
@@ -187,13 +192,14 @@
             // layoutControl1
             // 
             this.layoutControl1.Controls.Add(this.gridControl11);
-            this.layoutControl1.Controls.Add(this.textEditMaSanPham);
-            this.layoutControl1.Controls.Add(this.textEditMaSanPham1);
-            this.layoutControl1.Controls.Add(this.textEditMaSanPham2);
+            this.layoutControl1.Controls.Add(this.textEditSoPhieuPhanCong);
+            this.layoutControl1.Controls.Add(this.dateEditNgayTao);
+            this.layoutControl1.Controls.Add(this.comboBoxEditMaPhanXuong);
+            this.layoutControl1.Controls.Add(this.comboBoxEditTenPhanXuong);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 160);
             this.layoutControl1.Name = "layoutControl1";
-            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(7, 81, 650, 400);
+            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(80, 237, 650, 400);
             this.layoutControl1.Root = this.Root;
             this.layoutControl1.Size = new System.Drawing.Size(618, 419);
             this.layoutControl1.TabIndex = 3;
@@ -294,32 +300,14 @@
             this.repositoryItemButtonEditRemove.Name = "repositoryItemButtonEditRemove";
             this.repositoryItemButtonEditRemove.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
-            // textEditMaSanPham
+            // textEditSoPhieuPhanCong
             // 
-            this.textEditMaSanPham.Enabled = false;
-            this.textEditMaSanPham.Location = new System.Drawing.Point(106, 12);
-            this.textEditMaSanPham.Name = "textEditMaSanPham";
-            this.textEditMaSanPham.Size = new System.Drawing.Size(500, 20);
-            this.textEditMaSanPham.StyleController = this.layoutControl1;
-            this.textEditMaSanPham.TabIndex = 4;
-            // 
-            // textEditMaSanPham1
-            // 
-            this.textEditMaSanPham1.Enabled = false;
-            this.textEditMaSanPham1.Location = new System.Drawing.Point(106, 60);
-            this.textEditMaSanPham1.Name = "textEditMaSanPham1";
-            this.textEditMaSanPham1.Size = new System.Drawing.Size(500, 20);
-            this.textEditMaSanPham1.StyleController = this.layoutControl1;
-            this.textEditMaSanPham1.TabIndex = 4;
-            // 
-            // textEditMaSanPham2
-            // 
-            this.textEditMaSanPham2.Enabled = false;
-            this.textEditMaSanPham2.Location = new System.Drawing.Point(106, 36);
-            this.textEditMaSanPham2.Name = "textEditMaSanPham2";
-            this.textEditMaSanPham2.Size = new System.Drawing.Size(500, 20);
-            this.textEditMaSanPham2.StyleController = this.layoutControl1;
-            this.textEditMaSanPham2.TabIndex = 4;
+            this.textEditSoPhieuPhanCong.Enabled = false;
+            this.textEditSoPhieuPhanCong.Location = new System.Drawing.Point(108, 12);
+            this.textEditSoPhieuPhanCong.Name = "textEditSoPhieuPhanCong";
+            this.textEditSoPhieuPhanCong.Size = new System.Drawing.Size(498, 20);
+            this.textEditSoPhieuPhanCong.StyleController = this.layoutControl1;
+            this.textEditSoPhieuPhanCong.TabIndex = 4;
             // 
             // Root
             // 
@@ -329,7 +317,8 @@
             this.layoutControlItem1,
             this.layoutControlItem2,
             this.layoutControlItem4,
-            this.layoutControlItem3});
+            this.layoutControlItem3,
+            this.layoutControlItem5});
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(618, 419);
             this.Root.TextVisible = false;
@@ -347,36 +336,86 @@
             // 
             // layoutControlItem2
             // 
-            this.layoutControlItem2.Control = this.textEditMaSanPham;
+            this.layoutControlItem2.Control = this.textEditSoPhieuPhanCong;
             this.layoutControlItem2.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem2.CustomizationFormText = "Số phiếu";
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(598, 24);
             this.layoutControlItem2.Text = "Số phiếu";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(82, 13);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(84, 13);
             // 
             // layoutControlItem4
             // 
-            this.layoutControlItem4.Control = this.textEditMaSanPham2;
+            this.layoutControlItem4.Control = this.comboBoxEditMaPhanXuong;
             this.layoutControlItem4.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem4.CustomizationFormText = "Mã phân xưởng";
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 24);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(598, 24);
+            this.layoutControlItem4.Size = new System.Drawing.Size(299, 24);
             this.layoutControlItem4.Text = "Mã phân xưởng";
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(82, 13);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(84, 13);
             // 
             // layoutControlItem3
             // 
-            this.layoutControlItem3.Control = this.textEditMaSanPham1;
+            this.layoutControlItem3.Control = this.dateEditNgayTao;
             this.layoutControlItem3.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem3.CustomizationFormText = "Ngày tạo";
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 48);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(598, 24);
             this.layoutControlItem3.Text = "Ngày tạo";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(82, 13);
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(84, 13);
+            // 
+            // dateEditNgayTao
+            // 
+            this.dateEditNgayTao.EditValue = new System.DateTime(2022, 11, 14, 15, 24, 29, 0);
+            this.dateEditNgayTao.Location = new System.Drawing.Point(108, 60);
+            this.dateEditNgayTao.Name = "dateEditNgayTao";
+            this.dateEditNgayTao.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEditNgayTao.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEditNgayTao.Properties.DisplayFormat.FormatString = "dd/MM/yyyy";
+            this.dateEditNgayTao.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateEditNgayTao.Properties.EditFormat.FormatString = "dd/MM/yyyy";
+            this.dateEditNgayTao.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateEditNgayTao.Properties.MaskSettings.Set("mask", "");
+            this.dateEditNgayTao.Size = new System.Drawing.Size(498, 20);
+            this.dateEditNgayTao.StyleController = this.layoutControl1;
+            this.dateEditNgayTao.TabIndex = 4;
+            // 
+            // comboBoxEditMaPhanXuong
+            // 
+            this.comboBoxEditMaPhanXuong.Enabled = false;
+            this.comboBoxEditMaPhanXuong.Location = new System.Drawing.Point(108, 36);
+            this.comboBoxEditMaPhanXuong.Name = "comboBoxEditMaPhanXuong";
+            this.comboBoxEditMaPhanXuong.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxEditMaPhanXuong.Size = new System.Drawing.Size(199, 20);
+            this.comboBoxEditMaPhanXuong.StyleController = this.layoutControl1;
+            this.comboBoxEditMaPhanXuong.TabIndex = 4;
+            // 
+            // layoutControlItem5
+            // 
+            this.layoutControlItem5.Control = this.comboBoxEditTenPhanXuong;
+            this.layoutControlItem5.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.layoutControlItem5.CustomizationFormText = "Tên phân xưởng";
+            this.layoutControlItem5.Location = new System.Drawing.Point(299, 24);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.Size = new System.Drawing.Size(299, 24);
+            this.layoutControlItem5.Text = "Tên phân xưởng";
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(84, 13);
+            // 
+            // comboBoxEditTenPhanXuong
+            // 
+            this.comboBoxEditTenPhanXuong.Location = new System.Drawing.Point(407, 36);
+            this.comboBoxEditTenPhanXuong.Name = "comboBoxEditTenPhanXuong";
+            this.comboBoxEditTenPhanXuong.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxEditTenPhanXuong.Size = new System.Drawing.Size(199, 20);
+            this.comboBoxEditTenPhanXuong.StyleController = this.layoutControl1;
+            this.comboBoxEditTenPhanXuong.TabIndex = 4;
             // 
             // RibbonFormPhieuPhanCong
             // 
@@ -395,14 +434,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEditRemove)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditMaSanPham.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditMaSanPham1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditMaSanPham2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditSoPhieuPhanCong.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditNgayTao.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditNgayTao.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditMaPhanXuong.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditTenPhanXuong.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -428,9 +470,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumnGhiChu;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit11;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEditRemove;
-        private DevExpress.XtraEditors.TextEdit textEditMaSanPham;
-        private DevExpress.XtraEditors.TextEdit textEditMaSanPham1;
-        private DevExpress.XtraEditors.TextEdit textEditMaSanPham2;
+        private DevExpress.XtraEditors.TextEdit textEditSoPhieuPhanCong;
         private DevExpress.XtraLayout.LayoutControlGroup Root;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
@@ -439,5 +479,9 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumnDiaChi;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumnSoDienThoai;
+        private DevExpress.XtraEditors.DateEdit dateEditNgayTao;
+        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEditMaPhanXuong;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
+        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEditTenPhanXuong;
     }
 }

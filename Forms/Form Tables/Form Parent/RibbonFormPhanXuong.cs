@@ -27,5 +27,19 @@ namespace QuanLyXiNghiepMay.Forms.Form_Tables.Form_Parent
                 gridControl11.DataSource = dbContext.PhanXuongs.Local.ToBindingList();
             }, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
         }
+
+        private void barButtonItem5_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            clearForm();
+        }
+
+        private void clearForm()
+        {
+            String ma = Precenter.getMaPhanXuong();
+            textEditDiaChi.Text = ma;
+            //textEditTenSanPham.Focus();
+            //textEditTenSanPham.Text = "";
+            //textEditGhiChu.Text = "";
+        }
     }
 }

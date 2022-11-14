@@ -11,6 +11,12 @@ namespace QuanLyXiNghiepMay
     internal class Precenter
     {
         private static QuanLyVatTuCuaXiNghiepMayEntities data = new QuanLyVatTuCuaXiNghiepMayEntities();
+
+        internal static string getMaPhanXuong()
+        {
+            return data.Database.SqlQuery<String>("Select dbo.TaoMaPhanXuong();").FirstOrDefault();
+        }
+
         internal static string getMaSanPham()
         {
             return data.Database.SqlQuery<String>("Select dbo.TaoMaSanPham();").FirstOrDefault();

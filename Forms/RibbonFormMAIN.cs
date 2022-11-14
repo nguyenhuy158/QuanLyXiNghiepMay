@@ -65,7 +65,6 @@ namespace QuanLyXiNghiepMay
 
         private void barButtonItem5_ItemClick(object sender, ItemClickEventArgs e)
         {
-            ControlerMain.openForm(this, typeof(XtraForm1));
         }
 
         private void barButtonItem9_ItemClick(object sender, ItemClickEventArgs e)
