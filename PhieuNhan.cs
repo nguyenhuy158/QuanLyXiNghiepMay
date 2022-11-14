@@ -12,17 +12,17 @@ namespace QuanLyXiNghiepMay
     using System;
     using System.Collections.Generic;
     
-    public partial class PhieuNhanNguyenLieu
+    public partial class PhieuNhan
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public PhieuNhanNguyenLieu()
+        public PhieuNhan()
         {
             this.ChiTietPhieuNhans = new HashSet<ChiTietPhieuNhan>();
         }
     
-        public string soPhieuNhan { get; set; }
-        public Nullable<System.DateTime> ngayLapPhieu { get; set; }
+        public string so { get; set; }
         public string tenNguoiNhan { get; set; }
+        public System.DateTime ngayTao { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietPhieuNhan> ChiTietPhieuNhans { get; set; }

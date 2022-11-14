@@ -63,9 +63,9 @@ namespace QuanLyXiNghiepMay.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _294878529_809733306942865_5404269185164880146_n {
+        internal static System.Drawing.Bitmap background_templace_1 {
             get {
-                object obj = ResourceManager.GetObject("294878529_809733306942865_5404269185164880146_n", resourceCulture);
+                object obj = ResourceManager.GetObject("background_templace_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace QuanLyXiNghiepMay.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap factory {
+        internal static System.Drawing.Bitmap background_templace_2 {
             get {
-                object obj = ResourceManager.GetObject("factory", resourceCulture);
+                object obj = ResourceManager.GetObject("background_templace_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,159 @@ namespace QuanLyXiNghiepMay.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap needle_natural_linen_texture_background_73344_2303 {
+        internal static System.Drawing.Bitmap ic_add {
             get {
-                object obj = ResourceManager.GetObject("needle-natural-linen-texture-background_73344-2303", resourceCulture);
+                object obj = ResourceManager.GetObject("ic_add", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_add_1 {
+            get {
+                object obj = ResourceManager.GetObject("ic_add_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_backup_copy {
+            get {
+                object obj = ResourceManager.GetObject("ic_backup_copy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_close {
+            get {
+                object obj = ResourceManager.GetObject("ic_close", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_database {
+            get {
+                object obj = ResourceManager.GetObject("ic_database", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_export {
+            get {
+                object obj = ResourceManager.GetObject("ic_export", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_factory {
+            get {
+                object obj = ResourceManager.GetObject("ic_factory", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_group {
+            get {
+                object obj = ResourceManager.GetObject("ic_group", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_mechanical_arm {
+            get {
+                object obj = ResourceManager.GetObject("ic_mechanical_arm", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_print {
+            get {
+                object obj = ResourceManager.GetObject("ic_print", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_question {
+            get {
+                object obj = ResourceManager.GetObject("ic_question", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_refresh {
+            get {
+                object obj = ResourceManager.GetObject("ic_refresh", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_remove {
+            get {
+                object obj = ResourceManager.GetObject("ic_remove", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_save {
+            get {
+                object obj = ResourceManager.GetObject("ic_save", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_search {
+            get {
+                object obj = ResourceManager.GetObject("ic_search", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_sync {
+            get {
+                object obj = ResourceManager.GetObject("ic_sync", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

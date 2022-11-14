@@ -10,15 +10,10 @@
 namespace QuanLyXiNghiepMay
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class ChiTietPhieuNhan
+    public partial class sp_helpdiagramdefinition_Result
     {
-        public string soPhieuNhan { get; set; }
-        public string maNguyenLieu { get; set; }
-        public int soLuong { get; set; }
-    
-        public virtual NguyenLieu NguyenLieu { get; set; }
-        public virtual PhieuNhan PhieuNhan { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

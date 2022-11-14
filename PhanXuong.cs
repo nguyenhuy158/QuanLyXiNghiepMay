@@ -20,10 +20,10 @@ namespace QuanLyXiNghiepMay
             this.PhieuPhanCongs = new HashSet<PhieuPhanCong>();
         }
     
-        public string maPhanXuong { get; set; }
-        public string tenPhanXuong { get; set; }
+        public string ma { get; set; }
+        public string ten { get; set; }
         public string diaChi { get; set; }
-        public string soDienThoai { get; set; }
+        public string sdt { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PhieuPhanCong> PhieuPhanCongs { get; set; }

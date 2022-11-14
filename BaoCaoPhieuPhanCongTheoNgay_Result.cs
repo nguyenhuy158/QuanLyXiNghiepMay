@@ -10,15 +10,15 @@
 namespace QuanLyXiNghiepMay
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class ChiTietPhieuNhan
+    public partial class BaoCaoPhieuPhanCongTheoNgay_Result
     {
-        public string soPhieuNhan { get; set; }
-        public string maNguyenLieu { get; set; }
-        public int soLuong { get; set; }
-    
-        public virtual NguyenLieu NguyenLieu { get; set; }
-        public virtual PhieuNhan PhieuNhan { get; set; }
+        public string so { get; set; }
+        public string maPhanXuong { get; set; }
+        public string ten { get; set; }
+        public string diaChi { get; set; }
+        public string ma { get; set; }
+        public string ten1 { get; set; }
+        public Nullable<int> soLuong { get; set; }
     }
 }

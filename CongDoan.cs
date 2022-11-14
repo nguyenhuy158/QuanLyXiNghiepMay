@@ -15,9 +15,9 @@ namespace QuanLyXiNghiepMay
     public partial class CongDoan
     {
         public string maSanPham { get; set; }
-        public int sttCongDoan { get; set; }
+        public int soCongDoan { get; set; }
         public string yeuCauKyThuat { get; set; }
-        public Nullable<int> dinhMucTienLuong { get; set; }
+        public Nullable<int> mucTienLuong { get; set; }
         public string ghiChu { get; set; }
     
         public virtual SanPham SanPham { get; set; }

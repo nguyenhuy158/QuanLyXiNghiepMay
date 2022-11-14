@@ -10,15 +10,13 @@
 namespace QuanLyXiNghiepMay
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class ChiTietPhieuNhan
+    public partial class sp_helpdiagrams_Result
     {
-        public string soPhieuNhan { get; set; }
-        public string maNguyenLieu { get; set; }
-        public int soLuong { get; set; }
-    
-        public virtual NguyenLieu NguyenLieu { get; set; }
-        public virtual PhieuNhan PhieuNhan { get; set; }
+        public string Database { get; set; }
+        public string Name { get; set; }
+        public int ID { get; set; }
+        public string Owner { get; set; }
+        public int OwnerID { get; set; }
     }
 }

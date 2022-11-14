@@ -22,8 +22,8 @@ namespace QuanLyXiNghiepMay
             this.DinhMucs = new HashSet<DinhMuc>();
         }
     
-        public string maSanPham { get; set; }
-        public string tenSanPham { get; set; }
+        public string ma { get; set; }
+        public string ten { get; set; }
         public string ghiChu { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

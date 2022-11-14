@@ -20,9 +20,9 @@ namespace QuanLyXiNghiepMay
             this.ChiTietPhieuPhanCongs = new HashSet<ChiTietPhieuPhanCong>();
         }
     
-        public string soPhieuPhanCong { get; set; }
+        public string so { get; set; }
         public string maPhanXuong { get; set; }
-        public Nullable<System.DateTime> ngayLapPhieu { get; set; }
+        public System.DateTime ngayTao { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietPhieuPhanCong> ChiTietPhieuPhanCongs { get; set; }

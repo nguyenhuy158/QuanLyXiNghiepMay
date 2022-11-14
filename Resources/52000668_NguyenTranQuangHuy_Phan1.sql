@@ -102,11 +102,11 @@ CREATE TABLE ChiTietPhieuPhanCong(
 
 INSERT INTO NguyenLieu
 VALUES 
-('1', 'vai loai 1', ''),
-('2', 'vai loai 2', ''),
-('3', 'vai loai 3', ''),
-('4', 'vai loai 4', ''),
-('5', 'vai loai 5', '')
+('NL001', N'vai loai 1', ''),
+('NL002', N'vai loai 2', ''),
+('NL003', N'vai loai 3', ''),
+('NL004', N'vai loai 4', ''),
+('NL005', N'vai loai 5', '')
 
 
 INSERT INTO SanPham
