@@ -1,6 +1,7 @@
 ﻿using DevExpress.XtraBars;
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraReports.UI;
+using QuanLyXiNghiepMay.Forms.Features;
 using QuanLyXiNghiepMay.Forms.Form_Tables;
 using QuanLyXiNghiepMay.Forms.Form_Tables.Form_Child;
 using QuanLyXiNghiepMay.Forms.Form_Tables.Form_Detail.Form_Phieu_Nhan;
@@ -49,8 +50,9 @@ namespace QuanLyXiNghiepMay
 
         private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
         {
-            XtraReport1 xtraReport1 = new XtraReport1();
-            xtraReport1.ShowPreview();
+            XtraReportBaoCaoPhanCongTheoNgay xtraReport2 = new XtraReportBaoCaoPhanCongTheoNgay();
+            
+            xtraReport2.ShowPreview();
         }
 
         private void ribbon_Click(object sender, EventArgs e)
