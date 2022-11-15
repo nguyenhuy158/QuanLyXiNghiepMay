@@ -254,6 +254,32 @@ namespace QuanLyXiNghiepMay
                 comboBoxEdit.DisplayMember = "ten";
                 comboBoxEdit.ValueMember = "ten";
             }
+
+            if (key == Constance.KEY_MA_PHAN_XUONG)
+            {
+                comboBoxEdit.DataSource = data.PhanXuongs.ToList();
+                comboBoxEdit.DisplayMember = "ma";
+                comboBoxEdit.ValueMember = "ma";
+            }
+            if (key == Constance.KEY_TEN_PHAN_XUONG)
+            {
+                comboBoxEdit.DataSource = data.PhanXuongs.ToList();
+                comboBoxEdit.DisplayMember = "ten";
+                comboBoxEdit.ValueMember = "ten";
+            }
+
+            if (key == Constance.KEY_SO_PHIEU_NHAN)
+            {
+                comboBoxEdit.DataSource = data.PhieuNhans.ToList();
+                comboBoxEdit.DisplayMember = "so";
+                comboBoxEdit.ValueMember = "so";
+            }
+            if (key == Constance.KEY_SO_PHIEU_PHAN_CONG)
+            {
+                comboBoxEdit.DataSource = data.PhieuPhanCongs.ToList();
+                comboBoxEdit.DisplayMember = "so";
+                comboBoxEdit.ValueMember = "so";
+            }
         }
     }
 }

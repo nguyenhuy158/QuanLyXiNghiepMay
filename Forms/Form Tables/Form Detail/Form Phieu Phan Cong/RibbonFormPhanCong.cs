@@ -52,35 +52,34 @@ namespace QuanLyXiNghiepMay.Forms.Form_Tables.Form_Detail.Form_Phieu_Phan_Cong
             dateEditNgayTao.EditValue = DateTime.Now;
         }
 
-        private void updateSanPham()
+        private void updatePhanCong()
         {
-            SanPham sanPham = (from t in Precenter.data.SanPhams
-                               where t.ma == textEditMaSanPham.Text
+            PhieuPhanCong phanCong = (from t in Precenter.data.PhieuPhanCongs
+                               where t.so == textEditSoPhieuPhanCong.Text
                                select t).SingleOrDefault();
 
-            sanPham.ten = textEditTenSanPham.Text.Trim();
-            sanPham.ghiChu = textEditGhiChu.Text.Trim();
+            phanCong.ngayTao = (DateTime)dateEditNgayTao.EditValue;
             Precenter.data.SaveChanges();
         }
-        private void addSanPham()
+        private void addPhanCong()
         {
-            SanPham sanPham = new SanPham();
-            sanPham.ma = textEditMaSanPham.Text.Trim();
-            sanPham.ten = textEditTenSanPham.Text.Trim();
-            sanPham.ghiChu = textEditGhiChu.Text.Trim();
-            Precenter.data.SanPhams.Add(sanPham);
+            PhieuPhanCong phanCong = new PhieuPhanCong();
+            phanCong.so = textEditSoPhieuPhanCong.Text;
+            phanCong.maPhanXuong = comboBoxMaPhanXuong.SelectedValue.ToString();
+            phanCong.ngayTao = (DateTime)dateEditNgayTao.EditValue;
+            Precenter.data.PhieuPhanCongs.Add(phanCong);
             Precenter.data.SaveChanges();
         }
 
-        private void removeSanPham()
+        private void removePhanCong()
         {
-            var sanPham = (
-                            from sp in Precenter.data.SanPhams.ToList()
-                            where sp.ma == textEditMaSanPham.Text
+            var phanCong = (
+                            from sp in Precenter.data.PhieuPhanCongs.ToList()
+                            where sp.so == textEditSoPhieuPhanCong.Text
                             select sp
                                   ).SingleOrDefault();
 
-            Precenter.data.SanPhams.Remove(sanPham);
+            Precenter.data.PhieuPhanCongs.Remove(phanCong);
             Precenter.data.SaveChanges();
         }
 
@@ -90,7 +89,7 @@ namespace QuanLyXiNghiepMay.Forms.Form_Tables.Form_Detail.Form_Phieu_Phan_Cong
             {
                 try
                 {
-                    removeSanPham();
+                    removePhanCong();
                     Precenter.reloadDataSource(this, gridControl11);
                     clearForm();
                 }
@@ -118,7 +117,7 @@ namespace QuanLyXiNghiepMay.Forms.Form_Tables.Form_Detail.Form_Phieu_Phan_Cong
             {
                 try
                 {
-                    updateSanPham();
+                    updatePhanCong();
                     Precenter.reloadDataSource(this, gridControl11);
                     clearForm();
                 }
@@ -140,7 +139,7 @@ namespace QuanLyXiNghiepMay.Forms.Form_Tables.Form_Detail.Form_Phieu_Phan_Cong
             {
                 try
                 {
-                    addSanPham();
+                    addPhanCong();
                     Precenter.reloadDataSource(this, gridControl11);
                     clearForm();
                 }
@@ -155,12 +154,30 @@ namespace QuanLyXiNghiepMay.Forms.Form_Tables.Form_Detail.Form_Phieu_Phan_Cong
         private void gridView11_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
         {
             int rowHandle = e.RowHandle;
-            SanPham sanPham = (SanPham)gridView11.GetRow(e.RowHandle);
+            PhieuPhanCong phanCong = (PhieuPhanCong)gridView11.GetRow(e.RowHandle);
 
 
-            textEditSoPhieuPhanCong.Text= sanPham.ma;
-            textEditTenSanPham.Text = sanPham.ten;
-            textEditGhiChu.Text = sanPham.ghiChu;
+            textEditSoPhieuPhanCong.Text = phanCong.so;
+            comboBoxMaPhanXuong.SelectedValue = phanCong.maPhanXuong;
+            comboBoxTenPhanXuong.SelectedValue = phanCong.PhanXuong.ten;
+            dateEditNgayTao.EditValue = phanCong.ngayTao;
+        }
+
+        private void RibbonFormPhieuPhanCong_Load(object sender, EventArgs e)
+        {
+            Precenter.loadDataSourceComboBox(comboBoxMaPhanXuong, Constance.KEY_MA_PHAN_XUONG);
+            Precenter.loadDataSourceComboBox(comboBoxTenPhanXuong, Constance.KEY_TEN_PHAN_XUONG);
+            clearForm();
+        }
+
+        private void comboBoxTenPhanXuong_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboBoxMaPhanXuong.SelectedIndex = comboBoxTenPhanXuong.SelectedIndex;
+        }
+
+        private void ribbonControl1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

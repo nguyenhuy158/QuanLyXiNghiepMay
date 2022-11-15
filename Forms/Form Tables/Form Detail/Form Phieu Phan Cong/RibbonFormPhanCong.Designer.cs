@@ -41,33 +41,25 @@
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.comboBoxTenPhanXuong = new System.Windows.Forms.ComboBox();
+            this.comboBoxMaPhanXuong = new System.Windows.Forms.ComboBox();
             this.gridControl11 = new DevExpress.XtraGrid.GridControl();
             this.gridView11 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumnMaSanPham = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumnTenSanPham = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumnGhiChu = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumnDiaChi = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumnSoDienThoai = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemButtonEdit11 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.repositoryItemButtonEditRemove = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.textEditSoPhieuPhanCong = new DevExpress.XtraEditors.TextEdit();
             this.dateEditNgayTao = new DevExpress.XtraEditors.DateEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.comboBoxMaPhanXuong = new System.Windows.Forms.ComboBox();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.comboBoxTenPhanXuong = new System.Windows.Forms.ComboBox();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.repositoryItemButtonEdit11 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.repositoryItemButtonEditRemove = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEditRemove)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditSoPhieuPhanCong.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditNgayTao.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditNgayTao.Properties.CalendarTimeProperties)).BeginInit();
@@ -77,6 +69,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEditRemove)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl1
@@ -98,7 +92,8 @@
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
-            this.ribbonControl1.Size = new System.Drawing.Size(618, 160);
+            this.ribbonControl1.Size = new System.Drawing.Size(618, 148);
+            this.ribbonControl1.Click += new System.EventHandler(this.ribbonControl1_Click);
             // 
             // barButtonItem1
             // 
@@ -209,9 +204,28 @@
             this.layoutControl1.TabIndex = 3;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // comboBoxTenPhanXuong
+            // 
+            this.comboBoxTenPhanXuong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxTenPhanXuong.FormattingEnabled = true;
+            this.comboBoxTenPhanXuong.Location = new System.Drawing.Point(397, 36);
+            this.comboBoxTenPhanXuong.Name = "comboBoxTenPhanXuong";
+            this.comboBoxTenPhanXuong.Size = new System.Drawing.Size(209, 21);
+            this.comboBoxTenPhanXuong.TabIndex = 6;
+            this.comboBoxTenPhanXuong.SelectedIndexChanged += new System.EventHandler(this.comboBoxTenPhanXuong_SelectedIndexChanged);
+            // 
+            // comboBoxMaPhanXuong
+            // 
+            this.comboBoxMaPhanXuong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMaPhanXuong.Enabled = false;
+            this.comboBoxMaPhanXuong.FormattingEnabled = true;
+            this.comboBoxMaPhanXuong.Location = new System.Drawing.Point(108, 36);
+            this.comboBoxMaPhanXuong.Name = "comboBoxMaPhanXuong";
+            this.comboBoxMaPhanXuong.Size = new System.Drawing.Size(189, 21);
+            this.comboBoxMaPhanXuong.TabIndex = 5;
+            // 
             // gridControl11
             // 
-            this.gridControl11.DataSource = typeof(QuanLyXiNghiepMay.PhieuPhanCong);
             this.gridControl11.Location = new System.Drawing.Point(12, 85);
             this.gridControl11.MainView = this.gridView11;
             this.gridControl11.Name = "gridControl11";
@@ -225,85 +239,11 @@
             // 
             // gridView11
             // 
-            this.gridView11.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumnMaSanPham,
-            this.gridColumn1,
-            this.gridColumnTenSanPham,
-            this.gridColumnGhiChu,
-            this.gridColumnDiaChi,
-            this.gridColumnSoDienThoai});
             this.gridView11.GridControl = this.gridControl11;
             this.gridView11.Name = "gridView11";
             this.gridView11.OptionsBehavior.Editable = false;
             this.gridView11.OptionsView.ShowAutoFilterRow = true;
             this.gridView11.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridView11_RowCellClick);
-            // 
-            // gridColumnMaSanPham
-            // 
-            this.gridColumnMaSanPham.Caption = "Số phiếu";
-            this.gridColumnMaSanPham.FieldName = "so";
-            this.gridColumnMaSanPham.Name = "gridColumnMaSanPham";
-            this.gridColumnMaSanPham.Visible = true;
-            this.gridColumnMaSanPham.VisibleIndex = 0;
-            this.gridColumnMaSanPham.Width = 89;
-            // 
-            // gridColumn1
-            // 
-            this.gridColumn1.Caption = "Mã phân xưởng";
-            this.gridColumn1.FieldName = "maPhanXuong";
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 1;
-            // 
-            // gridColumnTenSanPham
-            // 
-            this.gridColumnTenSanPham.Caption = "Tên phân xưởng";
-            this.gridColumnTenSanPham.FieldName = "PhanXuong.ten";
-            this.gridColumnTenSanPham.Name = "gridColumnTenSanPham";
-            this.gridColumnTenSanPham.Visible = true;
-            this.gridColumnTenSanPham.VisibleIndex = 2;
-            this.gridColumnTenSanPham.Width = 89;
-            // 
-            // gridColumnGhiChu
-            // 
-            this.gridColumnGhiChu.Caption = "Ngày tạo";
-            this.gridColumnGhiChu.FieldName = "ngayTao";
-            this.gridColumnGhiChu.Name = "gridColumnGhiChu";
-            this.gridColumnGhiChu.Visible = true;
-            this.gridColumnGhiChu.VisibleIndex = 3;
-            this.gridColumnGhiChu.Width = 84;
-            // 
-            // gridColumnDiaChi
-            // 
-            this.gridColumnDiaChi.Caption = "Địa chỉ phân xưởng";
-            this.gridColumnDiaChi.FieldName = "PhanXuong.diaChi";
-            this.gridColumnDiaChi.Name = "gridColumnDiaChi";
-            this.gridColumnDiaChi.Visible = true;
-            this.gridColumnDiaChi.VisibleIndex = 4;
-            // 
-            // gridColumnSoDienThoai
-            // 
-            this.gridColumnSoDienThoai.Caption = "Số điện thoại phân xưởng";
-            this.gridColumnSoDienThoai.FieldName = "PhanXuong.sdt";
-            this.gridColumnSoDienThoai.Name = "gridColumnSoDienThoai";
-            this.gridColumnSoDienThoai.Visible = true;
-            this.gridColumnSoDienThoai.VisibleIndex = 5;
-            // 
-            // repositoryItemButtonEdit11
-            // 
-            this.repositoryItemButtonEdit11.AutoHeight = false;
-            this.repositoryItemButtonEdit11.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph)});
-            this.repositoryItemButtonEdit11.Name = "repositoryItemButtonEdit11";
-            this.repositoryItemButtonEdit11.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            // 
-            // repositoryItemButtonEditRemove
-            // 
-            this.repositoryItemButtonEditRemove.AutoHeight = false;
-            this.repositoryItemButtonEditRemove.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph)});
-            this.repositoryItemButtonEditRemove.Name = "repositoryItemButtonEditRemove";
-            this.repositoryItemButtonEditRemove.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
             // textEditSoPhieuPhanCong
             // 
@@ -379,16 +319,6 @@
             this.layoutControlItem3.Text = "Ngày tạo";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(84, 13);
             // 
-            // comboBoxMaPhanXuong
-            // 
-            this.comboBoxMaPhanXuong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxMaPhanXuong.Enabled = false;
-            this.comboBoxMaPhanXuong.FormattingEnabled = true;
-            this.comboBoxMaPhanXuong.Location = new System.Drawing.Point(108, 36);
-            this.comboBoxMaPhanXuong.Name = "comboBoxMaPhanXuong";
-            this.comboBoxMaPhanXuong.Size = new System.Drawing.Size(189, 21);
-            this.comboBoxMaPhanXuong.TabIndex = 5;
-            // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.comboBoxMaPhanXuong;
@@ -398,15 +328,6 @@
             this.layoutControlItem6.Size = new System.Drawing.Size(289, 25);
             this.layoutControlItem6.Text = "Mã phân xưởng";
             this.layoutControlItem6.TextSize = new System.Drawing.Size(84, 13);
-            // 
-            // comboBoxTenPhanXuong
-            // 
-            this.comboBoxTenPhanXuong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxTenPhanXuong.FormattingEnabled = true;
-            this.comboBoxTenPhanXuong.Location = new System.Drawing.Point(397, 36);
-            this.comboBoxTenPhanXuong.Name = "comboBoxTenPhanXuong";
-            this.comboBoxTenPhanXuong.Size = new System.Drawing.Size(209, 21);
-            this.comboBoxTenPhanXuong.TabIndex = 6;
             // 
             // layoutControlItem7
             // 
@@ -418,6 +339,22 @@
             this.layoutControlItem7.Text = "Tên phân xưởng";
             this.layoutControlItem7.TextSize = new System.Drawing.Size(84, 13);
             // 
+            // repositoryItemButtonEdit11
+            // 
+            this.repositoryItemButtonEdit11.AutoHeight = false;
+            this.repositoryItemButtonEdit11.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph)});
+            this.repositoryItemButtonEdit11.Name = "repositoryItemButtonEdit11";
+            this.repositoryItemButtonEdit11.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            // 
+            // repositoryItemButtonEditRemove
+            // 
+            this.repositoryItemButtonEditRemove.AutoHeight = false;
+            this.repositoryItemButtonEditRemove.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph)});
+            this.repositoryItemButtonEditRemove.Name = "repositoryItemButtonEditRemove";
+            this.repositoryItemButtonEditRemove.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            // 
             // RibbonFormPhieuPhanCong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -428,13 +365,12 @@
             this.Name = "RibbonFormPhieuPhanCong";
             this.Ribbon = this.ribbonControl1;
             this.Text = "Phiếu Phân Công";
+            this.Load += new System.EventHandler(this.RibbonFormPhieuPhanCong_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEditRemove)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditSoPhieuPhanCong.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditNgayTao.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditNgayTao.Properties)).EndInit();
@@ -444,6 +380,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEditRemove)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -464,9 +402,6 @@
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private DevExpress.XtraGrid.GridControl gridControl11;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView11;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumnMaSanPham;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumnTenSanPham;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumnGhiChu;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit11;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEditRemove;
         private DevExpress.XtraEditors.TextEdit textEditSoPhieuPhanCong;
@@ -474,9 +409,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumnDiaChi;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumnSoDienThoai;
         private DevExpress.XtraEditors.DateEdit dateEditNgayTao;
         private System.Windows.Forms.ComboBox comboBoxTenPhanXuong;
         private System.Windows.Forms.ComboBox comboBoxMaPhanXuong;

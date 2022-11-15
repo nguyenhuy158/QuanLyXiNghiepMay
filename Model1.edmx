@@ -103,7 +103,7 @@
               <PropertyRef Name="ma" />
             </Principal>
             <Dependent Role="ChiTietPhieuNhan">
-              <PropertyRef Name="soPhieuNhan" />
+              <PropertyRef Name="maNguyenLieu" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -397,7 +397,7 @@
               <PropertyRef Name="ma" />
             </Principal>
             <Dependent Role="ChiTietPhieuNhan">
-              <PropertyRef Name="soPhieuNhan" />
+              <PropertyRef Name="maNguyenLieu" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -568,7 +568,7 @@
           <Property Type="String" Name="ten" Nullable="true" MaxLength="50" />
           <Property Type="String" Name="diaChi" Nullable="true" MaxLength="50" />
           <Property Type="String" Name="ma" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="ten1" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="ma1" Nullable="false" MaxLength="50" />
           <Property Type="Int32" Name="soLuong" Nullable="true" />
         </ComplexType>
         <ComplexType Name="sp_helpdiagramdefinition_Result">
@@ -692,7 +692,7 @@
                 <ScalarProperty Name="ten" ColumnName="ten" />
                 <ScalarProperty Name="diaChi" ColumnName="diaChi" />
                 <ScalarProperty Name="ma" ColumnName="ma" />
-                <ScalarProperty Name="ten1" ColumnName="ten1" />
+                <ScalarProperty Name="ma1" ColumnName="ma1" />
                 <ScalarProperty Name="soLuong" ColumnName="soLuong" />
               </ComplexTypeMapping>
             </ResultMapping>

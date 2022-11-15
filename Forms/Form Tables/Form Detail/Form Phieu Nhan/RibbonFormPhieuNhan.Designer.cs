@@ -47,7 +47,7 @@
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.dateEditNgayTao = new DevExpress.XtraEditors.DateEdit();
             this.textEditTenNguoiNhan = new DevExpress.XtraEditors.TextEdit();
-            this.textEditPhieuNhan = new DevExpress.XtraEditors.TextEdit();
+            this.textEditSoPhieuNhan = new DevExpress.XtraEditors.TextEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -64,7 +64,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateEditNgayTao.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditNgayTao.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditTenNguoiNhan.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditPhieuNhan.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditSoPhieuNhan.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
@@ -77,7 +77,7 @@
             this.layoutControl1.Controls.Add(this.gridControl1);
             this.layoutControl1.Controls.Add(this.dateEditNgayTao);
             this.layoutControl1.Controls.Add(this.textEditTenNguoiNhan);
-            this.layoutControl1.Controls.Add(this.textEditPhieuNhan);
+            this.layoutControl1.Controls.Add(this.textEditSoPhieuNhan);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 160);
             this.layoutControl1.Name = "layoutControl1";
@@ -107,6 +107,7 @@
             this.gridColumn2});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridView1_RowCellClick);
             // 
             // gridColumn1
             // 
@@ -164,6 +165,7 @@
             this.barButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
             this.barButtonItem1.LargeWidth = 70;
             this.barButtonItem1.Name = "barButtonItem1";
+            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
             // barButtonItem2
             // 
@@ -173,6 +175,7 @@
             this.barButtonItem2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
             this.barButtonItem2.LargeWidth = 70;
             this.barButtonItem2.Name = "barButtonItem2";
+            this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
             // 
             // barButtonItem3
             // 
@@ -182,6 +185,7 @@
             this.barButtonItem3.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.LargeImage")));
             this.barButtonItem3.LargeWidth = 70;
             this.barButtonItem3.Name = "barButtonItem3";
+            this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
             // 
             // barButtonItem5
             // 
@@ -191,6 +195,7 @@
             this.barButtonItem5.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.LargeImage")));
             this.barButtonItem5.Name = "barButtonItem5";
             this.barButtonItem5.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText;
+            this.barButtonItem5.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem5_ItemClick);
             // 
             // barButtonItem6
             // 
@@ -200,6 +205,7 @@
             this.barButtonItem6.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem6.ImageOptions.LargeImage")));
             this.barButtonItem6.LargeWidth = 70;
             this.barButtonItem6.Name = "barButtonItem6";
+            this.barButtonItem6.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem6_ItemClick);
             // 
             // barButtonItem7
             // 
@@ -209,6 +215,7 @@
             this.barButtonItem7.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem7.ImageOptions.LargeImage")));
             this.barButtonItem7.LargeWidth = 70;
             this.barButtonItem7.Name = "barButtonItem7";
+            this.barButtonItem7.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem7_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -261,14 +268,15 @@
             this.textEditTenNguoiNhan.StyleController = this.layoutControl1;
             this.textEditTenNguoiNhan.TabIndex = 5;
             // 
-            // textEditPhieuNhan
+            // textEditSoPhieuNhan
             // 
-            this.textEditPhieuNhan.Location = new System.Drawing.Point(106, 12);
-            this.textEditPhieuNhan.MenuManager = this.ribbon;
-            this.textEditPhieuNhan.Name = "textEditPhieuNhan";
-            this.textEditPhieuNhan.Size = new System.Drawing.Size(503, 20);
-            this.textEditPhieuNhan.StyleController = this.layoutControl1;
-            this.textEditPhieuNhan.TabIndex = 4;
+            this.textEditSoPhieuNhan.Enabled = false;
+            this.textEditSoPhieuNhan.Location = new System.Drawing.Point(106, 12);
+            this.textEditSoPhieuNhan.MenuManager = this.ribbon;
+            this.textEditSoPhieuNhan.Name = "textEditSoPhieuNhan";
+            this.textEditSoPhieuNhan.Size = new System.Drawing.Size(503, 20);
+            this.textEditSoPhieuNhan.StyleController = this.layoutControl1;
+            this.textEditSoPhieuNhan.TabIndex = 4;
             // 
             // Root
             // 
@@ -285,7 +293,7 @@
             // 
             // layoutControlItem1
             // 
-            this.layoutControlItem1.Control = this.textEditPhieuNhan;
+            this.layoutControlItem1.Control = this.textEditSoPhieuNhan;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Size = new System.Drawing.Size(601, 24);
@@ -348,6 +356,7 @@
             this.Name = "RibbonFormPhieuNhan";
             this.Ribbon = this.ribbon;
             this.Text = "Phiếu Nhận";
+            this.Load += new System.EventHandler(this.RibbonFormPhieuNhan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
@@ -356,7 +365,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateEditNgayTao.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditNgayTao.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditTenNguoiNhan.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditPhieuNhan.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditSoPhieuNhan.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
@@ -370,7 +379,7 @@
         #endregion
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private DevExpress.XtraLayout.LayoutControlGroup Root;
-        private DevExpress.XtraEditors.TextEdit textEditPhieuNhan;
+        private DevExpress.XtraEditors.TextEdit textEditSoPhieuNhan;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;

@@ -18,7 +18,7 @@ namespace QuanLyXiNghiepMay
         public string ten { get; set; }
         public string diaChi { get; set; }
         public string ma { get; set; }
-        public string ten1 { get; set; }
+        public string ma1 { get; set; }
         public Nullable<int> soLuong { get; set; }
     }
 }

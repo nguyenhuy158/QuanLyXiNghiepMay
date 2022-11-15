@@ -9,6 +9,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Entity;
+using DevExpress.XtraRichEdit.Commands;
+using DevExpress.XtraGrid;
+using QuanLyXiNghiepMay.R;
+using DevExpress.XtraGrid.Views.Grid;
 
 namespace QuanLyXiNghiepMay.Forms.Form_Tables.Form_Detail.Form_Phieu_Nhan
 {
@@ -34,6 +38,146 @@ namespace QuanLyXiNghiepMay.Forms.Form_Tables.Form_Detail.Form_Phieu_Nhan
                 // Bind data to control when loading complete
                 gridControl1.DataSource = dbContext.PhieuNhans.Local.ToBindingList();
             }, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
+        }
+
+        private void barButtonItem7_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Dispose();
+        }
+
+        private void barButtonItem6_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Precenter.reloadDataSource(this, gridControl1);
+        }
+
+        private void barButtonItem5_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            clearForm();
+        }
+
+        private void clearForm()
+        {
+            String ma = Precenter.getMaPhieuNhan();
+            textEditSoPhieuNhan.Text = ma;
+            dateEditNgayTao.EditValue = DateTime.Now;
+            textEditTenNguoiNhan.Focus();
+            textEditTenNguoiNhan.Text = "";
+        }
+        private void removePhieuNhan()
+        {
+            var phieuNhan = (
+                            from sp in Precenter.data.PhieuNhans.ToList()
+                            where sp.so == textEditSoPhieuNhan.Text
+                            select sp
+                                  ).SingleOrDefault();
+
+            Precenter.data.PhieuNhans.Remove(phieuNhan);
+            Precenter.data.SaveChanges();
+        }
+        private void updatePhieuNhan()
+        {
+            PhieuNhan phieuNhan = (from t in Precenter.data.PhieuNhans
+                                   where t.so == textEditSoPhieuNhan.Text
+                                   select t).SingleOrDefault();
+
+
+            phieuNhan.ngayTao = (DateTime)dateEditNgayTao.EditValue;
+            phieuNhan.tenNguoiNhan = textEditTenNguoiNhan.Text;
+            Precenter.data.SaveChanges();
+        }
+        private void addPhieuNhan()
+        {
+            PhieuNhan phieuNhan = new PhieuNhan();
+            phieuNhan.so = textEditSoPhieuNhan.Text;
+            phieuNhan.ngayTao = (DateTime)dateEditNgayTao.EditValue;
+            phieuNhan.tenNguoiNhan = textEditTenNguoiNhan.Text;
+            Precenter.data.PhieuNhans.Add(phieuNhan);
+            Precenter.data.SaveChanges();
+        }
+
+
+        private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (Controler.isMessageBox(TemplateString.MESSAGE_DELETE, TemplateString.TITLE_WARNING))
+            {
+                try
+                {
+                    removePhieuNhan();
+                    Precenter.reloadDataSource(this, gridControl1);
+                    clearForm();
+                }
+                catch (Exception)
+                {
+                    if (textEditSoPhieuNhan.Text == Precenter.getMaSanPham())
+                    {
+                        Controler.messageBoxShow(TemplateString.PICK_ONE_ROW, TemplateString.TITLE_WARNING);
+                    }
+                    else
+                    {
+                        Controler.messageBoxShow(TemplateString.MESSAGE_DELETE_ERROR, TemplateString.TITLE_WARNING);
+                    }
+                }
+            }
+        }
+
+        private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (!Controler.isTextInputValid(dateEditNgayTao.EditValue.ToString()))
+            {
+                Controler.messageBoxShow(TemplateString.MESSAGE_INPUT_ERROR, TemplateString.TITLE_WARNING);
+            }
+            else
+            {
+                try
+                {
+                    updatePhieuNhan();
+                    Precenter.reloadDataSource(this, gridControl1);
+                    clearForm();
+                }
+                catch (Exception)
+                {
+                    Controler.messageBoxShow(TemplateString.MESSAGE_UPDATE_ERROR, TemplateString.TITLE_WARNING);
+                    dateEditNgayTao.Focus();
+                }
+            }
+        }
+
+        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (!Controler.isTextInputValid(dateEditNgayTao.EditValue.ToString()))
+            {
+                Controler.messageBoxShow(TemplateString.MESSAGE_INPUT_ERROR, TemplateString.TITLE_WARNING);
+            }
+            else
+            {
+                try
+                {
+                    addPhieuNhan();
+                    Precenter.reloadDataSource(this, gridControl1);
+                    clearForm();
+                }
+                catch (Exception)
+                {
+                    Controler.messageBoxShow(TemplateString.MESSAGE_INSERT_ERROR, TemplateString.TITLE_WARNING);
+                    dateEditNgayTao.Focus();
+                }
+            }
+        }
+
+        private void gridView1_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
+        {
+            int rowHandle = e.RowHandle;
+            PhieuNhan phieuNhan = (PhieuNhan)gridView1.GetRow(e.RowHandle);
+
+
+            textEditSoPhieuNhan.Text = phieuNhan.so;
+            dateEditNgayTao.EditValue = phieuNhan.ngayTao;
+            textEditTenNguoiNhan.Text = phieuNhan.tenNguoiNhan;
+        }
+
+        private void RibbonFormPhieuNhan_Load(object sender, EventArgs e)
+        {
+            clearForm();
         }
     }
 }

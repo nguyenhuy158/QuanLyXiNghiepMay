@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Entity;
+using QuanLyXiNghiepMay.R;
 
 namespace QuanLyXiNghiepMay.Forms.Form_Tables.Form_Detail.Form_Phieu_Phan_Cong
 {
@@ -26,6 +27,148 @@ namespace QuanLyXiNghiepMay.Forms.Form_Tables.Form_Detail.Form_Phieu_Phan_Cong
                 // Bind data to control when loading complete
                 gridControl11.DataSource = dbContext.ChiTietPhieuPhanCongs.Local.ToBindingList();
             }, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
+        }
+
+        private void RibbonFormChiTietPhieuPhanCong_Load(object sender, EventArgs e)
+        {
+            Precenter.loadDataSourceComboBox(comboBoxSoPhieuPhanCong, Constance.KEY_SO_PHIEU_PHAN_CONG);
+
+            Precenter.loadDataSourceComboBox(comboBoxMaSanPham, Constance.KEY_MA_SAN_PHAM);
+            Precenter.loadDataSourceComboBox(comboBoxTenSanPham, Constance.KEY_TEN_SAN_PHAM);
+            clearForm();
+        }
+
+        private void clearForm()
+        {
+            //String ma = Precenter.getMaPhieuPhanCong();
+            //textEditSoPhieuPhanCong.Text = ma;
+            //dateEditNgayTao.EditValue = DateTime.Now;
+            textEditSoLuong.Focus();
+            textEditSoLuong.Text = "";
+        }
+
+        private void barButtonItem7_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Dispose();
+        }
+
+        private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Precenter.reloadDataSource(this, gridControl11);
+        }
+
+        private void barButtonItem5_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            clearForm();
+        }
+
+        private void comboBoxTenSanPham_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboBoxMaSanPham.SelectedIndex = comboBoxTenSanPham.SelectedIndex;
+        }
+
+        private void updateChiTietPhieuPhanCong()
+        {
+            ChiTietPhieuPhanCong chiTietPhieuPhanCong = (from t in Precenter.data.ChiTietPhieuPhanCongs
+                                                         where t.soPhieuPhanCong == comboBoxSoPhieuPhanCong.SelectedValue.ToString() && t.maSanPham == comboBoxMaSanPham.SelectedValue.ToString()
+                                                         select t).SingleOrDefault();
+
+            chiTietPhieuPhanCong.soLuong = int.Parse(textEditSoLuong.Text);
+            Precenter.data.SaveChanges();
+        }
+        private void addChiTietPhieuPhanCong()
+        {
+            ChiTietPhieuPhanCong chiTietPhieuPhanCong = new ChiTietPhieuPhanCong();
+            chiTietPhieuPhanCong.soPhieuPhanCong = comboBoxSoPhieuPhanCong.SelectedValue.ToString();
+            chiTietPhieuPhanCong.maSanPham = comboBoxMaSanPham.SelectedValue.ToString();
+            chiTietPhieuPhanCong.soLuong = int.Parse(textEditSoLuong.Text);
+            Precenter.data.ChiTietPhieuPhanCongs.Add(chiTietPhieuPhanCong);
+            Precenter.data.SaveChanges();
+        }
+
+        private void removeChiTietPhieuPhanCong()
+        {
+            var chiTietPhieuPhanCong = (
+                            from t in Precenter.data.ChiTietPhieuPhanCongs.ToList()
+                            where t.soPhieuPhanCong == comboBoxSoPhieuPhanCong.SelectedValue.ToString() && t.maSanPham == comboBoxMaSanPham.SelectedValue.ToString()
+                            select t
+                                  ).SingleOrDefault();
+
+            Precenter.data.ChiTietPhieuPhanCongs.Remove(chiTietPhieuPhanCong);
+            Precenter.data.SaveChanges();
+        }
+
+        private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (Controler.isMessageBox(TemplateString.MESSAGE_DELETE, TemplateString.TITLE_WARNING))
+            {
+                try
+                {
+                    removeChiTietPhieuPhanCong();
+                    Precenter.reloadDataSource(this, gridControl11);
+                    clearForm();
+                }
+                catch (Exception)
+                {
+                    Controler.messageBoxShow(TemplateString.PICK_ONE_ROW, TemplateString.TITLE_WARNING);
+                }
+            }
+        }
+
+        private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (!Controler.isTextInputValid(textEditSoLuong.Text.ToString()))
+            {
+                Controler.messageBoxShow(TemplateString.MESSAGE_INPUT_ERROR, TemplateString.TITLE_WARNING);
+            }
+            else
+            {
+                try
+                {
+                    updateChiTietPhieuPhanCong();
+                    Precenter.reloadDataSource(this, gridControl11);
+                    clearForm();
+                }
+                catch (Exception)
+                {
+                    Controler.messageBoxShow(TemplateString.MESSAGE_UPDATE_ERROR, TemplateString.TITLE_WARNING);
+                    textEditSoLuong.Focus();
+                }
+            }
+        }
+
+        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (!Controler.isTextInputValid(textEditSoLuong.Text.ToString()))
+            {
+                Controler.messageBoxShow(TemplateString.MESSAGE_INPUT_ERROR, TemplateString.TITLE_WARNING);
+            }
+            else
+            {
+                try
+                {
+                    addChiTietPhieuPhanCong();
+                    Precenter.reloadDataSource(this, gridControl11);
+                    clearForm();
+                }
+                catch (Exception)
+                {
+                    Controler.messageBoxShow(TemplateString.MESSAGE_INSERT_ERROR, TemplateString.TITLE_WARNING);
+                    textEditSoLuong.Focus();
+                }
+            }
+        }
+
+        private void gridView11_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
+        {
+            int rowHandle = e.RowHandle;
+            ChiTietPhieuPhanCong chiTietPhieuPhanCong = (ChiTietPhieuPhanCong)gridView11.GetRow(e.RowHandle);
+
+
+            comboBoxSoPhieuPhanCong.SelectedValue = chiTietPhieuPhanCong.soPhieuPhanCong;
+            comboBoxMaSanPham.SelectedValue = chiTietPhieuPhanCong.maSanPham;
+            comboBoxTenSanPham.SelectedValue = chiTietPhieuPhanCong.SanPham.ten;
+            textEditSoLuong.Text = chiTietPhieuPhanCong.soLuong.ToString();
         }
     }
 }
