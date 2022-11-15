@@ -158,5 +158,14 @@ namespace QuanLyXiNghiepMay
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_upgraddiagrams");
         }
+    
+        public virtual ObjectResult<ThongKeSanPhamSanXuatCuaTungPhanXuong_Result> ThongKeSanPhamSanXuatCuaTungPhanXuong(string maPhanXuong)
+        {
+            var maPhanXuongParameter = maPhanXuong != null ?
+                new ObjectParameter("maPhanXuong", maPhanXuong) :
+                new ObjectParameter("maPhanXuong", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ThongKeSanPhamSanXuatCuaTungPhanXuong_Result>("ThongKeSanPhamSanXuatCuaTungPhanXuong", maPhanXuongParameter);
+        }
     }
 }

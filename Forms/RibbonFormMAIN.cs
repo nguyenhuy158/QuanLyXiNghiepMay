@@ -1,5 +1,6 @@
 ﻿using DevExpress.XtraBars;
 using DevExpress.XtraBars.Ribbon;
+using DevExpress.XtraEditors;
 using DevExpress.XtraReports.UI;
 using QuanLyXiNghiepMay.Forms.Features;
 using QuanLyXiNghiepMay.Forms.Form_Tables;
@@ -50,9 +51,7 @@ namespace QuanLyXiNghiepMay
 
         private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
         {
-            XtraReportBaoCaoPhanCongTheoNgay xtraReport2 = new XtraReportBaoCaoPhanCongTheoNgay();
-            
-            xtraReport2.ShowPreview();
+
         }
 
         private void ribbon_Click(object sender, EventArgs e)
@@ -62,7 +61,7 @@ namespace QuanLyXiNghiepMay
 
         private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
         {
-            ControlerMain.openForm(this, typeof(RibbonFormPhieuNhan)); 
+            ControlerMain.openForm(this, typeof(RibbonFormPhieuNhan));
         }
 
         private void barButtonItem5_ItemClick(object sender, ItemClickEventArgs e)
@@ -116,6 +115,44 @@ namespace QuanLyXiNghiepMay
         private void barButtonItem14_ItemClick(object sender, ItemClickEventArgs e)
         {
             ControlerMain.openForm(this, typeof(RibbonFormChiTietPhieuPhanCong));
+        }
+
+        private void barButtonItem17_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void barButtonItem18_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void barListItem1_ListItemClick_1(object sender, ListItemClickEventArgs e)
+        {
+            //phân công theo ngày
+            //phân xưởng ký nhận
+            //sao kê sản phẩm theo phân xưởng
+
+            switch (e.Index)
+            {
+                case 0:
+                    XtraReportBaoCaoPhanCongTheoNgay xtraReportBaoCaoPhanCongTheoNgay = new XtraReportBaoCaoPhanCongTheoNgay();
+
+                    xtraReportBaoCaoPhanCongTheoNgay.ShowPreview();
+                    break;
+                case 1:
+                    XtraReportPhanXuongKyNhan xtraReportPhanXuongKyNhan = new XtraReportPhanXuongKyNhan();
+
+                    xtraReportPhanXuongKyNhan.ShowPreview();
+                    break;
+                case 2:
+                    XtraReportSanPhamSanXuatCuaTungPhanXuong xtraReportSanPhamSanXuatCuaTungPhanXuong = new XtraReportSanPhamSanXuatCuaTungPhanXuong();
+
+                    xtraReportSanPhamSanXuatCuaTungPhanXuong.ShowPreview();
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }
