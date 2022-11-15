@@ -523,9 +523,35 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\controls %281%29.png" />
+    <None Include="Resources\controls.png" />
     <Content Include="Resources\Database_Diagrams.png" />
     <None Include="Resources\icon_logo.png" />
     <None Include="Resources\while_logo.png" />
+    <None Include="Resources\purchase.png" />
+    <None Include="Resources\product.png" />
+    <None Include="Resources\gears.png" />
+    <None Include="Resources\settings.png" />
+    <None Include="Resources\volume.png" />
+    <None Include="Resources\stairs.png" />
+    <None Include="Resources\factory1.png" />
+    <None Include="Resources\warehouse %281%29.png" />
+    <None Include="Resources\warehouse.png" />
+    <None Include="Resources\robotic-arm.png" />
+    <None Include="Resources\receive.png" />
+    <None Include="Resources\send.png" />
+    <None Include="Resources\shipped.png" />
+    <None Include="Resources\detail.png" />
+    <None Include="Resources\review.png" />
+    <None Include="Resources\printer %282%29.png" />
+    <None Include="Resources\printer %281%29.png" />
+    <None Include="Resources\printer1.png" />
+    <None Include="Resources\exit1.png" />
+    <None Include="Resources\refresh.png" />
+    <None Include="Resources\rubber.png" />
+    <None Include="Resources\delete-file.png" />
+    <None Include="Resources\edit1.png" />
+    <None Include="Resources\floppy-disk.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
