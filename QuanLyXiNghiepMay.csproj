@@ -137,6 +137,9 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaoCaoPhanXuongKyNhan_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="BaoCaoPhieuPhanCongTheoNgay_Result.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -157,6 +160,12 @@
     </Compile>
     <Compile Include="Forms\Features\XtraReportBaoCaoPhanCongTheoNgay.Designer.cs">
       <DependentUpon>XtraReportBaoCaoPhanCongTheoNgay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Features\XtraReportPhanXuongKyNhan.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Features\XtraReportPhanXuongKyNhan.Designer.cs">
+      <DependentUpon>XtraReportPhanXuongKyNhan.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Form Tables\Form Child\FormCongDoan.cs">
       <SubType>Form</SubType>
@@ -359,6 +368,9 @@
     <EmbeddedResource Include="Forms\Features\XtraReportBaoCaoPhanCongTheoNgay.resx">
       <DependentUpon>XtraReportBaoCaoPhanCongTheoNgay.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Features\XtraReportPhanXuongKyNhan.resx">
+      <DependentUpon>XtraReportPhanXuongKyNhan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form Tables\Form Child\FormCongDoan.resx">
       <DependentUpon>FormCongDoan.cs</DependentUpon>
     </EmbeddedResource>
@@ -500,6 +512,7 @@
     <None Include="Resources\ic_group.png" />
     <None Include="Resources\save_FILL0_wght400_GRAD0_opsz48.png" />
     <None Include="Resources\Image1.png" />
+    <None Include="Resources\back_logo.png" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
@@ -510,7 +523,6 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
-    <None Include="Resources\back_logo.png" />
     <Content Include="Resources\Database_Diagrams.png" />
     <None Include="Resources\icon_logo.png" />
     <None Include="Resources\while_logo.png" />

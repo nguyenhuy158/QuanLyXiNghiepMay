@@ -38,6 +38,15 @@ namespace QuanLyXiNghiepMay
         public virtual DbSet<SanPham> SanPhams { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
     
+        public virtual ObjectResult<BaoCaoPhanXuongKyNhan_Result> BaoCaoPhanXuongKyNhan(Nullable<System.DateTime> ngay)
+        {
+            var ngayParameter = ngay.HasValue ?
+                new ObjectParameter("Ngay", ngay) :
+                new ObjectParameter("Ngay", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<BaoCaoPhanXuongKyNhan_Result>("BaoCaoPhanXuongKyNhan", ngayParameter);
+        }
+    
         public virtual ObjectResult<BaoCaoPhieuPhanCongTheoNgay_Result> BaoCaoPhieuPhanCongTheoNgay(Nullable<System.DateTime> ngay)
         {
             var ngayParameter = ngay.HasValue ?

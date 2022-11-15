@@ -191,6 +191,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="BaoCaoPhanXuongKyNhan" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Ngay" Type="datetime" Mode="In" />
+        </Function>
         <Function Name="BaoCaoPhieuPhanCongTheoNgay" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Ngay" Type="datetime" Mode="In" />
         </Function>
@@ -528,6 +531,9 @@
             <End Role="PhanXuong" EntitySet="PhanXuongs" />
             <End Role="PhieuPhanCong" EntitySet="PhieuPhanCongs" />
           </AssociationSet>
+          <FunctionImport Name="BaoCaoPhanXuongKyNhan" ReturnType="Collection(QuanLyVatTuCuaXiNghiepMayModel.BaoCaoPhanXuongKyNhan_Result)">
+            <Parameter Name="Ngay" Mode="In" Type="DateTime" />
+          </FunctionImport>
           <FunctionImport Name="BaoCaoPhieuPhanCongTheoNgay" ReturnType="Collection(QuanLyVatTuCuaXiNghiepMayModel.BaoCaoPhieuPhanCongTheoNgay_Result)">
             <Parameter Name="Ngay" Mode="In" Type="DateTime" />
           </FunctionImport>
@@ -562,6 +568,12 @@
           </FunctionImport>
           <FunctionImport Name="sp_upgraddiagrams" />
         </EntityContainer>
+        <ComplexType Name="BaoCaoPhanXuongKyNhan_Result">
+          <Property Type="String" Name="ma" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="diaChi" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ten" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="soLuong" Nullable="true" />
+        </ComplexType>
         <ComplexType Name="BaoCaoPhieuPhanCongTheoNgay_Result">
           <Property Type="String" Name="so" Nullable="false" MaxLength="50" />
           <Property Type="String" Name="maPhanXuong" Nullable="false" MaxLength="50" />
@@ -684,6 +696,16 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="BaoCaoPhanXuongKyNhan" FunctionName="QuanLyVatTuCuaXiNghiepMayModel.Store.BaoCaoPhanXuongKyNhan">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QuanLyVatTuCuaXiNghiepMayModel.BaoCaoPhanXuongKyNhan_Result">
+                <ScalarProperty Name="ma" ColumnName="ma" />
+                <ScalarProperty Name="diaChi" ColumnName="diaChi" />
+                <ScalarProperty Name="ten" ColumnName="ten" />
+                <ScalarProperty Name="soLuong" ColumnName="soLuong" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="BaoCaoPhieuPhanCongTheoNgay" FunctionName="QuanLyVatTuCuaXiNghiepMayModel.Store.BaoCaoPhieuPhanCongTheoNgay">
             <ResultMapping>
               <ComplexTypeMapping TypeName="QuanLyVatTuCuaXiNghiepMayModel.BaoCaoPhieuPhanCongTheoNgay_Result">
