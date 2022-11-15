@@ -41,6 +41,15 @@ namespace QuanLyXiNghiepMay.Forms.Form_Tables.Form_Parent
             ribbonControl1.SelectPage(ribbonPage1);
         }
 
+       
+
+       
+
+        private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Precenter.reloadDataSource(this, gridControl1);
+        }
+
         private void clearForm()
         {
             String ma = Precenter.getMaSanPham();
@@ -49,6 +58,18 @@ namespace QuanLyXiNghiepMay.Forms.Form_Tables.Form_Parent
             textEditTenSanPham.Text = "";
             textEditGhiChu.Text = "";
         }
+
+        private void gridView1_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
+        {
+            int rowHandle = e.RowHandle;
+            SanPham sanPham = (SanPham)gridView1.GetRow(e.RowHandle);
+
+
+            textEditMaSanPham.Text = sanPham.ma;
+            textEditTenSanPham.Text = sanPham.ten;
+            textEditGhiChu.Text = sanPham.ghiChu;
+        }
+
 
         private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -71,23 +92,6 @@ namespace QuanLyXiNghiepMay.Forms.Form_Tables.Form_Parent
                 }
             }
         }
-
-        private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            Precenter.reloadDataSource(this, gridControl1);
-        }
-
-        private void gridView1_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
-        {
-            int rowHandle = e.RowHandle;
-            SanPham sanPham = (SanPham)gridView1.GetRow(e.RowHandle);
-
-
-            textEditMaSanPham.Text = sanPham.ma;
-            textEditTenSanPham.Text = sanPham.ten;
-            textEditGhiChu.Text = sanPham.ghiChu;
-        }
-
         private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (!Controler.isTextInputValid(textEditTenSanPham.Text))
@@ -108,26 +112,6 @@ namespace QuanLyXiNghiepMay.Forms.Form_Tables.Form_Parent
                     textEditTenSanPham.Focus();
                 }
             }
-        }
-
-        private void updateSanPham()
-        {
-            SanPham sanPham = (from t in Precenter.data.SanPhams
-                               where t.ma == textEditMaSanPham.Text
-                               select t).SingleOrDefault();
-
-            sanPham.ten = textEditTenSanPham.Text.Trim();
-            sanPham.ghiChu = textEditGhiChu.Text.Trim();
-            Precenter.data.SaveChanges();
-        }
-        private void addSanPham()
-        {
-            SanPham sanPham = new SanPham();
-            sanPham.ma = textEditMaSanPham.Text.Trim();
-            sanPham.ten = textEditTenSanPham.Text.Trim();
-            sanPham.ghiChu = textEditGhiChu.Text.Trim();
-            Precenter.data.SanPhams.Add(sanPham);
-            Precenter.data.SaveChanges();
         }
 
         private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -154,6 +138,26 @@ namespace QuanLyXiNghiepMay.Forms.Form_Tables.Form_Parent
             }
         }
 
+        private void updateSanPham()
+        {
+            SanPham sanPham = (from t in Precenter.data.SanPhams
+                               where t.ma == textEditMaSanPham.Text
+                               select t).SingleOrDefault();
+
+            sanPham.ten = textEditTenSanPham.Text.Trim();
+            sanPham.ghiChu = textEditGhiChu.Text.Trim();
+            Precenter.data.SaveChanges();
+        }
+        private void addSanPham()
+        {
+            SanPham sanPham = new SanPham();
+            sanPham.ma = textEditMaSanPham.Text.Trim();
+            sanPham.ten = textEditTenSanPham.Text.Trim();
+            sanPham.ghiChu = textEditGhiChu.Text.Trim();
+            Precenter.data.SanPhams.Add(sanPham);
+            Precenter.data.SaveChanges();
+        }
+
         private void removeSanPham()
         {
             var sanPham = (
@@ -165,6 +169,10 @@ namespace QuanLyXiNghiepMay.Forms.Form_Tables.Form_Parent
             Precenter.data.SanPhams.Remove(sanPham);
             Precenter.data.SaveChanges();
         }
+
+        
+
+        
 
         private void barButtonItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
