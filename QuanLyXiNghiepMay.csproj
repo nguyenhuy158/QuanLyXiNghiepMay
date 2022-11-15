@@ -510,7 +510,10 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\back_logo.png" />
     <Content Include="Resources\Database_Diagrams.png" />
+    <None Include="Resources\icon_logo.png" />
+    <None Include="Resources\while_logo.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
