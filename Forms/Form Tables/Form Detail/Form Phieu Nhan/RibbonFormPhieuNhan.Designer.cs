@@ -255,6 +255,7 @@
             this.dateEditNgayTao.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dateEditNgayTao.Properties.EditFormat.FormatString = "dd/MM/yyyy";
             this.dateEditNgayTao.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateEditNgayTao.Properties.MaskSettings.Set("mask", "dd / MM/ yyyy");
             this.dateEditNgayTao.Size = new System.Drawing.Size(503, 20);
             this.dateEditNgayTao.StyleController = this.layoutControl1;
             this.dateEditNgayTao.TabIndex = 6;
