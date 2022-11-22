@@ -80,13 +80,8 @@ namespace QuanLyXiNghiepMay
 
         private void ribbon_Merge(object sender, DevExpress.XtraBars.Ribbon.RibbonMergeEventArgs e)
         {
-            //ribbon.SelectedPage = ribbon.MergedCategories[0].Pages[0];
-            //RibbonControl parentRibbonControl = sender as RibbonControl;
-            //RibbonControl childRibbonControl = e.MergedChild;
-            //parentRibbonControl.StatusBar.MergeStatusBar(childRibbonControl.StatusBar);
-
-            XtraMessageBox.Show(ribbon.MergedPages.Count + "");
-            ribbon.SelectPage(ribbon.MergedPages.GetPageByText("Sản phẩm"));
+            RibbonPage indexPage = ribbon.MergedPages[0];
+            ribbon.SelectPage(indexPage);
         }
 
         private void ribbon_UnMerge(object sender, RibbonMergeEventArgs e)
