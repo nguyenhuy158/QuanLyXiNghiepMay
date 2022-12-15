@@ -199,6 +199,18 @@ namespace QuanLyXiNghiepMay.Forms.Form_Tables.Form_Parent
             }
             else
             {
+                if (barCheckItemHighlightEvenRow.Checked)
+                {
+                    gridView1.OptionsPrint.UsePrintStyles = true;
+                    // Enable the AppearancePrint.EvenRow property's settings.
+                    gridView1.OptionsPrint.EnableAppearanceEvenRow = true;
+                    // Set the background color of the even rows.
+                    gridView1.AppearancePrint.EvenRow.BackColor = Color.LightYellow;
+                }
+                else
+                {
+                    gridView1.OptionsPrint.UsePrintStyles = false;
+                }
                 // Opens the Preview window.
                 if (barCheckItemWindown.Checked)
                 {
