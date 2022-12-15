@@ -67,7 +67,7 @@
             this.textEditUsername.Name = "textEditUsername";
             this.textEditUsername.Size = new System.Drawing.Size(268, 28);
             this.textEditUsername.StyleController = this.layoutControl1;
-            this.textEditUsername.TabIndex = 4;
+            this.textEditUsername.TabIndex = 0;
             // 
             // textEditPassword
             // 
@@ -77,7 +77,7 @@
             this.textEditPassword.Properties.PasswordChar = '*';
             this.textEditPassword.Size = new System.Drawing.Size(268, 28);
             this.textEditPassword.StyleController = this.layoutControl1;
-            this.textEditPassword.TabIndex = 5;
+            this.textEditPassword.TabIndex = 1;
             // 
             // simpleButtonLogin
             // 
@@ -85,7 +85,7 @@
             this.simpleButtonLogin.Name = "simpleButtonLogin";
             this.simpleButtonLogin.Size = new System.Drawing.Size(268, 28);
             this.simpleButtonLogin.StyleController = this.layoutControl1;
-            this.simpleButtonLogin.TabIndex = 7;
+            this.simpleButtonLogin.TabIndex = 2;
             this.simpleButtonLogin.Text = "Sign in";
             this.simpleButtonLogin.Click += new System.EventHandler(this.simpleButtonLogin_Click);
             // 
