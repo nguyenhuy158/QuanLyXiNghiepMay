@@ -8,6 +8,11 @@ namespace QuanLyXiNghiepMay.R
 {
     internal class Constance
     {
+        
+        public static string USERNAME = "admin";
+        public static string PASSWORD = "123";
+        public static int TIME_OUT = 3000;
+
         public static string KEY_SO_PHIEU_NHAN = "KEY_SO_PHIEU_NHAN";
         public static string KEY_SO_PHIEU_PHAN_CONG = "KEY_SO_PHIEU_PHAN_CONG";
 
