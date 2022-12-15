@@ -18,7 +18,7 @@ namespace QuanLyXiNghiepMay.Forms.Form_Tables.Form_Parent
 {
     public partial class XtraFormSanPham : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-        
+
 
         public XtraFormSanPham()
         {
@@ -41,9 +41,9 @@ namespace QuanLyXiNghiepMay.Forms.Form_Tables.Form_Parent
             ribbonControl1.SelectPage(ribbonPage1);
         }
 
-       
 
-       
+
+
 
         private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -170,9 +170,9 @@ namespace QuanLyXiNghiepMay.Forms.Form_Tables.Form_Parent
             Precenter.data.SaveChanges();
         }
 
-        
 
-        
+
+
 
         private void barButtonItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -187,6 +187,29 @@ namespace QuanLyXiNghiepMay.Forms.Form_Tables.Form_Parent
         private void barButtonItem7_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Dispose();
+        }
+
+        private void barButtonItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            // Check whether the Grid Control can be previewed.
+            if (!gridView1.GridControl.IsPrintingAvailable)
+            {
+                MessageBox.Show("The 'DevExpress.XtraPrinting' Library is not found", "Error");
+                return;
+            }
+            else
+            {
+                // Opens the Preview window.
+                if (barCheckItemWindown.Checked)
+                {
+                    gridView1.ShowRibbonPrintPreview();
+                }
+                else
+                {
+                    gridView1.ShowPrintPreview();
+                }
+
+            }
         }
     }
 }

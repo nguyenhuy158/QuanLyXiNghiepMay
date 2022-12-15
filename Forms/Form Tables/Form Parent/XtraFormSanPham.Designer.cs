@@ -55,9 +55,12 @@
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItemPrint = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.barCheckItemWindown = new DevExpress.XtraBars.BarCheckItem();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
@@ -79,13 +82,13 @@
             // gridControl1
             // 
             this.gridControl1.DataSource = typeof(QuanLyXiNghiepMay.SanPham);
-            this.gridControl1.Location = new System.Drawing.Point(12, 84);
+            this.gridControl1.Location = new System.Drawing.Point(16, 118);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit1,
             this.repositoryItemButtonEditRemove});
-            this.gridControl1.Size = new System.Drawing.Size(609, 242);
+            this.gridControl1.Size = new System.Drawing.Size(855, 161);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -152,36 +155,36 @@
             this.layoutControl1.Controls.Add(this.textEditMaSanPham);
             this.layoutControl1.Controls.Add(this.gridControl1);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutControl1.Location = new System.Drawing.Point(0, 160);
+            this.layoutControl1.Location = new System.Drawing.Point(0, 203);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(716, 0, 650, 400);
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(633, 338);
+            this.layoutControl1.Size = new System.Drawing.Size(887, 295);
             this.layoutControl1.TabIndex = 1;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // textEditGhiChu
             // 
-            this.textEditGhiChu.Location = new System.Drawing.Point(95, 60);
+            this.textEditGhiChu.Location = new System.Drawing.Point(103, 84);
             this.textEditGhiChu.Name = "textEditGhiChu";
-            this.textEditGhiChu.Size = new System.Drawing.Size(526, 20);
+            this.textEditGhiChu.Size = new System.Drawing.Size(768, 28);
             this.textEditGhiChu.StyleController = this.layoutControl1;
             this.textEditGhiChu.TabIndex = 6;
             // 
             // textEditTenSanPham
             // 
-            this.textEditTenSanPham.Location = new System.Drawing.Point(95, 36);
+            this.textEditTenSanPham.Location = new System.Drawing.Point(103, 50);
             this.textEditTenSanPham.Name = "textEditTenSanPham";
-            this.textEditTenSanPham.Size = new System.Drawing.Size(526, 20);
+            this.textEditTenSanPham.Size = new System.Drawing.Size(768, 28);
             this.textEditTenSanPham.StyleController = this.layoutControl1;
             this.textEditTenSanPham.TabIndex = 5;
             // 
             // textEditMaSanPham
             // 
             this.textEditMaSanPham.Enabled = false;
-            this.textEditMaSanPham.Location = new System.Drawing.Point(95, 12);
+            this.textEditMaSanPham.Location = new System.Drawing.Point(103, 16);
             this.textEditMaSanPham.Name = "textEditMaSanPham";
-            this.textEditMaSanPham.Size = new System.Drawing.Size(526, 20);
+            this.textEditMaSanPham.Size = new System.Drawing.Size(768, 28);
             this.textEditMaSanPham.StyleController = this.layoutControl1;
             this.textEditMaSanPham.TabIndex = 4;
             // 
@@ -195,15 +198,15 @@
             this.layoutControlItem3,
             this.layoutControlItem4});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(633, 338);
+            this.Root.Size = new System.Drawing.Size(887, 295);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.gridControl1;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 72);
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 102);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(613, 246);
+            this.layoutControlItem1.Size = new System.Drawing.Size(861, 167);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
@@ -212,25 +215,25 @@
             this.layoutControlItem2.Control = this.textEditMaSanPham;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(613, 24);
+            this.layoutControlItem2.Size = new System.Drawing.Size(861, 34);
             this.layoutControlItem2.Text = "Mã sản phẩm";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(71, 13);
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.textEditTenSanPham;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 24);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 34);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(613, 24);
+            this.layoutControlItem3.Size = new System.Drawing.Size(861, 34);
             this.layoutControlItem3.Text = "Tên sản phẩm";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(71, 13);
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.textEditGhiChu;
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 48);
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 68);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(613, 24);
+            this.layoutControlItem4.Size = new System.Drawing.Size(861, 34);
             this.layoutControlItem4.Text = "Ghi chú";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(71, 13);
             // 
@@ -247,14 +250,16 @@
             this.barButtonItem4,
             this.barButtonItem5,
             this.barButtonItem6,
-            this.barButtonItem7});
+            this.barButtonItem7,
+            this.barButtonItemPrint,
+            this.barCheckItemWindown});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 10;
+            this.ribbonControl1.MaxItemId = 15;
             this.ribbonControl1.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.OnlyWhenMaximized;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
-            this.ribbonControl1.Size = new System.Drawing.Size(633, 160);
+            this.ribbonControl1.Size = new System.Drawing.Size(887, 203);
             // 
             // barButtonItem1
             // 
@@ -290,6 +295,7 @@
             this.barButtonItem4.ImageOptions.LargeImage = global::QuanLyXiNghiepMay.Properties.Resources.refresh;
             this.barButtonItem4.LargeWidth = 70;
             this.barButtonItem4.Name = "barButtonItem4";
+            this.barButtonItem4.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
             // 
             // barButtonItem5
@@ -327,11 +333,21 @@
             this.barButtonItem7.Name = "barButtonItem7";
             this.barButtonItem7.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem7_ItemClick);
             // 
+            // barButtonItemPrint
+            // 
+            this.barButtonItemPrint.Caption = "In danh sách";
+            this.barButtonItemPrint.Id = 10;
+            this.barButtonItemPrint.ImageOptions.Image = global::QuanLyXiNghiepMay.Properties.Resources.ic_print_table;
+            this.barButtonItemPrint.Name = "barButtonItemPrint";
+            this.barButtonItemPrint.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText)));
+            this.barButtonItemPrint.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem8_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup1,
-            this.ribbonPageGroup2});
+            this.ribbonPageGroup2,
+            this.ribbonPageGroup3});
             this.ribbonPage1.Name = "ribbonPage1";
             this.ribbonPage1.Text = "Sản phẩm";
             // 
@@ -351,11 +367,28 @@
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "Nâng cao";
             // 
+            // ribbonPageGroup3
+            // 
+            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItemPrint);
+            this.ribbonPageGroup3.ItemLinks.Add(this.barCheckItemWindown);
+            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
+            this.ribbonPageGroup3.Text = "ribbonPageGroup3";
+            // 
+            // barCheckItemWindown
+            // 
+            this.barCheckItemWindown.BindableChecked = true;
+            this.barCheckItemWindown.Caption = "Hiển thị dạng cửa sổ";
+            this.barCheckItemWindown.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText;
+            this.barCheckItemWindown.Checked = true;
+            this.barCheckItemWindown.Id = 14;
+            this.barCheckItemWindown.Name = "barCheckItemWindown";
+            this.barCheckItemWindown.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
+            // 
             // XtraFormSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(633, 498);
+            this.ClientSize = new System.Drawing.Size(887, 498);
             this.Controls.Add(this.layoutControl1);
             this.Controls.Add(this.ribbonControl1);
             this.Name = "XtraFormSanPham";
@@ -414,5 +447,8 @@
         private DevExpress.XtraBars.PopupMenu popupMenu1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem6;
         private DevExpress.XtraBars.BarButtonItem barButtonItem7;
+        private DevExpress.XtraBars.BarButtonItem barButtonItemPrint;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
+        private DevExpress.XtraBars.BarCheckItem barCheckItemWindown;
     }
 }
