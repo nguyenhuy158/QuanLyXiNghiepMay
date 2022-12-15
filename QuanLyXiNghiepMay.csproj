@@ -373,6 +373,12 @@
     <Compile Include="ThongKeSanPhamSanXuatCuaTungPhanXuong_Result.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="XtraFormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XtraFormLogin.Designer.cs">
+      <DependentUpon>XtraFormLogin.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\Features\Report1.rdlc" />
     <EmbeddedResource Include="Forms\Features\Report2.rdlc" />
     <EmbeddedResource Include="Forms\Features\XtraReportBaoCaoPhanCongTheoNgay.resx">
@@ -462,6 +468,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RibbonFormMAIN.resx">
       <DependentUpon>RibbonFormMAIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraFormLogin.resx">
+      <DependentUpon>XtraFormLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

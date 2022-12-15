@@ -13,7 +13,7 @@ namespace QuanLyXiNghiepMay
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new RibbonFormMAIN());
+            Application.Run(new XtraFormLogin());
         }
     }
 }
