@@ -3,6 +3,9 @@
 
     internal class TemplateString
     {
+        public static string CAPTION_LOGIN_FAIL = "Login Fail";
+        public static string LOGIN_FAIL = "Login thất bại vui lòng kiểm tra lại thông tin";
+
         public static string MESSAGE_DELETE = "Bạn thật sự muốn xóa?";
         public static string MESSAGE_DELETE_ERROR = "Xoá thất bại thông tin này tồn tại trong các bảng khác";
         public static string TITLE_WARNING = "Cảnh báo";
