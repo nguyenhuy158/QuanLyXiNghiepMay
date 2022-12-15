@@ -19,9 +19,12 @@ namespace QuanLyXiNghiepMay
         public XtraFormLogin()
         {
             InitializeComponent();
+
+            //enter handle login
+            this.AcceptButton = simpleButtonLogin;
         }
 
-        private void simpleButton11_Click(object sender, EventArgs e)
+        private void simpleButtonLogin_Click(object sender, EventArgs e)
         {
             if (textEditUsername.Text == Constance.USERNAME
                 && textEditPassword.Text == Constance.PASSWORD)
@@ -45,5 +48,11 @@ namespace QuanLyXiNghiepMay
                 XtraMessageBox.Show(args).ToString();
             }
         }
+
+        private void XtraFormLogin_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
     }
 }

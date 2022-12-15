@@ -31,7 +31,7 @@
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.textEditUsername = new DevExpress.XtraEditors.TextEdit();
             this.textEditPassword = new DevExpress.XtraEditors.TextEdit();
-            this.simpleButton11 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButtonLogin = new DevExpress.XtraEditors.SimpleButton();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -50,7 +50,7 @@
             // 
             this.layoutControl1.Controls.Add(this.textEditUsername);
             this.layoutControl1.Controls.Add(this.textEditPassword);
-            this.layoutControl1.Controls.Add(this.simpleButton11);
+            this.layoutControl1.Controls.Add(this.simpleButtonLogin);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
@@ -79,15 +79,15 @@
             this.textEditPassword.StyleController = this.layoutControl1;
             this.textEditPassword.TabIndex = 5;
             // 
-            // simpleButton11
+            // simpleButtonLogin
             // 
-            this.simpleButton11.Location = new System.Drawing.Point(15, 79);
-            this.simpleButton11.Name = "simpleButton11";
-            this.simpleButton11.Size = new System.Drawing.Size(268, 28);
-            this.simpleButton11.StyleController = this.layoutControl1;
-            this.simpleButton11.TabIndex = 7;
-            this.simpleButton11.Text = "Sign in";
-            this.simpleButton11.Click += new System.EventHandler(this.simpleButton11_Click);
+            this.simpleButtonLogin.Location = new System.Drawing.Point(15, 79);
+            this.simpleButtonLogin.Name = "simpleButtonLogin";
+            this.simpleButtonLogin.Size = new System.Drawing.Size(268, 28);
+            this.simpleButtonLogin.StyleController = this.layoutControl1;
+            this.simpleButtonLogin.TabIndex = 7;
+            this.simpleButtonLogin.Text = "Sign in";
+            this.simpleButtonLogin.Click += new System.EventHandler(this.simpleButtonLogin_Click);
             // 
             // Root
             // 
@@ -135,7 +135,7 @@
             // 
             this.layoutControlItem4.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.layoutControlItem4.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem4.Control = this.simpleButton11;
+            this.layoutControlItem4.Control = this.simpleButtonLogin;
             this.layoutControlItem4.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem4.CustomizationFormText = "layoutControlItem4";
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 64);
@@ -158,6 +158,7 @@
             this.Name = "XtraFormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.XtraFormLogin_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.textEditUsername.Properties)).EndInit();
@@ -175,7 +176,7 @@
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private DevExpress.XtraEditors.TextEdit textEditUsername;
         private DevExpress.XtraEditors.TextEdit textEditPassword;
-        private DevExpress.XtraEditors.SimpleButton simpleButton11;
+        private DevExpress.XtraEditors.SimpleButton simpleButtonLogin;
         private DevExpress.XtraLayout.LayoutControlGroup Root;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
