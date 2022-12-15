@@ -575,6 +575,7 @@
     <None Include="Resources\delete-file.png" />
     <None Include="Resources\edit1.png" />
     <None Include="Resources\floppy-disk.png" />
+    <None Include="Resources\ic_print_table.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
