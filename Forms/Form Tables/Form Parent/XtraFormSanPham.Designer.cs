@@ -56,11 +56,12 @@
             this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItemPrint = new DevExpress.XtraBars.BarButtonItem();
+            this.barCheckItemWindown = new DevExpress.XtraBars.BarCheckItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barCheckItemWindown = new DevExpress.XtraBars.BarCheckItem();
+            this.barCheckItemHighlightEvenRow = new DevExpress.XtraBars.BarCheckItem();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
@@ -252,9 +253,10 @@
             this.barButtonItem6,
             this.barButtonItem7,
             this.barButtonItemPrint,
-            this.barCheckItemWindown});
+            this.barCheckItemWindown,
+            this.barCheckItemHighlightEvenRow});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 15;
+            this.ribbonControl1.MaxItemId = 16;
             this.ribbonControl1.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.OnlyWhenMaximized;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -342,6 +344,16 @@
             this.barButtonItemPrint.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText)));
             this.barButtonItemPrint.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem8_ItemClick);
             // 
+            // barCheckItemWindown
+            // 
+            this.barCheckItemWindown.BindableChecked = true;
+            this.barCheckItemWindown.Caption = "Hiển thị dạng cửa sổ";
+            this.barCheckItemWindown.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText;
+            this.barCheckItemWindown.Checked = true;
+            this.barCheckItemWindown.Id = 14;
+            this.barCheckItemWindown.Name = "barCheckItemWindown";
+            this.barCheckItemWindown.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -371,18 +383,18 @@
             // 
             this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItemPrint);
             this.ribbonPageGroup3.ItemLinks.Add(this.barCheckItemWindown);
+            this.ribbonPageGroup3.ItemLinks.Add(this.barCheckItemHighlightEvenRow);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             this.ribbonPageGroup3.Text = "ribbonPageGroup3";
             // 
-            // barCheckItemWindown
+            // barCheckItemHighlightEvenRow
             // 
-            this.barCheckItemWindown.BindableChecked = true;
-            this.barCheckItemWindown.Caption = "Hiển thị dạng cửa sổ";
-            this.barCheckItemWindown.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText;
-            this.barCheckItemWindown.Checked = true;
-            this.barCheckItemWindown.Id = 14;
-            this.barCheckItemWindown.Name = "barCheckItemWindown";
-            this.barCheckItemWindown.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
+            this.barCheckItemHighlightEvenRow.BindableChecked = true;
+            this.barCheckItemHighlightEvenRow.Caption = "Hightlight dòng chẳn";
+            this.barCheckItemHighlightEvenRow.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText;
+            this.barCheckItemHighlightEvenRow.Checked = true;
+            this.barCheckItemHighlightEvenRow.Id = 15;
+            this.barCheckItemHighlightEvenRow.Name = "barCheckItemHighlightEvenRow";
             // 
             // XtraFormSanPham
             // 
@@ -450,5 +462,6 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItemPrint;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
         private DevExpress.XtraBars.BarCheckItem barCheckItemWindown;
+        private DevExpress.XtraBars.BarCheckItem barCheckItemHighlightEvenRow;
     }
 }
