@@ -246,17 +246,17 @@
     <Compile Include="Forms\Form Tables\Form Detail\Form Phieu Phan Cong\RibbonFormPhanCong.Designer.cs">
       <DependentUpon>RibbonFormPhanCong.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form Tables\Form Parent\RibbonFormNguyenLieu.cs">
+    <Compile Include="Forms\Form Tables\Form Parent\FormNguyenLieu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form Tables\Form Parent\RibbonFormNguyenLieu.Designer.cs">
-      <DependentUpon>RibbonFormNguyenLieu.cs</DependentUpon>
+    <Compile Include="Forms\Form Tables\Form Parent\FormNguyenLieu.Designer.cs">
+      <DependentUpon>FormNguyenLieu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form Tables\Form Parent\RibbonFormPhanXuong.cs">
+    <Compile Include="Forms\Form Tables\Form Parent\FormPhanXuong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form Tables\Form Parent\RibbonFormPhanXuong.Designer.cs">
-      <DependentUpon>RibbonFormPhanXuong.cs</DependentUpon>
+    <Compile Include="Forms\Form Tables\Form Parent\FormPhanXuong.Designer.cs">
+      <DependentUpon>FormPhanXuong.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Form Tables\Form Parent\FormSanPham.cs">
       <SubType>Form</SubType>
@@ -435,11 +435,11 @@
     <EmbeddedResource Include="FormOlds\FormPhanXuongOld.resx">
       <DependentUpon>FormPhanXuongOld.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form Tables\Form Parent\RibbonFormNguyenLieu.resx">
-      <DependentUpon>RibbonFormNguyenLieu.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Form Tables\Form Parent\FormNguyenLieu.resx">
+      <DependentUpon>FormNguyenLieu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form Tables\Form Parent\RibbonFormPhanXuong.resx">
-      <DependentUpon>RibbonFormPhanXuong.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Form Tables\Form Parent\FormPhanXuong.resx">
+      <DependentUpon>FormPhanXuong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form Tables\Form Parent\FormSanPham.resx">
       <DependentUpon>FormSanPham.cs</DependentUpon>
