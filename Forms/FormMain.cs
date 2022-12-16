@@ -51,7 +51,8 @@ namespace QuanLyXiNghiepMay
 
         private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
         {
-            ControlerMain.openForm(this, typeof(RibbonFormDinhMuc));
+
+            ControlerMain.openForm(this, typeof(FormDinhMuc));
         }
 
         private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
@@ -66,7 +67,8 @@ namespace QuanLyXiNghiepMay
 
         private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
         {
-            ControlerMain.openForm(this, typeof(RibbonFormPhieuNhan));
+
+            ControlerMain.openForm(this, typeof(FormPhieuNhan));
         }
 
         private void barButtonItem5_ItemClick(object sender, ItemClickEventArgs e)
@@ -97,7 +99,7 @@ namespace QuanLyXiNghiepMay
 
         private void barButtonItem13_ItemClick(object sender, ItemClickEventArgs e)
         {
-            ControlerMain.openForm(this, typeof(RibbonFormCongDoan));
+            ControlerMain.openForm(this, typeof(FormCongDoan));
         }
 
         private void barButtonItem11_ItemClick(object sender, ItemClickEventArgs e)
@@ -107,7 +109,7 @@ namespace QuanLyXiNghiepMay
 
         private void barButtonItem5_ItemClick_1(object sender, ItemClickEventArgs e)
         {
-            ControlerMain.openForm(this, typeof(RibbonFormChiTietPhieuNhan));
+            ControlerMain.openForm(this, typeof(FormChiTietPhieuNhan));
         }
 
         private void barButtonItem15_ItemClick(object sender, ItemClickEventArgs e)
@@ -117,7 +119,7 @@ namespace QuanLyXiNghiepMay
 
         private void barButtonItem14_ItemClick(object sender, ItemClickEventArgs e)
         {
-            ControlerMain.openForm(this, typeof(RibbonFormChiTietPhieuPhanCong));
+            ControlerMain.openForm(this, typeof(FormChiTietPhieuPhanCong));
         }
 
         private void barButtonItem17_ItemClick(object sender, ItemClickEventArgs e)
