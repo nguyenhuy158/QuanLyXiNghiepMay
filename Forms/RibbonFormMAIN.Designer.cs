@@ -37,8 +37,11 @@
             this.documentViewer1 = new DevExpress.XtraPrinting.Preview.DocumentViewer();
             this.backstageViewClientControl4 = new DevExpress.XtraBars.Ribbon.BackstageViewClientControl();
             this.documentViewer2 = new DevExpress.XtraPrinting.Preview.DocumentViewer();
+            this.backstageViewClientControl1 = new DevExpress.XtraBars.Ribbon.BackstageViewClientControl();
+            this.documentViewer3 = new DevExpress.XtraPrinting.Preview.DocumentViewer();
             this.backstageViewTabItem3 = new DevExpress.XtraBars.Ribbon.BackstageViewTabItem();
             this.backstageViewTabItem4 = new DevExpress.XtraBars.Ribbon.BackstageViewTabItem();
+            this.backstageViewTabItem1 = new DevExpress.XtraBars.Ribbon.BackstageViewTabItem();
             this.backstageViewTabItem2 = new DevExpress.XtraBars.Ribbon.BackstageViewTabItem();
             this.backstageViewButtonItem2 = new DevExpress.XtraBars.Ribbon.BackstageViewButtonItem();
             this.backstageViewButtonItem3 = new DevExpress.XtraBars.Ribbon.BackstageViewButtonItem();
@@ -84,9 +87,7 @@
             this.barButtonItem12 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem16 = new DevExpress.XtraBars.BarButtonItem();
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
-            this.backstageViewClientControl1 = new DevExpress.XtraBars.Ribbon.BackstageViewClientControl();
-            this.backstageViewTabItem1 = new DevExpress.XtraBars.Ribbon.BackstageViewTabItem();
-            this.documentViewer3 = new DevExpress.XtraPrinting.Preview.DocumentViewer();
+            this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backstageViewControl1)).BeginInit();
             this.backstageViewControl1.SuspendLayout();
@@ -95,10 +96,10 @@
             this.backstageViewControl2.SuspendLayout();
             this.backstageViewClientControl3.SuspendLayout();
             this.backstageViewClientControl4.SuspendLayout();
+            this.backstageViewClientControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
-            this.backstageViewClientControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // ribbon
@@ -133,6 +134,8 @@
             this.ribbon.MaxItemId = 41;
             this.ribbon.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.Always;
             this.ribbon.Name = "ribbon";
+            this.ribbon.PageHeaderItemLinks.Add(this.skinPaletteRibbonGalleryBarItem1);
+            this.ribbon.PageHeaderItemLinks.Add(this.skinRibbonGalleryBarItem1);
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
             this.ribbonPage4,
@@ -140,6 +143,7 @@
             this.ribbonPage2,
             this.ribbonPage5,
             this.ribbonPage6});
+            this.ribbon.QuickToolbarItemLinks.Add(this.barListItem1);
             this.ribbon.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemComboBox1});
             this.ribbon.Size = new System.Drawing.Size(831, 203);
@@ -195,7 +199,7 @@
             this.backstageViewClientControl3.Controls.Add(this.documentViewer1);
             this.backstageViewClientControl3.Location = new System.Drawing.Point(132, 0);
             this.backstageViewClientControl3.Name = "backstageViewClientControl3";
-            this.backstageViewClientControl3.Size = new System.Drawing.Size(566, 261);
+            this.backstageViewClientControl3.Size = new System.Drawing.Size(567, 263);
             this.backstageViewClientControl3.TabIndex = 1;
             // 
             // documentViewer1
@@ -205,7 +209,7 @@
             this.documentViewer1.IsMetric = false;
             this.documentViewer1.Location = new System.Drawing.Point(0, 0);
             this.documentViewer1.Name = "documentViewer1";
-            this.documentViewer1.Size = new System.Drawing.Size(566, 261);
+            this.documentViewer1.Size = new System.Drawing.Size(567, 263);
             this.documentViewer1.TabIndex = 2;
             // 
             // backstageViewClientControl4
@@ -213,7 +217,7 @@
             this.backstageViewClientControl4.Controls.Add(this.documentViewer2);
             this.backstageViewClientControl4.Location = new System.Drawing.Point(132, 0);
             this.backstageViewClientControl4.Name = "backstageViewClientControl4";
-            this.backstageViewClientControl4.Size = new System.Drawing.Size(566, 261);
+            this.backstageViewClientControl4.Size = new System.Drawing.Size(567, 263);
             this.backstageViewClientControl4.TabIndex = 2;
             // 
             // documentViewer2
@@ -223,8 +227,26 @@
             this.documentViewer2.IsMetric = false;
             this.documentViewer2.Location = new System.Drawing.Point(0, 0);
             this.documentViewer2.Name = "documentViewer2";
-            this.documentViewer2.Size = new System.Drawing.Size(566, 261);
+            this.documentViewer2.Size = new System.Drawing.Size(567, 263);
             this.documentViewer2.TabIndex = 0;
+            // 
+            // backstageViewClientControl1
+            // 
+            this.backstageViewClientControl1.Controls.Add(this.documentViewer3);
+            this.backstageViewClientControl1.Location = new System.Drawing.Point(132, 0);
+            this.backstageViewClientControl1.Name = "backstageViewClientControl1";
+            this.backstageViewClientControl1.Size = new System.Drawing.Size(566, 261);
+            this.backstageViewClientControl1.TabIndex = 3;
+            // 
+            // documentViewer3
+            // 
+            this.documentViewer3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.documentViewer3.DocumentSource = typeof(QuanLyXiNghiepMay.Forms.Features.XtraReportSanPhamSanXuatCuaTungPhanXuong);
+            this.documentViewer3.IsMetric = false;
+            this.documentViewer3.Location = new System.Drawing.Point(0, 0);
+            this.documentViewer3.Name = "documentViewer3";
+            this.documentViewer3.Size = new System.Drawing.Size(566, 261);
+            this.documentViewer3.TabIndex = 0;
             // 
             // backstageViewTabItem3
             // 
@@ -238,6 +260,13 @@
             this.backstageViewTabItem4.ContentControl = this.backstageViewClientControl4;
             this.backstageViewTabItem4.Name = "backstageViewTabItem4";
             this.backstageViewTabItem4.SelectedChanged += new DevExpress.XtraBars.Ribbon.BackstageViewItemEventHandler(this.backstageViewTabItem4_SelectedChanged);
+            // 
+            // backstageViewTabItem1
+            // 
+            this.backstageViewTabItem1.Caption = "Báo cáo";
+            this.backstageViewTabItem1.ContentControl = this.backstageViewClientControl1;
+            this.backstageViewTabItem1.Name = "backstageViewTabItem1";
+            this.backstageViewTabItem1.Selected = true;
             // 
             // backstageViewTabItem2
             // 
@@ -519,7 +548,7 @@
             this.ribbonPage6.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup7});
             this.ribbonPage6.Name = "ribbonPage6";
-            this.ribbonPage6.Text = "More";
+            this.ribbonPage6.Text = "Tùy chỉnh";
             // 
             // ribbonPageGroup7
             // 
@@ -573,30 +602,12 @@
             // 
             this.defaultLookAndFeel1.LookAndFeel.SkinName = "WXI";
             // 
-            // backstageViewClientControl1
+            // ribbonPageGroup8
             // 
-            this.backstageViewClientControl1.Controls.Add(this.documentViewer3);
-            this.backstageViewClientControl1.Location = new System.Drawing.Point(132, 0);
-            this.backstageViewClientControl1.Name = "backstageViewClientControl1";
-            this.backstageViewClientControl1.Size = new System.Drawing.Size(566, 261);
-            this.backstageViewClientControl1.TabIndex = 3;
-            // 
-            // backstageViewTabItem1
-            // 
-            this.backstageViewTabItem1.Caption = "Báo cáo";
-            this.backstageViewTabItem1.ContentControl = this.backstageViewClientControl1;
-            this.backstageViewTabItem1.Name = "backstageViewTabItem1";
-            this.backstageViewTabItem1.Selected = true;
-            // 
-            // documentViewer3
-            // 
-            this.documentViewer3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.documentViewer3.DocumentSource = typeof(QuanLyXiNghiepMay.Forms.Features.XtraReportSanPhamSanXuatCuaTungPhanXuong);
-            this.documentViewer3.IsMetric = false;
-            this.documentViewer3.Location = new System.Drawing.Point(0, 0);
-            this.documentViewer3.Name = "documentViewer3";
-            this.documentViewer3.Size = new System.Drawing.Size(566, 261);
-            this.documentViewer3.TabIndex = 0;
+            this.ribbonPageGroup8.ItemLinks.Add(this.skinRibbonGalleryBarItem1);
+            this.ribbonPageGroup8.ItemLinks.Add(this.skinPaletteRibbonGalleryBarItem1);
+            this.ribbonPageGroup8.Name = "ribbonPageGroup8";
+            this.ribbonPageGroup8.Text = "Giao diện";
             // 
             // RibbonFormMAIN
             // 
@@ -623,10 +634,10 @@
             this.backstageViewControl2.ResumeLayout(false);
             this.backstageViewClientControl3.ResumeLayout(false);
             this.backstageViewClientControl4.ResumeLayout(false);
+            this.backstageViewClientControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).EndInit();
-            this.backstageViewClientControl1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -692,5 +703,6 @@
         private DevExpress.XtraBars.Ribbon.BackstageViewClientControl backstageViewClientControl1;
         private DevExpress.XtraPrinting.Preview.DocumentViewer documentViewer3;
         private DevExpress.XtraBars.Ribbon.BackstageViewTabItem backstageViewTabItem1;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
     }
 }
