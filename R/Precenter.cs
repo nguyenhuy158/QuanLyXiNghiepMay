@@ -52,12 +52,12 @@ namespace QuanLyXiNghiepMay
             return data.Database.SqlQuery<String>("Select dbo.TaoMaSanPham();").FirstOrDefault();
         }
 
-        internal static void reloadDataSource(RibbonFormPhanXuong ribbonFormPhanXuong, GridControl gridControl1)
+        internal static void reloadDataSource(FormPhanXuong ribbonFormPhanXuong, GridControl gridControl1)
         {
             gridControl1.DataSource = data.PhanXuongs.ToList();
         }
 
-        internal static void reloadDataSource(RibbonFormNguyenLieu ribbonFormNguyenLieu, GridControl gridControl1)
+        internal static void reloadDataSource(FormNguyenLieu ribbonFormNguyenLieu, GridControl gridControl1)
         {
             gridControl1.DataSource = data.NguyenLieux.ToList();
         }

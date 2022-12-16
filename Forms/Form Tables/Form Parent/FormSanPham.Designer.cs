@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSanPham));
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -52,16 +51,14 @@
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
-            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItemPrint = new DevExpress.XtraBars.BarButtonItem();
             this.barCheckItemWindown = new DevExpress.XtraBars.BarCheckItem();
+            this.barCheckItemHighlightEvenRow = new DevExpress.XtraBars.BarCheckItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barCheckItemHighlightEvenRow = new DevExpress.XtraBars.BarCheckItem();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
@@ -77,7 +74,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControl1
@@ -89,7 +85,7 @@
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit1,
             this.repositoryItemButtonEditRemove});
-            this.gridControl1.Size = new System.Drawing.Size(855, 161);
+            this.gridControl1.Size = new System.Drawing.Size(766, 262);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -160,7 +156,7 @@
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(716, 0, 650, 400);
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(887, 295);
+            this.layoutControl1.Size = new System.Drawing.Size(798, 396);
             this.layoutControl1.TabIndex = 1;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -168,7 +164,7 @@
             // 
             this.textEditGhiChu.Location = new System.Drawing.Point(103, 84);
             this.textEditGhiChu.Name = "textEditGhiChu";
-            this.textEditGhiChu.Size = new System.Drawing.Size(768, 28);
+            this.textEditGhiChu.Size = new System.Drawing.Size(679, 28);
             this.textEditGhiChu.StyleController = this.layoutControl1;
             this.textEditGhiChu.TabIndex = 6;
             // 
@@ -176,7 +172,7 @@
             // 
             this.textEditTenSanPham.Location = new System.Drawing.Point(103, 50);
             this.textEditTenSanPham.Name = "textEditTenSanPham";
-            this.textEditTenSanPham.Size = new System.Drawing.Size(768, 28);
+            this.textEditTenSanPham.Size = new System.Drawing.Size(679, 28);
             this.textEditTenSanPham.StyleController = this.layoutControl1;
             this.textEditTenSanPham.TabIndex = 5;
             // 
@@ -185,7 +181,7 @@
             this.textEditMaSanPham.Enabled = false;
             this.textEditMaSanPham.Location = new System.Drawing.Point(103, 16);
             this.textEditMaSanPham.Name = "textEditMaSanPham";
-            this.textEditMaSanPham.Size = new System.Drawing.Size(768, 28);
+            this.textEditMaSanPham.Size = new System.Drawing.Size(679, 28);
             this.textEditMaSanPham.StyleController = this.layoutControl1;
             this.textEditMaSanPham.TabIndex = 4;
             // 
@@ -199,7 +195,7 @@
             this.layoutControlItem3,
             this.layoutControlItem4});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(887, 295);
+            this.Root.Size = new System.Drawing.Size(798, 396);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
@@ -207,7 +203,7 @@
             this.layoutControlItem1.Control = this.gridControl1;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 102);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(861, 167);
+            this.layoutControlItem1.Size = new System.Drawing.Size(772, 268);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
@@ -216,7 +212,7 @@
             this.layoutControlItem2.Control = this.textEditMaSanPham;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(861, 34);
+            this.layoutControlItem2.Size = new System.Drawing.Size(772, 34);
             this.layoutControlItem2.Text = "Mã sản phẩm";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(71, 13);
             // 
@@ -225,7 +221,7 @@
             this.layoutControlItem3.Control = this.textEditTenSanPham;
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 34);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(861, 34);
+            this.layoutControlItem3.Size = new System.Drawing.Size(772, 34);
             this.layoutControlItem3.Text = "Tên sản phẩm";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(71, 13);
             // 
@@ -234,7 +230,7 @@
             this.layoutControlItem4.Control = this.textEditGhiChu;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 68);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(861, 34);
+            this.layoutControlItem4.Size = new System.Drawing.Size(772, 34);
             this.layoutControlItem4.Text = "Ghi chú";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(71, 13);
             // 
@@ -261,7 +257,7 @@
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
-            this.ribbonControl1.Size = new System.Drawing.Size(887, 203);
+            this.ribbonControl1.Size = new System.Drawing.Size(798, 203);
             // 
             // barButtonItem1
             // 
@@ -304,18 +300,11 @@
             // 
             this.barButtonItem5.ActAsDropDown = true;
             this.barButtonItem5.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.DropDown;
-            this.barButtonItem5.DropDownControl = this.popupMenu1;
             this.barButtonItem5.Id = 5;
             this.barButtonItem5.ImageOptions.Image = global::QuanLyXiNghiepMay.Properties.Resources.rubber;
             this.barButtonItem5.Name = "barButtonItem5";
             this.barButtonItem5.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText;
             this.barButtonItem5.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem5_ItemClick);
-            // 
-            // popupMenu1
-            // 
-            this.popupMenu1.ItemLinks.Add(this.barButtonItem6);
-            this.popupMenu1.Name = "popupMenu1";
-            this.popupMenu1.Ribbon = this.ribbonControl1;
             // 
             // barButtonItem6
             // 
@@ -354,11 +343,19 @@
             this.barCheckItemWindown.Name = "barCheckItemWindown";
             this.barCheckItemWindown.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
             // 
+            // barCheckItemHighlightEvenRow
+            // 
+            this.barCheckItemHighlightEvenRow.BindableChecked = true;
+            this.barCheckItemHighlightEvenRow.Caption = "Hightlight dòng chẳn";
+            this.barCheckItemHighlightEvenRow.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText;
+            this.barCheckItemHighlightEvenRow.Checked = true;
+            this.barCheckItemHighlightEvenRow.Id = 15;
+            this.barCheckItemHighlightEvenRow.Name = "barCheckItemHighlightEvenRow";
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup1,
-            this.ribbonPageGroup2,
             this.ribbonPageGroup3});
             this.ribbonPage1.Name = "ribbonPage1";
             this.ribbonPage1.Text = "Sản phẩm";
@@ -372,38 +369,24 @@
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "Thao tác";
             // 
-            // ribbonPageGroup2
-            // 
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem4);
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem7);
-            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            this.ribbonPageGroup2.Text = "Nâng cao";
-            // 
             // ribbonPageGroup3
             // 
-            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItemPrint);
+            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem7);
+            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem4);
+            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItemPrint, true);
             this.ribbonPageGroup3.ItemLinks.Add(this.barCheckItemWindown);
             this.ribbonPageGroup3.ItemLinks.Add(this.barCheckItemHighlightEvenRow);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
-            this.ribbonPageGroup3.Text = "ribbonPageGroup3";
+            this.ribbonPageGroup3.Text = "Nâng cao";
             // 
-            // barCheckItemHighlightEvenRow
-            // 
-            this.barCheckItemHighlightEvenRow.BindableChecked = true;
-            this.barCheckItemHighlightEvenRow.Caption = "Hightlight dòng chẳn";
-            this.barCheckItemHighlightEvenRow.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText;
-            this.barCheckItemHighlightEvenRow.Checked = true;
-            this.barCheckItemHighlightEvenRow.Id = 15;
-            this.barCheckItemHighlightEvenRow.Name = "barCheckItemHighlightEvenRow";
-            // 
-            // XtraFormSanPham
+            // FormSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(887, 498);
+            this.ClientSize = new System.Drawing.Size(798, 599);
             this.Controls.Add(this.layoutControl1);
             this.Controls.Add(this.ribbonControl1);
-            this.Name = "XtraFormSanPham";
+            this.Name = "FormSanPham";
             this.Ribbon = this.ribbonControl1;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sản Phẩm";
@@ -423,7 +406,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -454,9 +436,7 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
         private DevExpress.XtraBars.BarButtonItem barButtonItem4;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
         private DevExpress.XtraBars.BarButtonItem barButtonItem5;
-        private DevExpress.XtraBars.PopupMenu popupMenu1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem6;
         private DevExpress.XtraBars.BarButtonItem barButtonItem7;
         private DevExpress.XtraBars.BarButtonItem barButtonItemPrint;
