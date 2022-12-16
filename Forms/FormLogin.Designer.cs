@@ -1,6 +1,6 @@
 ﻿namespace QuanLyXiNghiepMay
 {
-    partial class XtraFormLogin
+    partial class FormLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::QuanLyXiNghiepMay.SplashScreen), true, true);
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.textEditUsername = new DevExpress.XtraEditors.TextEdit();
@@ -38,10 +37,6 @@
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.validationHint1 = new DevExpress.Utils.VisualEffects.ValidationHint();
-            this.guide1 = new DevExpress.Utils.VisualEffects.Guide();
-            this.badge1 = new DevExpress.Utils.VisualEffects.Badge();
-            this.adornerUIManager1 = new DevExpress.Utils.VisualEffects.AdornerUIManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEditUsername.Properties)).BeginInit();
@@ -50,7 +45,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.adornerUIManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // splashScreenManager1
@@ -73,7 +67,7 @@
             // 
             // textEditUsername
             // 
-            this.textEditUsername.EditValue = "Username";
+            this.textEditUsername.EditValue = "Tài khoảng";
             this.textEditUsername.Location = new System.Drawing.Point(15, 15);
             this.textEditUsername.Name = "textEditUsername";
             this.textEditUsername.Size = new System.Drawing.Size(268, 28);
@@ -97,7 +91,7 @@
             this.simpleButtonLogin.Size = new System.Drawing.Size(268, 28);
             this.simpleButtonLogin.StyleController = this.layoutControl1;
             this.simpleButtonLogin.TabIndex = 2;
-            this.simpleButtonLogin.Text = "Sign in";
+            this.simpleButtonLogin.Text = "Đăng nhập";
             this.simpleButtonLogin.Click += new System.EventHandler(this.simpleButtonLogin_Click);
             // 
             // Root
@@ -157,14 +151,7 @@
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
-            // adornerUIManager1
-            // 
-            this.adornerUIManager1.Elements.Add(this.badge1);
-            this.adornerUIManager1.Elements.Add(this.guide1);
-            this.adornerUIManager1.Elements.Add(this.validationHint1);
-            this.adornerUIManager1.Owner = this;
-            // 
-            // XtraFormLogin
+            // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -173,9 +160,9 @@
             this.IconOptions.Image = global::QuanLyXiNghiepMay.Properties.Resources.icon_logo;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "XtraFormLogin";
+            this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Login";
+            this.Text = "Đăng nhập";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.XtraFormLogin_FormClosing);
             this.Load += new System.EventHandler(this.XtraFormLogin_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.XtraFormLogin_KeyPress);
@@ -187,7 +174,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.adornerUIManager1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -202,9 +188,5 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
-        private DevExpress.Utils.VisualEffects.ValidationHint validationHint1;
-        private DevExpress.Utils.VisualEffects.Guide guide1;
-        private DevExpress.Utils.VisualEffects.Badge badge1;
-        private DevExpress.Utils.VisualEffects.AdornerUIManager adornerUIManager1;
     }
 }

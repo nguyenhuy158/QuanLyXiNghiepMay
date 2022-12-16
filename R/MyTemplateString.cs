@@ -1,7 +1,7 @@
 ﻿namespace QuanLyXiNghiepMay.R
 {
 
-    internal class TemplateString
+    internal class MyTemplateString
     {
         public static string CAPTION_LOGIN_FAIL = "Login Fail";
         public static string LOGIN_FAIL = "Login thất bại vui lòng kiểm tra lại thông tin";

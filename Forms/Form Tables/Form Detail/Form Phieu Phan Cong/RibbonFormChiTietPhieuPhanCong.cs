@@ -100,7 +100,7 @@ namespace QuanLyXiNghiepMay.Forms.Form_Tables.Form_Detail.Form_Phieu_Phan_Cong
 
         private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
         {
-            if (Controler.isMessageBox(TemplateString.MESSAGE_DELETE, TemplateString.TITLE_WARNING))
+            if (Controler.isMessageBox(MyTemplateString.MESSAGE_DELETE, MyTemplateString.TITLE_WARNING))
             {
                 try
                 {
@@ -110,7 +110,7 @@ namespace QuanLyXiNghiepMay.Forms.Form_Tables.Form_Detail.Form_Phieu_Phan_Cong
                 }
                 catch (Exception)
                 {
-                    Controler.messageBoxShow(TemplateString.PICK_ONE_ROW, TemplateString.TITLE_WARNING);
+                    Controler.messageBoxShow(MyTemplateString.PICK_ONE_ROW, MyTemplateString.TITLE_WARNING);
                 }
             }
         }
@@ -119,7 +119,7 @@ namespace QuanLyXiNghiepMay.Forms.Form_Tables.Form_Detail.Form_Phieu_Phan_Cong
         {
             if (!Controler.isTextInputValid(textEditSoLuong.Text.ToString()))
             {
-                Controler.messageBoxShow(TemplateString.MESSAGE_INPUT_ERROR, TemplateString.TITLE_WARNING);
+                Controler.messageBoxShow(MyTemplateString.MESSAGE_INPUT_ERROR, MyTemplateString.TITLE_WARNING);
             }
             else
             {
@@ -131,7 +131,7 @@ namespace QuanLyXiNghiepMay.Forms.Form_Tables.Form_Detail.Form_Phieu_Phan_Cong
                 }
                 catch (Exception)
                 {
-                    Controler.messageBoxShow(TemplateString.MESSAGE_UPDATE_ERROR, TemplateString.TITLE_WARNING);
+                    Controler.messageBoxShow(MyTemplateString.MESSAGE_UPDATE_ERROR, MyTemplateString.TITLE_WARNING);
                     textEditSoLuong.Focus();
                 }
             }
@@ -141,7 +141,7 @@ namespace QuanLyXiNghiepMay.Forms.Form_Tables.Form_Detail.Form_Phieu_Phan_Cong
         {
             if (!Controler.isTextInputValid(textEditSoLuong.Text.ToString()))
             {
-                Controler.messageBoxShow(TemplateString.MESSAGE_INPUT_ERROR, TemplateString.TITLE_WARNING);
+                Controler.messageBoxShow(MyTemplateString.MESSAGE_INPUT_ERROR, MyTemplateString.TITLE_WARNING);
             }
             else
             {
@@ -153,7 +153,7 @@ namespace QuanLyXiNghiepMay.Forms.Form_Tables.Form_Detail.Form_Phieu_Phan_Cong
                 }
                 catch (Exception)
                 {
-                    Controler.messageBoxShow(TemplateString.MESSAGE_INSERT_ERROR, TemplateString.TITLE_WARNING);
+                    Controler.messageBoxShow(MyTemplateString.MESSAGE_INSERT_ERROR, MyTemplateString.TITLE_WARNING);
                     textEditSoLuong.Focus();
                 }
             }

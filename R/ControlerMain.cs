@@ -11,7 +11,7 @@ namespace QuanLyXiNghiepMay.R.ControlerForForm
     internal class ControlerMain
     {
 
-        internal static void openForm(RibbonFormMAIN ribbonFormMain, Type formType)
+        internal static void openForm(FormMAIN ribbonFormMain, Type formType)
         {
             foreach (Form form in ribbonFormMain.MdiChildren)
             {
@@ -26,26 +26,26 @@ namespace QuanLyXiNghiepMay.R.ControlerForForm
             showForm(ribbonFormMain, formNew);
         }
 
-        internal static void showForm(RibbonFormMAIN ribbonFormMain, Form form)
+        internal static void showForm(FormMAIN ribbonFormMain, Form form)
         {
             form.MdiParent = ribbonFormMain;
             form.Show();
         }
 
-        internal static void showForm(FormMain formMain, Form form)
+        internal static void showForm(FormMainOld formMain, Form form)
         {
             form.MdiParent = formMain;
             form.Show();
         }
 
-        internal static void showFormNoAttactParent(FormMain formMain, Form form)
+        internal static void showFormNoAttactParent(FormMainOld formMain, Form form)
         {
             form.Show();
         }
 
         internal static void exitForm(Form form)
         {
-            if (Controler.isMessageBox(TemplateString.MESSAGE_EXIT, TemplateString.TITLE_WARNING))
+            if (Controler.isMessageBox(MyTemplateString.MESSAGE_EXIT, MyTemplateString.TITLE_WARNING))
             {
                 form.Dispose();
             }
