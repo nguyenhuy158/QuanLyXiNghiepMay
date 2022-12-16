@@ -51,7 +51,7 @@ namespace QuanLyXiNghiepMay
 
         private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
         {
-            ControlerMain.openForm(this, typeof(RibbonFormDinhMuc));
+            ControlerMain.openForm(this, typeof(FormDinhMuc));
         }
 
         private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
@@ -97,7 +97,7 @@ namespace QuanLyXiNghiepMay
 
         private void barButtonItem13_ItemClick(object sender, ItemClickEventArgs e)
         {
-            ControlerMain.openForm(this, typeof(RibbonFormCongDoan));
+            ControlerMain.openForm(this, typeof(FormCongDoan));
         }
 
         private void barButtonItem11_ItemClick(object sender, ItemClickEventArgs e)

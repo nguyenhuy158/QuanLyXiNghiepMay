@@ -1,6 +1,6 @@
 ﻿namespace QuanLyXiNghiepMay.Forms.Form_Tables.Form_Child
 {
-    partial class RibbonFormDinhMuc
+    partial class FormDinhMuc
     {
         /// <summary>
         /// Required designer variable.
@@ -61,6 +61,7 @@
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlGroup10 = new DevExpress.XtraLayout.LayoutControlGroup();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEditSoLuong.Properties)).BeginInit();
@@ -76,6 +77,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup10)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -88,11 +90,11 @@
             this.layoutControl1.Controls.Add(this.gridControl1);
             this.layoutControl1.Controls.Add(this.comboBoxEditDonViTinh);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutControl1.Location = new System.Drawing.Point(0, 160);
+            this.layoutControl1.Location = new System.Drawing.Point(0, 203);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(491, 166, 650, 400);
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(563, 378);
+            this.layoutControl1.Size = new System.Drawing.Size(798, 396);
             this.layoutControl1.TabIndex = 2;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -100,9 +102,9 @@
             // 
             this.comboBoxTenNguyenLieu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxTenNguyenLieu.FormattingEnabled = true;
-            this.comboBoxTenNguyenLieu.Location = new System.Drawing.Point(349, 37);
+            this.comboBoxTenNguyenLieu.Location = new System.Drawing.Point(507, 82);
             this.comboBoxTenNguyenLieu.Name = "comboBoxTenNguyenLieu";
-            this.comboBoxTenNguyenLieu.Size = new System.Drawing.Size(202, 21);
+            this.comboBoxTenNguyenLieu.Size = new System.Drawing.Size(263, 21);
             this.comboBoxTenNguyenLieu.TabIndex = 17;
             this.comboBoxTenNguyenLieu.SelectedIndexChanged += new System.EventHandler(this.comboBoxTenNguyenLieu_SelectedIndexChanged);
             // 
@@ -111,18 +113,18 @@
             this.comboBoxMaNguyenLieu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxMaNguyenLieu.Enabled = false;
             this.comboBoxMaNguyenLieu.FormattingEnabled = true;
-            this.comboBoxMaNguyenLieu.Location = new System.Drawing.Point(106, 37);
+            this.comboBoxMaNguyenLieu.Location = new System.Drawing.Point(120, 82);
             this.comboBoxMaNguyenLieu.Name = "comboBoxMaNguyenLieu";
-            this.comboBoxMaNguyenLieu.Size = new System.Drawing.Size(145, 21);
+            this.comboBoxMaNguyenLieu.Size = new System.Drawing.Size(289, 21);
             this.comboBoxMaNguyenLieu.TabIndex = 16;
             // 
             // comboBoxTenSanPham
             // 
             this.comboBoxTenSanPham.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxTenSanPham.FormattingEnabled = true;
-            this.comboBoxTenSanPham.Location = new System.Drawing.Point(349, 12);
+            this.comboBoxTenSanPham.Location = new System.Drawing.Point(507, 55);
             this.comboBoxTenSanPham.Name = "comboBoxTenSanPham";
-            this.comboBoxTenSanPham.Size = new System.Drawing.Size(202, 21);
+            this.comboBoxTenSanPham.Size = new System.Drawing.Size(263, 21);
             this.comboBoxTenSanPham.TabIndex = 15;
             this.comboBoxTenSanPham.SelectedIndexChanged += new System.EventHandler(this.comboBoxTenSanPham_SelectedIndexChanged);
             // 
@@ -131,17 +133,17 @@
             this.comboBoxMaSanPham.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxMaSanPham.Enabled = false;
             this.comboBoxMaSanPham.FormattingEnabled = true;
-            this.comboBoxMaSanPham.Location = new System.Drawing.Point(106, 12);
+            this.comboBoxMaSanPham.Location = new System.Drawing.Point(120, 55);
             this.comboBoxMaSanPham.Name = "comboBoxMaSanPham";
-            this.comboBoxMaSanPham.Size = new System.Drawing.Size(145, 21);
+            this.comboBoxMaSanPham.Size = new System.Drawing.Size(289, 21);
             this.comboBoxMaSanPham.TabIndex = 14;
             // 
             // textEditSoLuong
             // 
-            this.textEditSoLuong.Location = new System.Drawing.Point(106, 86);
+            this.textEditSoLuong.Location = new System.Drawing.Point(120, 143);
             this.textEditSoLuong.MenuManager = this.ribbon;
             this.textEditSoLuong.Name = "textEditSoLuong";
-            this.textEditSoLuong.Size = new System.Drawing.Size(445, 20);
+            this.textEditSoLuong.Size = new System.Drawing.Size(650, 28);
             this.textEditSoLuong.StyleController = this.layoutControl1;
             this.textEditSoLuong.TabIndex = 7;
             // 
@@ -163,7 +165,7 @@
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
-            this.ribbon.Size = new System.Drawing.Size(563, 160);
+            this.ribbon.Size = new System.Drawing.Size(798, 203);
             // 
             // barButtonItem1
             // 
@@ -251,11 +253,11 @@
             // gridControl1
             // 
             this.gridControl1.DataSource = typeof(QuanLyXiNghiepMay.DinhMuc);
-            this.gridControl1.Location = new System.Drawing.Point(12, 110);
+            this.gridControl1.Location = new System.Drawing.Point(16, 189);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.MenuManager = this.ribbon;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(539, 256);
+            this.gridControl1.Size = new System.Drawing.Size(766, 191);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -329,7 +331,7 @@
             // 
             // comboBoxEditDonViTinh
             // 
-            this.comboBoxEditDonViTinh.Location = new System.Drawing.Point(106, 62);
+            this.comboBoxEditDonViTinh.Location = new System.Drawing.Point(120, 109);
             this.comboBoxEditDonViTinh.MenuManager = this.ribbon;
             this.comboBoxEditDonViTinh.Name = "comboBoxEditDonViTinh";
             this.comboBoxEditDonViTinh.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -340,7 +342,7 @@
             "Thùng",
             "Bao",
             "Chiếc"});
-            this.comboBoxEditDonViTinh.Size = new System.Drawing.Size(445, 20);
+            this.comboBoxEditDonViTinh.Size = new System.Drawing.Size(650, 28);
             this.comboBoxEditDonViTinh.StyleController = this.layoutControl1;
             this.comboBoxEditDonViTinh.TabIndex = 6;
             // 
@@ -350,42 +352,37 @@
             this.Root.GroupBordersVisible = false;
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem2,
-            this.layoutControlItem4,
-            this.layoutControlItem5,
-            this.layoutControlItem1,
-            this.layoutControlItem3,
-            this.layoutControlItem6,
-            this.layoutControlItem7});
+            this.layoutControlGroup10});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(563, 378);
+            this.Root.Size = new System.Drawing.Size(798, 396);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.gridControl1;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 98);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 173);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(543, 260);
+            this.layoutControlItem2.Size = new System.Drawing.Size(772, 197);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.comboBoxEditDonViTinh;
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 50);
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 54);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(543, 24);
+            this.layoutControlItem4.Size = new System.Drawing.Size(748, 34);
             this.layoutControlItem4.Text = "Đơn vị tính";
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(82, 13);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(76, 13);
             // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.textEditSoLuong;
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 74);
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 88);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(543, 24);
+            this.layoutControlItem5.Size = new System.Drawing.Size(748, 34);
             this.layoutControlItem5.Text = "Số Lượng";
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(82, 13);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(76, 13);
             // 
             // layoutControlItem1
             // 
@@ -393,48 +390,81 @@
             this.layoutControlItem1.CustomizationFormText = "Mã sản phẩm";
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(243, 25);
+            this.layoutControlItem1.Size = new System.Drawing.Size(387, 27);
             this.layoutControlItem1.Text = "Mã sản phẩm";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(82, 13);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(76, 13);
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.comboBoxTenSanPham;
             this.layoutControlItem3.CustomizationFormText = "Tên sản phẩm";
-            this.layoutControlItem3.Location = new System.Drawing.Point(243, 0);
+            this.layoutControlItem3.Location = new System.Drawing.Point(387, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(300, 25);
+            this.layoutControlItem3.Size = new System.Drawing.Size(361, 27);
             this.layoutControlItem3.Text = "Tên sản phẩm";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(82, 13);
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(76, 13);
             // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.comboBoxMaNguyenLieu;
             this.layoutControlItem6.CustomizationFormText = "Mã nguyên liệu";
-            this.layoutControlItem6.Location = new System.Drawing.Point(0, 25);
+            this.layoutControlItem6.Location = new System.Drawing.Point(0, 27);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(243, 25);
+            this.layoutControlItem6.Size = new System.Drawing.Size(387, 27);
             this.layoutControlItem6.Text = "Mã nguyên liệu";
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(82, 13);
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(76, 13);
             // 
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.comboBoxTenNguyenLieu;
             this.layoutControlItem7.CustomizationFormText = "Tên nguyên liệu";
-            this.layoutControlItem7.Location = new System.Drawing.Point(243, 25);
+            this.layoutControlItem7.Location = new System.Drawing.Point(387, 27);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(300, 25);
+            this.layoutControlItem7.Size = new System.Drawing.Size(361, 27);
             this.layoutControlItem7.Text = "Tên nguyên liệu";
-            this.layoutControlItem7.TextSize = new System.Drawing.Size(82, 13);
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(76, 13);
             // 
-            // RibbonFormDinhMuc
+            // layoutControlGroup10
+            // 
+            this.layoutControlGroup10.AppearanceGroup.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.layoutControlGroup10.AppearanceGroup.Options.UseFont = true;
+            this.layoutControlGroup10.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.layoutControlGroup10.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlGroup10.AppearanceTabPage.Header.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.layoutControlGroup10.AppearanceTabPage.Header.Options.UseFont = true;
+            this.layoutControlGroup10.AppearanceTabPage.HeaderActive.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.layoutControlGroup10.AppearanceTabPage.HeaderActive.Options.UseFont = true;
+            this.layoutControlGroup10.AppearanceTabPage.HeaderDisabled.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.layoutControlGroup10.AppearanceTabPage.HeaderDisabled.Options.UseFont = true;
+            this.layoutControlGroup10.AppearanceTabPage.HeaderHotTracked.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.layoutControlGroup10.AppearanceTabPage.HeaderHotTracked.Options.UseFont = true;
+            this.layoutControlGroup10.AppearanceTabPage.PageClient.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.layoutControlGroup10.AppearanceTabPage.PageClient.Options.UseFont = true;
+            this.layoutControlGroup10.CustomizationFormText = "layoutControlGroup10";
+            this.layoutControlGroup10.ExpandButtonVisible = true;
+            this.layoutControlGroup10.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem1,
+            this.layoutControlItem3,
+            this.layoutControlItem6,
+            this.layoutControlItem7,
+            this.layoutControlItem4,
+            this.layoutControlItem5});
+            this.layoutControlGroup10.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup10.Name = "layoutControlGroup10";
+            this.layoutControlGroup10.OptionsItemText.TextToControlDistance = 3;
+            this.layoutControlGroup10.Padding = new DevExpress.XtraLayout.Utils.Padding(9, 9, 9, 9);
+            this.layoutControlGroup10.Size = new System.Drawing.Size(772, 173);
+            this.layoutControlGroup10.Spacing = new DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2);
+            this.layoutControlGroup10.Text = "Nhập thông tin";
+            // 
+            // FormDinhMuc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(563, 538);
+            this.ClientSize = new System.Drawing.Size(798, 599);
             this.Controls.Add(this.layoutControl1);
             this.Controls.Add(this.ribbon);
-            this.Name = "RibbonFormDinhMuc";
+            this.Name = "FormDinhMuc";
             this.Ribbon = this.ribbon;
             this.Text = "Định Mức";
             this.Load += new System.EventHandler(this.RibbonFormDinhMuc_Load);
@@ -453,6 +483,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup10)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -492,5 +523,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup10;
     }
 }
