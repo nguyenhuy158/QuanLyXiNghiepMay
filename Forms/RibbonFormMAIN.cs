@@ -152,5 +152,26 @@ namespace QuanLyXiNghiepMay
                     break;
             }
         }
+
+        private void backstageViewTabItem1_SelectedChanged(object sender, BackstageViewItemEventArgs e)
+        {
+            documentViewer1.DocumentSource = new XtraReportPhanXuongKyNhan();
+            documentViewer1.InitiateDocumentCreation();
+        }
+
+        private void documentViewer1_Load(object sender, EventArgs e)
+        {
+            documentViewer1.RequestDocumentCreation = true;
+        }
+
+        private void backstageViewTabItem2_SelectedChanged(object sender, BackstageViewItemEventArgs e)
+        {
+
+        }
+
+        private void backstageViewTabItem4_SelectedChanged(object sender, BackstageViewItemEventArgs e)
+        {
+
+        }
     }
 }

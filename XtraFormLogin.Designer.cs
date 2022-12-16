@@ -28,23 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::QuanLyXiNghiepMay.SplashScreen), true, true);
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.simpleButtonLogin = new DevExpress.XtraEditors.SimpleButton();
-            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.textEditUsername = new DevExpress.XtraEditors.TextEdit();
             this.textEditPassword = new DevExpress.XtraEditors.TextEdit();
+            this.simpleButtonLogin = new DevExpress.XtraEditors.SimpleButton();
+            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.validationHint1 = new DevExpress.Utils.VisualEffects.ValidationHint();
+            this.guide1 = new DevExpress.Utils.VisualEffects.Guide();
+            this.badge1 = new DevExpress.Utils.VisualEffects.Badge();
+            this.adornerUIManager1 = new DevExpress.Utils.VisualEffects.AdornerUIManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditUsername.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditPassword.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adornerUIManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // splashScreenManager1
@@ -64,6 +70,25 @@
             this.layoutControl1.Size = new System.Drawing.Size(298, 126);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // textEditUsername
+            // 
+            this.textEditUsername.EditValue = "Username";
+            this.textEditUsername.Location = new System.Drawing.Point(15, 15);
+            this.textEditUsername.Name = "textEditUsername";
+            this.textEditUsername.Size = new System.Drawing.Size(268, 28);
+            this.textEditUsername.StyleController = this.layoutControl1;
+            this.textEditUsername.TabIndex = 0;
+            // 
+            // textEditPassword
+            // 
+            this.textEditPassword.EditValue = "Password";
+            this.textEditPassword.Location = new System.Drawing.Point(15, 47);
+            this.textEditPassword.Name = "textEditPassword";
+            this.textEditPassword.Properties.PasswordChar = '*';
+            this.textEditPassword.Size = new System.Drawing.Size(268, 28);
+            this.textEditPassword.StyleController = this.layoutControl1;
+            this.textEditPassword.TabIndex = 1;
             // 
             // simpleButtonLogin
             // 
@@ -86,40 +111,6 @@
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(298, 126);
             this.Root.TextVisible = false;
-            // 
-            // layoutControlItem4
-            // 
-            this.layoutControlItem4.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.layoutControlItem4.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem4.Control = this.simpleButtonLogin;
-            this.layoutControlItem4.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.layoutControlItem4.CustomizationFormText = "layoutControlItem4";
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 64);
-            this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2);
-            this.layoutControlItem4.Size = new System.Drawing.Size(272, 36);
-            this.layoutControlItem4.TextLocation = DevExpress.Utils.Locations.Left;
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem4.TextVisible = false;
-            // 
-            // textEditUsername
-            // 
-            this.textEditUsername.EditValue = "Username";
-            this.textEditUsername.Location = new System.Drawing.Point(15, 15);
-            this.textEditUsername.Name = "textEditUsername";
-            this.textEditUsername.Size = new System.Drawing.Size(268, 28);
-            this.textEditUsername.StyleController = this.layoutControl1;
-            this.textEditUsername.TabIndex = 0;
-            // 
-            // textEditPassword
-            // 
-            this.textEditPassword.EditValue = "Password";
-            this.textEditPassword.Location = new System.Drawing.Point(15, 47);
-            this.textEditPassword.Name = "textEditPassword";
-            this.textEditPassword.Properties.PasswordChar = '*';
-            this.textEditPassword.Size = new System.Drawing.Size(268, 28);
-            this.textEditPassword.StyleController = this.layoutControl1;
-            this.textEditPassword.TabIndex = 1;
             // 
             // layoutControlItem1
             // 
@@ -151,6 +142,28 @@
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.layoutControlItem4.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem4.Control = this.simpleButtonLogin;
+            this.layoutControlItem4.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.layoutControlItem4.CustomizationFormText = "layoutControlItem4";
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 64);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2);
+            this.layoutControlItem4.Size = new System.Drawing.Size(272, 36);
+            this.layoutControlItem4.TextLocation = DevExpress.Utils.Locations.Left;
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem4.TextVisible = false;
+            // 
+            // adornerUIManager1
+            // 
+            this.adornerUIManager1.Elements.Add(this.badge1);
+            this.adornerUIManager1.Elements.Add(this.guide1);
+            this.adornerUIManager1.Elements.Add(this.validationHint1);
+            this.adornerUIManager1.Owner = this;
+            // 
             // XtraFormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -167,12 +180,13 @@
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.XtraFormLogin_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditUsername.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditPassword.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adornerUIManager1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -187,5 +201,9 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
+        private DevExpress.Utils.VisualEffects.ValidationHint validationHint1;
+        private DevExpress.Utils.VisualEffects.Guide guide1;
+        private DevExpress.Utils.VisualEffects.Badge badge1;
+        private DevExpress.Utils.VisualEffects.AdornerUIManager adornerUIManager1;
     }
 }
