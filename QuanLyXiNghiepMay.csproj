@@ -186,17 +186,17 @@
     <Compile Include="FormOlds\FormDinhMucOld.Designer.cs">
       <DependentUpon>FormDinhMucOld.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form Tables\Form Child\RibbonFormCongDoan.cs">
+    <Compile Include="Forms\Form Tables\Form Child\FormCongDoan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form Tables\Form Child\RibbonFormCongDoan.Designer.cs">
-      <DependentUpon>RibbonFormCongDoan.cs</DependentUpon>
+    <Compile Include="Forms\Form Tables\Form Child\FormCongDoan.Designer.cs">
+      <DependentUpon>FormCongDoan.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form Tables\Form Child\RibbonFormDinhMuc.cs">
+    <Compile Include="Forms\Form Tables\Form Child\FormDinhMuc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form Tables\Form Child\RibbonFormDinhMuc.Designer.cs">
-      <DependentUpon>RibbonFormDinhMuc.cs</DependentUpon>
+    <Compile Include="Forms\Form Tables\Form Child\FormDinhMuc.Designer.cs">
+      <DependentUpon>FormDinhMuc.cs</DependentUpon>
     </Compile>
     <Compile Include="FormOlds\FormChiTietPhieuNhanOld.cs">
       <SubType>Form</SubType>
@@ -402,11 +402,11 @@
     <EmbeddedResource Include="FormOlds\FormDinhMucOld.resx">
       <DependentUpon>FormDinhMucOld.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form Tables\Form Child\RibbonFormCongDoan.resx">
-      <DependentUpon>RibbonFormCongDoan.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Form Tables\Form Child\FormCongDoan.resx">
+      <DependentUpon>FormCongDoan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form Tables\Form Child\RibbonFormDinhMuc.resx">
-      <DependentUpon>RibbonFormDinhMuc.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Form Tables\Form Child\FormDinhMuc.resx">
+      <DependentUpon>FormDinhMuc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormOlds\FormChiTietPhieuNhanOld.resx">
       <DependentUpon>FormChiTietPhieuNhanOld.cs</DependentUpon>

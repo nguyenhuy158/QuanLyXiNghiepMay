@@ -62,12 +62,12 @@ namespace QuanLyXiNghiepMay
             gridControl1.DataSource = data.NguyenLieux.ToList();
         }
 
-        internal static void reloadDataSource(RibbonFormCongDoan ribbonFormCongDoan, GridControl gridControl1)
+        internal static void reloadDataSource(FormCongDoan ribbonFormCongDoan, GridControl gridControl1)
         {
             gridControl1.DataSource = data.CongDoans.ToList();
         }
 
-        internal static void reloadDataSource(RibbonFormDinhMuc ribbonFormDinhMuc, GridControl gridControl1)
+        internal static void reloadDataSource(FormDinhMuc ribbonFormDinhMuc, GridControl gridControl1)
         {
             gridControl1.DataSource = data.DinhMucs.ToList();
         }
