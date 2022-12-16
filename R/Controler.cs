@@ -7,9 +7,14 @@ namespace QuanLyXiNghiepMay.R
 {
     internal class Controler
     {
+        internal static void confirmExit(string message, string title)
+        {
+            XtraMessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+        }
+
         internal static bool isMessageBox(string message, string title)
         {
-            return XtraMessageBox.Show(message, title, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1) == DialogResult.OK;
+            return XtraMessageBox.Show(message, title, MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1) != DialogResult.No;
         }
 
         internal static void messageBoxShow(string message, string title)

@@ -176,6 +176,7 @@
             this.Name = "XtraFormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.XtraFormLogin_FormClosing);
             this.Load += new System.EventHandler(this.XtraFormLogin_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.XtraFormLogin_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
