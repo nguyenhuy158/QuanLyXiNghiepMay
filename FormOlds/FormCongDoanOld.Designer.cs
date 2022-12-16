@@ -1,6 +1,6 @@
 ﻿namespace QuanLyXiNghiepMay.Form_Child
 {
-    partial class FormCongDoan
+    partial class FormCongDoanOld
     {
         /// <summary>
         /// Required designer variable.

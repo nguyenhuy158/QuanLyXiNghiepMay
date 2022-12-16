@@ -5,11 +5,11 @@ using System.Windows.Forms;
 
 namespace QuanLyXiNghiepMay
 {
-    public partial class FormNguyenLieu : Form
+    public partial class FormNguyenLieuOld : Form
     {
 
         bool isUpdate = false;
-        public FormNguyenLieu()
+        public FormNguyenLieuOld()
         {
             InitializeComponent();
         }

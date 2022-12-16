@@ -6,11 +6,11 @@ using System.Windows.Forms;
 
 namespace QuanLyXiNghiepMay.Form_Parent
 {
-    public partial class FormPhanXuong : Form
+    public partial class FormPhanXuongOld : Form
     {
         private bool isUpdate = false;
 
-        public FormPhanXuong()
+        public FormPhanXuongOld()
         {
             InitializeComponent();
         }

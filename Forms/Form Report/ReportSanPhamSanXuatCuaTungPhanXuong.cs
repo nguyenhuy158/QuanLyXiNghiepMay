@@ -6,9 +6,9 @@ using System.Drawing;
 
 namespace QuanLyXiNghiepMay.Forms.Features
 {
-    public partial class XtraReportPhanXuongKyNhan : DevExpress.XtraReports.UI.XtraReport
+    public partial class ReportSanPhamSanXuatCuaTungPhanXuong : DevExpress.XtraReports.UI.XtraReport
     {
-        public XtraReportPhanXuongKyNhan()
+        public ReportSanPhamSanXuatCuaTungPhanXuong()
         {
             InitializeComponent();
         }

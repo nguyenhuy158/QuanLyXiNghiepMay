@@ -1,6 +1,6 @@
 ﻿namespace QuanLyXiNghiepMay.Form_Parent
 {
-    partial class FormPhanXuong
+    partial class FormPhanXuongOld
     {
         /// <summary>
         /// Required designer variable.

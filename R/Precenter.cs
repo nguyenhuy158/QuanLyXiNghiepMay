@@ -92,7 +92,7 @@ namespace QuanLyXiNghiepMay
             gridControl1.DataSource = data.ChiTietPhieuPhanCongs.ToList();
         }
 
-        internal static void reloadDataSource(XtraFormSanPham xtraFormSanPham, GridControl gridControl1)
+        internal static void reloadDataSource(FormSanPham xtraFormSanPham, GridControl gridControl1)
         {
             gridControl1.DataSource = data.SanPhams.ToList();
         }
