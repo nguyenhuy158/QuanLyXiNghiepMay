@@ -43,11 +43,11 @@ namespace QuanLyXiNghiepMay.R.ControlerForForm
             form.Show();
         }
 
-        internal static void exitForm(FormMain formMain)
+        internal static void exitForm(Form form)
         {
             if (Controler.isMessageBox(TemplateString.MESSAGE_EXIT, TemplateString.TITLE_WARNING))
             {
-                formMain.Dispose();
+                form.Dispose();
             }
         }
     }

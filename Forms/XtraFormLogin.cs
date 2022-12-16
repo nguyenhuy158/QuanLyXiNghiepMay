@@ -1,7 +1,9 @@
-﻿using DevExpress.XtraEditors;
+﻿using DevExpress.XtraCharts;
+using DevExpress.XtraEditors;
 using DevExpress.XtraSplashScreen;
 using QuanLyXiNghiepMay.Properties;
 using QuanLyXiNghiepMay.R;
+using QuanLyXiNghiepMay.R.ControlerForForm;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -103,6 +105,14 @@ namespace QuanLyXiNghiepMay
 
             ////Close the splashscreen
             //DevExpress.XtraSplashScreen.SplashScreenManager.CloseForm();
+        }
+
+        private void XtraFormLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (XtraMessageBox.Show(TemplateString.MESSAGE_EXIT, TemplateString.TITLE_WARNING, MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
         }
     }
 }
