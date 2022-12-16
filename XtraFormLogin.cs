@@ -1,4 +1,6 @@
 ﻿using DevExpress.XtraEditors;
+using DevExpress.XtraSplashScreen;
+using QuanLyXiNghiepMay.Properties;
 using QuanLyXiNghiepMay.R;
 using System;
 using System.Collections.Generic;
@@ -54,5 +56,53 @@ namespace QuanLyXiNghiepMay
 
         }
 
+        private void XtraFormLogin_Load(object sender, EventArgs e)
+        {
+            //// Show a splashscreen.
+            //FluentSplashScreenOptions op = new FluentSplashScreenOptions();
+            //op.Title = "When Only The Best Will Do";
+            //op.Subtitle = "DevExpress WinForms Controls";
+            //op.RightFooter = "Starting...";
+            //op.LeftFooter = "Copyright © 2000 - 2020 Developer Express Inc." + Environment.NewLine + "All Rights reserved.";
+            ////op.LoadingIndicatorType = FluentLoadingIndicatorType.Dots;
+            ////op.OpacityColor = Color.Gray;
+            ////op.Opacity = 130;
+            ////op.LogoImageOptions.Image = Resources.icon_logo;
+
+            //DevExpress.XtraSplashScreen.SplashScreenManager.ShowFluentSplashScreen(
+            //    op,
+            //    parentForm: this,
+            //    useFadeIn: true,
+            //    useFadeOut: true
+            //);
+
+            ////Do an operation
+            //Thread.Sleep(Constance.TIME_OUT);
+            ////...
+
+            ////Close the splashscreen
+            //DevExpress.XtraSplashScreen.SplashScreenManager.CloseForm();
+
+            //// Logo image.
+            //Image myLogoImage = Resources.icon_logo;
+
+            //// Show a splashscreen.
+            //SplashScreenManager.ShowSkinSplashScreen(
+            //    logoImage: myLogoImage,
+            //    title: "When Only The Best Will Do",
+            //    subtitle: "DevExpress WinForms Controls",
+            //    footer: "Copyright © 2000 - 2020 Developer Express Inc." + Environment.NewLine + "All Rights reserved.",
+            //    loading: "Starting...",
+            //    parentForm: this
+            //);
+
+            ////Do an operation
+            ////...
+            //Thread.Sleep(Constance.TIME_OUT);
+
+
+            ////Close the splashscreen
+            //DevExpress.XtraSplashScreen.SplashScreenManager.CloseForm();
+        }
     }
 }
