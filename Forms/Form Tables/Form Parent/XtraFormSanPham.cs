@@ -75,7 +75,7 @@ namespace QuanLyXiNghiepMay.Forms.Form_Tables.Form_Parent
         {
             if (!Controler.isTextInputValid(textEditTenSanPham.Text))
             {
-                Controler.messageBoxShow(TemplateString.MESSAGE_INPUT_ERROR, TemplateString.TITLE_WARNING);
+                Controler.messageBoxShow(MyTemplateString.MESSAGE_INPUT_ERROR, MyTemplateString.TITLE_WARNING);
             }
             else
             {
@@ -87,7 +87,7 @@ namespace QuanLyXiNghiepMay.Forms.Form_Tables.Form_Parent
                 }
                 catch (Exception)
                 {
-                    Controler.messageBoxShow(TemplateString.MESSAGE_INSERT_ERROR, TemplateString.TITLE_WARNING);
+                    Controler.messageBoxShow(MyTemplateString.MESSAGE_INSERT_ERROR, MyTemplateString.TITLE_WARNING);
                     textEditTenSanPham.Focus();
                 }
             }
@@ -96,7 +96,7 @@ namespace QuanLyXiNghiepMay.Forms.Form_Tables.Form_Parent
         {
             if (!Controler.isTextInputValid(textEditTenSanPham.Text))
             {
-                Controler.messageBoxShow(TemplateString.MESSAGE_INPUT_ERROR, TemplateString.TITLE_WARNING);
+                Controler.messageBoxShow(MyTemplateString.MESSAGE_INPUT_ERROR, MyTemplateString.TITLE_WARNING);
             }
             else
             {
@@ -108,7 +108,7 @@ namespace QuanLyXiNghiepMay.Forms.Form_Tables.Form_Parent
                 }
                 catch (Exception)
                 {
-                    Controler.messageBoxShow(TemplateString.MESSAGE_UPDATE_ERROR, TemplateString.TITLE_WARNING);
+                    Controler.messageBoxShow(MyTemplateString.MESSAGE_UPDATE_ERROR, MyTemplateString.TITLE_WARNING);
                     textEditTenSanPham.Focus();
                 }
             }
@@ -116,7 +116,7 @@ namespace QuanLyXiNghiepMay.Forms.Form_Tables.Form_Parent
 
         private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (Controler.isMessageBox(TemplateString.MESSAGE_DELETE, TemplateString.TITLE_WARNING))
+            if (Controler.isMessageBox(MyTemplateString.MESSAGE_DELETE, MyTemplateString.TITLE_WARNING))
             {
                 try
                 {
@@ -128,11 +128,11 @@ namespace QuanLyXiNghiepMay.Forms.Form_Tables.Form_Parent
                 {
                     if (textEditMaSanPham.Text == Precenter.getMaSanPham())
                     {
-                        Controler.messageBoxShow(TemplateString.PICK_ONE_ROW, TemplateString.TITLE_WARNING);
+                        Controler.messageBoxShow(MyTemplateString.PICK_ONE_ROW, MyTemplateString.TITLE_WARNING);
                     }
                     else
                     {
-                        Controler.messageBoxShow(TemplateString.MESSAGE_DELETE_ERROR, TemplateString.TITLE_WARNING);
+                        Controler.messageBoxShow(MyTemplateString.MESSAGE_DELETE_ERROR, MyTemplateString.TITLE_WARNING);
                     }
                 }
             }

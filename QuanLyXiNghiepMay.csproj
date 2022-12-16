@@ -276,11 +276,11 @@
     <Compile Include="Forms\Form Report\RibbonFormReport.Designer.cs">
       <DependentUpon>RibbonFormReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\RibbonFormMAIN.cs">
+    <Compile Include="Forms\FormMAIN.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\RibbonFormMAIN.Designer.cs">
-      <DependentUpon>RibbonFormMAIN.cs</DependentUpon>
+    <Compile Include="Forms\FormMAIN.Designer.cs">
+      <DependentUpon>FormMAIN.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Form Tables\Form Parent\FormPhanXuong.cs">
       <SubType>Form</SubType>
@@ -330,11 +330,11 @@
     <Compile Include="R\Constance.cs" />
     <Compile Include="R\ControlerMain.cs" />
     <Compile Include="R\Precenter.cs" />
-    <Compile Include="Forms\FormMain.cs">
+    <Compile Include="FormOlds\FormMainOld.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FormMain.Designer.cs">
-      <DependentUpon>FormMain.cs</DependentUpon>
+    <Compile Include="FormOlds\FormMainOld.Designer.cs">
+      <DependentUpon>FormMainOld.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Form Tables\Form Parent\FormNguyenLieu.cs">
       <SubType>Form</SubType>
@@ -356,7 +356,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="R\Controler.cs" />
-    <Compile Include="R\TemplateString.cs" />
+    <Compile Include="R\MyTemplateString.cs" />
     <Compile Include="SanPham.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -379,11 +379,11 @@
     <Compile Include="ThongKeSanPhamSanXuatCuaTungPhanXuong_Result.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Forms\XtraFormLogin.cs">
+    <Compile Include="Forms\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\XtraFormLogin.Designer.cs">
-      <DependentUpon>XtraFormLogin.cs</DependentUpon>
+    <Compile Include="Forms\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Forms\Form Report\Report1.rdlc" />
     <EmbeddedResource Include="Forms\Form Report\Report2.rdlc" />
@@ -447,8 +447,8 @@
     <EmbeddedResource Include="Forms\Form Tables\XtraReport1.resx">
       <DependentUpon>XtraReport1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormMain.resx">
-      <DependentUpon>FormMain.cs</DependentUpon>
+    <EmbeddedResource Include="FormOlds\FormMainOld.resx">
+      <DependentUpon>FormMainOld.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form Tables\Form Parent\FormNguyenLieu.resx">
       <DependentUpon>FormNguyenLieu.cs</DependentUpon>
@@ -472,14 +472,14 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\RibbonFormMAIN.resx">
-      <DependentUpon>RibbonFormMAIN.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FormMAIN.resx">
+      <DependentUpon>FormMAIN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\XtraFormLogin.resx">
-      <DependentUpon>XtraFormLogin.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EntityDeploy Include="Model1.edmx">
