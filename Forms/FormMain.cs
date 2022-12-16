@@ -51,6 +51,7 @@ namespace QuanLyXiNghiepMay
 
         private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
         {
+
             ControlerMain.openForm(this, typeof(FormDinhMuc));
         }
 
@@ -66,6 +67,7 @@ namespace QuanLyXiNghiepMay
 
         private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
         {
+
             ControlerMain.openForm(this, typeof(FormPhieuNhan));
         }
 
