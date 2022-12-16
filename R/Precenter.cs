@@ -72,12 +72,12 @@ namespace QuanLyXiNghiepMay
             gridControl1.DataSource = data.DinhMucs.ToList();
         }
 
-        internal static void reloadDataSource(RibbonFormPhieuNhan ribbonFormPhieuNhan, GridControl gridControl1)
+        internal static void reloadDataSource(FormPhieuNhan ribbonFormPhieuNhan, GridControl gridControl1)
         {
             gridControl1.DataSource = data.PhieuNhans.ToList();
         }
 
-        internal static void reloadDataSource(RibbonFormChiTietPhieuNhan ribbonFormChiTietPhieuNhan, GridControl gridControl1)
+        internal static void reloadDataSource(FormChiTietPhieuNhan ribbonFormChiTietPhieuNhan, GridControl gridControl1)
         {
             gridControl1.DataSource = data.ChiTietPhieuNhans.ToList();
         }
@@ -87,7 +87,7 @@ namespace QuanLyXiNghiepMay
             gridControl1.DataSource = data.PhieuPhanCongs.ToList();
         }
 
-        internal static void reloadDataSource(RibbonFormChiTietPhieuPhanCong ribbonFormChiTietPhieuPhanCong, GridControl gridControl1)
+        internal static void reloadDataSource(FormChiTietPhieuPhanCong ribbonFormChiTietPhieuPhanCong, GridControl gridControl1)
         {
             gridControl1.DataSource = data.ChiTietPhieuPhanCongs.ToList();
         }

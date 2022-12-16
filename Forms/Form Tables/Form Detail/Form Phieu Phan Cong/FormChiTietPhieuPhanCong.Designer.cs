@@ -1,6 +1,6 @@
 ﻿namespace QuanLyXiNghiepMay.Forms.Form_Tables.Form_Detail.Form_Phieu_Phan_Cong
 {
-    partial class RibbonFormChiTietPhieuPhanCong
+    partial class FormChiTietPhieuPhanCong
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RibbonFormChiTietPhieuPhanCong));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormChiTietPhieuPhanCong));
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
@@ -41,8 +41,8 @@
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.gridControl11 = new DevExpress.XtraGrid.GridControl();
-            this.gridView11 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumnSoPhieuNhan = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumnMaSanPham = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumnSoLuong = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -58,11 +58,12 @@
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlGroup10 = new DevExpress.XtraLayout.LayoutControlGroup();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEditRemove)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditSoLuong.Properties)).BeginInit();
@@ -72,6 +73,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup10)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl1
@@ -94,7 +96,7 @@
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
-            this.ribbonControl1.Size = new System.Drawing.Size(571, 203);
+            this.ribbonControl1.Size = new System.Drawing.Size(798, 203);
             // 
             // barButtonItem1
             // 
@@ -190,7 +192,7 @@
             // 
             // layoutControl1
             // 
-            this.layoutControl1.Controls.Add(this.gridControl11);
+            this.layoutControl1.Controls.Add(this.gridControl1);
             this.layoutControl1.Controls.Add(this.textEditSoLuong);
             this.layoutControl1.Controls.Add(this.comboBoxSoPhieuPhanCong);
             this.layoutControl1.Controls.Add(this.comboBoxMaSanPham);
@@ -200,35 +202,35 @@
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(527, 149, 650, 400);
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(571, 367);
+            this.layoutControl1.Size = new System.Drawing.Size(798, 396);
             this.layoutControl1.TabIndex = 3;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // gridControl11
+            // gridControl1
             // 
-            this.gridControl11.DataSource = typeof(QuanLyXiNghiepMay.ChiTietPhieuPhanCong);
-            this.gridControl11.Location = new System.Drawing.Point(16, 104);
-            this.gridControl11.MainView = this.gridView11;
-            this.gridControl11.Name = "gridControl11";
-            this.gridControl11.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.gridControl1.DataSource = typeof(QuanLyXiNghiepMay.ChiTietPhieuPhanCong);
+            this.gridControl1.Location = new System.Drawing.Point(16, 155);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit11,
             this.repositoryItemButtonEditRemove});
-            this.gridControl11.Size = new System.Drawing.Size(539, 247);
-            this.gridControl11.TabIndex = 0;
-            this.gridControl11.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView11});
+            this.gridControl1.Size = new System.Drawing.Size(766, 225);
+            this.gridControl1.TabIndex = 0;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
             // 
-            // gridView11
+            // gridView1
             // 
-            this.gridView11.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumnSoPhieuNhan,
             this.gridColumnMaSanPham,
             this.gridColumnSoLuong});
-            this.gridView11.GridControl = this.gridControl11;
-            this.gridView11.Name = "gridView11";
-            this.gridView11.OptionsBehavior.Editable = false;
-            this.gridView11.OptionsView.ShowAutoFilterRow = true;
-            this.gridView11.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridView11_RowCellClick);
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
+            this.gridView1.OptionsView.ShowAutoFilterRow = true;
+            this.gridView1.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridView11_RowCellClick);
             // 
             // gridColumnSoPhieuNhan
             // 
@@ -275,12 +277,12 @@
             // 
             // textEditSoLuong
             // 
-            this.textEditSoLuong.Location = new System.Drawing.Point(103, 70);
+            this.textEditSoLuong.Location = new System.Drawing.Point(111, 109);
             this.textEditSoLuong.Name = "textEditSoLuong";
             this.textEditSoLuong.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.textEditSoLuong.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.textEditSoLuong.Properties.UseMaskAsDisplayFormat = true;
-            this.textEditSoLuong.Size = new System.Drawing.Size(452, 28);
+            this.textEditSoLuong.Size = new System.Drawing.Size(659, 28);
             this.textEditSoLuong.StyleController = this.layoutControl1;
             this.textEditSoLuong.TabIndex = 4;
             // 
@@ -288,9 +290,9 @@
             // 
             this.comboBoxSoPhieuPhanCong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSoPhieuPhanCong.FormattingEnabled = true;
-            this.comboBoxSoPhieuPhanCong.Location = new System.Drawing.Point(103, 16);
+            this.comboBoxSoPhieuPhanCong.Location = new System.Drawing.Point(111, 55);
             this.comboBoxSoPhieuPhanCong.Name = "comboBoxSoPhieuPhanCong";
-            this.comboBoxSoPhieuPhanCong.Size = new System.Drawing.Size(452, 21);
+            this.comboBoxSoPhieuPhanCong.Size = new System.Drawing.Size(659, 21);
             this.comboBoxSoPhieuPhanCong.TabIndex = 6;
             // 
             // comboBoxMaSanPham
@@ -298,18 +300,18 @@
             this.comboBoxMaSanPham.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxMaSanPham.Enabled = false;
             this.comboBoxMaSanPham.FormattingEnabled = true;
-            this.comboBoxMaSanPham.Location = new System.Drawing.Point(103, 43);
+            this.comboBoxMaSanPham.Location = new System.Drawing.Point(111, 82);
             this.comboBoxMaSanPham.Name = "comboBoxMaSanPham";
-            this.comboBoxMaSanPham.Size = new System.Drawing.Size(179, 21);
+            this.comboBoxMaSanPham.Size = new System.Drawing.Size(285, 21);
             this.comboBoxMaSanPham.TabIndex = 6;
             // 
             // comboBoxTenSanPham
             // 
             this.comboBoxTenSanPham.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxTenSanPham.FormattingEnabled = true;
-            this.comboBoxTenSanPham.Location = new System.Drawing.Point(375, 43);
+            this.comboBoxTenSanPham.Location = new System.Drawing.Point(485, 82);
             this.comboBoxTenSanPham.Name = "comboBoxTenSanPham";
-            this.comboBoxTenSanPham.Size = new System.Drawing.Size(180, 21);
+            this.comboBoxTenSanPham.Size = new System.Drawing.Size(285, 21);
             this.comboBoxTenSanPham.TabIndex = 6;
             this.comboBoxTenSanPham.SelectedIndexChanged += new System.EventHandler(this.comboBoxTenSanPham_SelectedIndexChanged);
             // 
@@ -319,22 +321,19 @@
             this.Root.GroupBordersVisible = false;
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem1,
-            this.layoutControlItem5,
-            this.layoutControlItem7,
-            this.layoutControlItem8,
-            this.layoutControlItem2});
+            this.layoutControlGroup10});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(571, 367);
+            this.Root.Size = new System.Drawing.Size(798, 396);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
             // 
-            this.layoutControlItem1.Control = this.gridControl11;
+            this.layoutControlItem1.Control = this.gridControl1;
             this.layoutControlItem1.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem1.CustomizationFormText = "layoutControlItem1";
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 88);
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 139);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(545, 253);
+            this.layoutControlItem1.Size = new System.Drawing.Size(772, 231);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
@@ -345,9 +344,9 @@
             this.layoutControlItem5.CustomizationFormText = "Số lượng";
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 54);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(545, 34);
+            this.layoutControlItem5.Size = new System.Drawing.Size(748, 34);
             this.layoutControlItem5.Text = "Số lượng";
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(71, 13);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(67, 13);
             // 
             // layoutControlItem7
             // 
@@ -356,9 +355,9 @@
             this.layoutControlItem7.CustomizationFormText = "Số phiếu";
             this.layoutControlItem7.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(545, 27);
+            this.layoutControlItem7.Size = new System.Drawing.Size(748, 27);
             this.layoutControlItem7.Text = "Số phiếu";
-            this.layoutControlItem7.TextSize = new System.Drawing.Size(71, 13);
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(67, 13);
             // 
             // layoutControlItem8
             // 
@@ -367,37 +366,68 @@
             this.layoutControlItem8.CustomizationFormText = "Mã sản phẩm";
             this.layoutControlItem8.Location = new System.Drawing.Point(0, 27);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(272, 27);
+            this.layoutControlItem8.Size = new System.Drawing.Size(374, 27);
             this.layoutControlItem8.Text = "Mã sản phẩm";
-            this.layoutControlItem8.TextSize = new System.Drawing.Size(71, 13);
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(67, 13);
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.comboBoxTenSanPham;
             this.layoutControlItem2.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem2.CustomizationFormText = "Tên sản phẩm";
-            this.layoutControlItem2.Location = new System.Drawing.Point(272, 27);
+            this.layoutControlItem2.Location = new System.Drawing.Point(374, 27);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(273, 27);
+            this.layoutControlItem2.Size = new System.Drawing.Size(374, 27);
             this.layoutControlItem2.Text = "Tên sản phẩm";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(71, 13);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(67, 13);
             // 
-            // RibbonFormChiTietPhieuPhanCong
+            // layoutControlGroup10
+            // 
+            this.layoutControlGroup10.AppearanceGroup.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.layoutControlGroup10.AppearanceGroup.Options.UseFont = true;
+            this.layoutControlGroup10.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.layoutControlGroup10.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlGroup10.AppearanceTabPage.Header.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.layoutControlGroup10.AppearanceTabPage.Header.Options.UseFont = true;
+            this.layoutControlGroup10.AppearanceTabPage.HeaderActive.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.layoutControlGroup10.AppearanceTabPage.HeaderActive.Options.UseFont = true;
+            this.layoutControlGroup10.AppearanceTabPage.HeaderDisabled.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.layoutControlGroup10.AppearanceTabPage.HeaderDisabled.Options.UseFont = true;
+            this.layoutControlGroup10.AppearanceTabPage.HeaderHotTracked.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.layoutControlGroup10.AppearanceTabPage.HeaderHotTracked.Options.UseFont = true;
+            this.layoutControlGroup10.AppearanceTabPage.PageClient.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.layoutControlGroup10.AppearanceTabPage.PageClient.Options.UseFont = true;
+            this.layoutControlGroup10.CustomizationFormText = "layoutControlGroup10";
+            this.layoutControlGroup10.ExpandButtonVisible = true;
+            this.layoutControlGroup10.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem7,
+            this.layoutControlItem8,
+            this.layoutControlItem5,
+            this.layoutControlItem2});
+            this.layoutControlGroup10.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup10.Name = "layoutControlGroup10";
+            this.layoutControlGroup10.OptionsItemText.TextToControlDistance = 3;
+            this.layoutControlGroup10.Padding = new DevExpress.XtraLayout.Utils.Padding(9, 9, 9, 9);
+            this.layoutControlGroup10.Size = new System.Drawing.Size(772, 139);
+            this.layoutControlGroup10.Spacing = new DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2);
+            this.layoutControlGroup10.Text = "Nhập thông tin";
+            // 
+            // FormChiTietPhieuPhanCong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(571, 570);
+            this.ClientSize = new System.Drawing.Size(798, 599);
             this.Controls.Add(this.layoutControl1);
             this.Controls.Add(this.ribbonControl1);
-            this.Name = "RibbonFormChiTietPhieuPhanCong";
+            this.Name = "FormChiTietPhieuPhanCong";
             this.Ribbon = this.ribbonControl1;
             this.Text = "Chi Tiết Phiếu Phân Công";
             this.Load += new System.EventHandler(this.RibbonFormChiTietPhieuPhanCong_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEditRemove)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditSoLuong.Properties)).EndInit();
@@ -407,6 +437,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup10)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -426,8 +457,8 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
-        private DevExpress.XtraGrid.GridControl gridControl11;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView11;
+        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumnSoPhieuNhan;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumnMaSanPham;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumnSoLuong;
@@ -443,5 +474,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup10;
     }
 }
