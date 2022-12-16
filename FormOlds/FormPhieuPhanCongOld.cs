@@ -8,11 +8,11 @@ using System.Windows.Forms;
 
 namespace QuanLyXiNghiepMay.Form_Detail.Form_Phieu_Phan_Cong
 {
-    public partial class FormPhieuPhanCong : Form
+    public partial class FormPhieuPhanCongOld : Form
     {
         private bool isUpdate = false;
 
-        public FormPhieuPhanCong()
+        public FormPhieuPhanCongOld()
         {
             InitializeComponent();
         }

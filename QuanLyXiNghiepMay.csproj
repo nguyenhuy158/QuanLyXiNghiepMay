@@ -156,35 +156,35 @@
     <Compile Include="DinhMuc.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form Report\XtraReportBaoCaoPhanCongTheoNgay.cs">
+    <Compile Include="Forms\Form Report\ReportBaoCaoPhanCongTheoNgay.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Forms\Form Report\XtraReportBaoCaoPhanCongTheoNgay.Designer.cs">
-      <DependentUpon>XtraReportBaoCaoPhanCongTheoNgay.cs</DependentUpon>
+    <Compile Include="Forms\Form Report\ReportBaoCaoPhanCongTheoNgay.Designer.cs">
+      <DependentUpon>ReportBaoCaoPhanCongTheoNgay.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form Report\XtraReportPhanXuongKyNhan.cs">
+    <Compile Include="Forms\Form Report\ReportPhanXuongKyNhan.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Forms\Form Report\XtraReportPhanXuongKyNhan.Designer.cs">
-      <DependentUpon>XtraReportPhanXuongKyNhan.cs</DependentUpon>
+    <Compile Include="Forms\Form Report\ReportPhanXuongKyNhan.Designer.cs">
+      <DependentUpon>ReportPhanXuongKyNhan.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form Report\XtraReportSanPhamSanXuatCuaTungPhanXuong.cs">
+    <Compile Include="Forms\Form Report\ReportSanPhamSanXuatCuaTungPhanXuong.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Forms\Form Report\XtraReportSanPhamSanXuatCuaTungPhanXuong.Designer.cs">
-      <DependentUpon>XtraReportSanPhamSanXuatCuaTungPhanXuong.cs</DependentUpon>
+    <Compile Include="Forms\Form Report\ReportSanPhamSanXuatCuaTungPhanXuong.Designer.cs">
+      <DependentUpon>ReportSanPhamSanXuatCuaTungPhanXuong.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form Tables\Form Child\FormCongDoan.cs">
+    <Compile Include="FormOlds\FormCongDoanOld.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form Tables\Form Child\FormCongDoan.Designer.cs">
-      <DependentUpon>FormCongDoan.cs</DependentUpon>
+    <Compile Include="FormOlds\FormCongDoanOld.Designer.cs">
+      <DependentUpon>FormCongDoanOld.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form Tables\Form Child\FormDinhMuc.cs">
+    <Compile Include="FormOlds\FormDinhMucOld.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form Tables\Form Child\FormDinhMuc.Designer.cs">
-      <DependentUpon>FormDinhMuc.cs</DependentUpon>
+    <Compile Include="FormOlds\FormDinhMucOld.Designer.cs">
+      <DependentUpon>FormDinhMucOld.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Form Tables\Form Child\RibbonFormCongDoan.cs">
       <SubType>Form</SubType>
@@ -198,17 +198,17 @@
     <Compile Include="Forms\Form Tables\Form Child\RibbonFormDinhMuc.Designer.cs">
       <DependentUpon>RibbonFormDinhMuc.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form Tables\Form Detail\Form Phieu Nhan\FormChiTietPhieuNhan.cs">
+    <Compile Include="FormOlds\FormChiTietPhieuNhanOld.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form Tables\Form Detail\Form Phieu Nhan\FormChiTietPhieuNhan.Designer.cs">
-      <DependentUpon>FormChiTietPhieuNhan.cs</DependentUpon>
+    <Compile Include="FormOlds\FormChiTietPhieuNhanOld.Designer.cs">
+      <DependentUpon>FormChiTietPhieuNhanOld.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form Tables\Form Detail\Form Phieu Nhan\FormPhieuNhan.cs">
+    <Compile Include="FormOlds\FormPhieuNhanOld.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form Tables\Form Detail\Form Phieu Nhan\FormPhieuNhan.Designer.cs">
-      <DependentUpon>FormPhieuNhan.cs</DependentUpon>
+    <Compile Include="FormOlds\FormPhieuNhanOld.Designer.cs">
+      <DependentUpon>FormPhieuNhanOld.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Form Tables\Form Detail\Form Phieu Nhan\RibbonFormChiTietPhieuNhan.cs">
       <SubType>Form</SubType>
@@ -222,17 +222,17 @@
     <Compile Include="Forms\Form Tables\Form Detail\Form Phieu Nhan\RibbonFormPhieuNhan.Designer.cs">
       <DependentUpon>RibbonFormPhieuNhan.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form Tables\Form Detail\Form Phieu Phan Cong\FormChiTietPhieuPhanCong.cs">
+    <Compile Include="FormOlds\FormChiTietPhieuPhanCongOld.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form Tables\Form Detail\Form Phieu Phan Cong\FormChiTietPhieuPhanCong.Designer.cs">
-      <DependentUpon>FormChiTietPhieuPhanCong.cs</DependentUpon>
+    <Compile Include="FormOlds\FormChiTietPhieuPhanCongOld.Designer.cs">
+      <DependentUpon>FormChiTietPhieuPhanCongOld.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form Tables\Form Detail\Form Phieu Phan Cong\FormPhieuPhanCong.cs">
+    <Compile Include="FormOlds\FormPhieuPhanCongOld.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form Tables\Form Detail\Form Phieu Phan Cong\FormPhieuPhanCong.Designer.cs">
-      <DependentUpon>FormPhieuPhanCong.cs</DependentUpon>
+    <Compile Include="FormOlds\FormPhieuPhanCongOld.Designer.cs">
+      <DependentUpon>FormPhieuPhanCongOld.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Form Tables\Form Detail\Form Phieu Phan Cong\RibbonFormChiTietPhieuPhanCong.cs">
       <SubType>Form</SubType>
@@ -258,22 +258,22 @@
     <Compile Include="Forms\Form Tables\Form Parent\RibbonFormPhanXuong.Designer.cs">
       <DependentUpon>RibbonFormPhanXuong.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form Tables\Form Parent\XtraFormSanPham.cs">
+    <Compile Include="Forms\Form Tables\Form Parent\FormSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form Tables\Form Parent\XtraFormSanPham.Designer.cs">
-      <DependentUpon>XtraFormSanPham.cs</DependentUpon>
+    <Compile Include="Forms\Form Tables\Form Parent\FormSanPham.Designer.cs">
+      <DependentUpon>FormSanPham.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form Tables\XtraReport1.cs">
+    <Compile Include="FormOlds\XtraReport1.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Forms\Form Tables\XtraReport1.Designer.cs">
+    <Compile Include="FormOlds\XtraReport1.Designer.cs">
       <DependentUpon>XtraReport1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form Report\RibbonFormReport.cs">
+    <Compile Include="FormOlds\RibbonFormReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form Report\RibbonFormReport.Designer.cs">
+    <Compile Include="FormOlds\RibbonFormReport.Designer.cs">
       <DependentUpon>RibbonFormReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormMAIN.cs">
@@ -282,23 +282,23 @@
     <Compile Include="Forms\FormMAIN.Designer.cs">
       <DependentUpon>FormMAIN.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form Tables\Form Parent\FormPhanXuong.cs">
+    <Compile Include="FormOlds\FormPhanXuongOld.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form Tables\Form Parent\FormPhanXuong.Designer.cs">
-      <DependentUpon>FormPhanXuong.cs</DependentUpon>
+    <Compile Include="FormOlds\FormPhanXuongOld.Designer.cs">
+      <DependentUpon>FormPhanXuongOld.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form Report\FormReport.cs">
+    <Compile Include="FormOlds\FormReportOld.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form Report\FormReport.Designer.cs">
-      <DependentUpon>FormReport.cs</DependentUpon>
+    <Compile Include="FormOlds\FormReportOld.Designer.cs">
+      <DependentUpon>FormReportOld.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form Report\FormThongTinTacGia.cs">
+    <Compile Include="FormOlds\FormThongTinTacGiaOld.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form Report\FormThongTinTacGia.Designer.cs">
-      <DependentUpon>FormThongTinTacGia.cs</DependentUpon>
+    <Compile Include="FormOlds\FormThongTinTacGiaOld.Designer.cs">
+      <DependentUpon>FormThongTinTacGiaOld.cs</DependentUpon>
     </Compile>
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
@@ -336,17 +336,17 @@
     <Compile Include="FormOlds\FormMainOld.Designer.cs">
       <DependentUpon>FormMainOld.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form Tables\Form Parent\FormNguyenLieu.cs">
+    <Compile Include="FormOlds\FormNguyenLieuOld.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form Tables\Form Parent\FormNguyenLieu.Designer.cs">
-      <DependentUpon>FormNguyenLieu.cs</DependentUpon>
+    <Compile Include="FormOlds\FormNguyenLieuOld.Designer.cs">
+      <DependentUpon>FormNguyenLieuOld.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form Tables\Form Parent\FormSanPham.cs">
+    <Compile Include="FormOlds\FormSanPhamOld.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form Tables\Form Parent\FormSanPham.Designer.cs">
-      <DependentUpon>FormSanPham.cs</DependentUpon>
+    <Compile Include="FormOlds\FormSanPhamOld.Designer.cs">
+      <DependentUpon>FormSanPhamOld.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -385,22 +385,22 @@
     <Compile Include="Forms\FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Forms\Form Report\Report1.rdlc" />
-    <EmbeddedResource Include="Forms\Form Report\Report2.rdlc" />
-    <EmbeddedResource Include="Forms\Form Report\XtraReportBaoCaoPhanCongTheoNgay.resx">
-      <DependentUpon>XtraReportBaoCaoPhanCongTheoNgay.cs</DependentUpon>
+    <EmbeddedResource Include="FormOlds\Report1.rdlc" />
+    <EmbeddedResource Include="FormOlds\Report2.rdlc" />
+    <EmbeddedResource Include="Forms\Form Report\ReportBaoCaoPhanCongTheoNgay.resx">
+      <DependentUpon>ReportBaoCaoPhanCongTheoNgay.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form Report\XtraReportPhanXuongKyNhan.resx">
-      <DependentUpon>XtraReportPhanXuongKyNhan.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Form Report\ReportPhanXuongKyNhan.resx">
+      <DependentUpon>ReportPhanXuongKyNhan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form Report\XtraReportSanPhamSanXuatCuaTungPhanXuong.resx">
-      <DependentUpon>XtraReportSanPhamSanXuatCuaTungPhanXuong.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Form Report\ReportSanPhamSanXuatCuaTungPhanXuong.resx">
+      <DependentUpon>ReportSanPhamSanXuatCuaTungPhanXuong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form Tables\Form Child\FormCongDoan.resx">
-      <DependentUpon>FormCongDoan.cs</DependentUpon>
+    <EmbeddedResource Include="FormOlds\FormCongDoanOld.resx">
+      <DependentUpon>FormCongDoanOld.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form Tables\Form Child\FormDinhMuc.resx">
-      <DependentUpon>FormDinhMuc.cs</DependentUpon>
+    <EmbeddedResource Include="FormOlds\FormDinhMucOld.resx">
+      <DependentUpon>FormDinhMucOld.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form Tables\Form Child\RibbonFormCongDoan.resx">
       <DependentUpon>RibbonFormCongDoan.cs</DependentUpon>
@@ -408,11 +408,11 @@
     <EmbeddedResource Include="Forms\Form Tables\Form Child\RibbonFormDinhMuc.resx">
       <DependentUpon>RibbonFormDinhMuc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form Tables\Form Detail\Form Phieu Nhan\FormChiTietPhieuNhan.resx">
-      <DependentUpon>FormChiTietPhieuNhan.cs</DependentUpon>
+    <EmbeddedResource Include="FormOlds\FormChiTietPhieuNhanOld.resx">
+      <DependentUpon>FormChiTietPhieuNhanOld.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form Tables\Form Detail\Form Phieu Nhan\FormPhieuNhan.resx">
-      <DependentUpon>FormPhieuNhan.cs</DependentUpon>
+    <EmbeddedResource Include="FormOlds\FormPhieuNhanOld.resx">
+      <DependentUpon>FormPhieuNhanOld.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form Tables\Form Detail\Form Phieu Nhan\RibbonFormChiTietPhieuNhan.resx">
       <DependentUpon>RibbonFormChiTietPhieuNhan.cs</DependentUpon>
@@ -420,11 +420,11 @@
     <EmbeddedResource Include="Forms\Form Tables\Form Detail\Form Phieu Nhan\RibbonFormPhieuNhan.resx">
       <DependentUpon>RibbonFormPhieuNhan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form Tables\Form Detail\Form Phieu Phan Cong\FormChiTietPhieuPhanCong.resx">
-      <DependentUpon>FormChiTietPhieuPhanCong.cs</DependentUpon>
+    <EmbeddedResource Include="FormOlds\FormChiTietPhieuPhanCongOld.resx">
+      <DependentUpon>FormChiTietPhieuPhanCongOld.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form Tables\Form Detail\Form Phieu Phan Cong\FormPhieuPhanCong.resx">
-      <DependentUpon>FormPhieuPhanCong.cs</DependentUpon>
+    <EmbeddedResource Include="FormOlds\FormPhieuPhanCongOld.resx">
+      <DependentUpon>FormPhieuPhanCongOld.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form Tables\Form Detail\Form Phieu Phan Cong\RibbonFormChiTietPhieuPhanCong.resx">
       <DependentUpon>RibbonFormChiTietPhieuPhanCong.cs</DependentUpon>
@@ -432,8 +432,8 @@
     <EmbeddedResource Include="Forms\Form Tables\Form Detail\Form Phieu Phan Cong\RibbonFormPhanCong.resx">
       <DependentUpon>RibbonFormPhanCong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form Tables\Form Parent\FormPhanXuong.resx">
-      <DependentUpon>FormPhanXuong.cs</DependentUpon>
+    <EmbeddedResource Include="FormOlds\FormPhanXuongOld.resx">
+      <DependentUpon>FormPhanXuongOld.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form Tables\Form Parent\RibbonFormNguyenLieu.resx">
       <DependentUpon>RibbonFormNguyenLieu.cs</DependentUpon>
@@ -441,28 +441,28 @@
     <EmbeddedResource Include="Forms\Form Tables\Form Parent\RibbonFormPhanXuong.resx">
       <DependentUpon>RibbonFormPhanXuong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form Tables\Form Parent\XtraFormSanPham.resx">
-      <DependentUpon>XtraFormSanPham.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Form Tables\Form Parent\FormSanPham.resx">
+      <DependentUpon>FormSanPham.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form Tables\XtraReport1.resx">
+    <EmbeddedResource Include="FormOlds\XtraReport1.resx">
       <DependentUpon>XtraReport1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormOlds\FormMainOld.resx">
       <DependentUpon>FormMainOld.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form Tables\Form Parent\FormNguyenLieu.resx">
-      <DependentUpon>FormNguyenLieu.cs</DependentUpon>
+    <EmbeddedResource Include="FormOlds\FormNguyenLieuOld.resx">
+      <DependentUpon>FormNguyenLieuOld.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form Tables\Form Parent\FormSanPham.resx">
-      <DependentUpon>FormSanPham.cs</DependentUpon>
+    <EmbeddedResource Include="FormOlds\FormSanPhamOld.resx">
+      <DependentUpon>FormSanPhamOld.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form Report\FormReport.resx">
-      <DependentUpon>FormReport.cs</DependentUpon>
+    <EmbeddedResource Include="FormOlds\FormReportOld.resx">
+      <DependentUpon>FormReportOld.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form Report\FormThongTinTacGia.resx">
-      <DependentUpon>FormThongTinTacGia.cs</DependentUpon>
+    <EmbeddedResource Include="FormOlds\FormThongTinTacGiaOld.resx">
+      <DependentUpon>FormThongTinTacGiaOld.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form Report\RibbonFormReport.resx">
+    <EmbeddedResource Include="FormOlds\RibbonFormReport.resx">
       <DependentUpon>RibbonFormReport.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>

@@ -7,11 +7,11 @@ using System.Windows.Forms;
 
 namespace QuanLyXiNghiepMay.Form_Detail.Form_Phieu_Phan_Cong
 {
-    public partial class FormChiTietPhieuPhanCong : Form
+    public partial class FormChiTietPhieuPhanCongOld : Form
     {
         private bool isUpdate = false;
 
-        public FormChiTietPhieuPhanCong()
+        public FormChiTietPhieuPhanCongOld()
         {
             InitializeComponent();
         }

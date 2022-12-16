@@ -1,6 +1,6 @@
 ﻿namespace QuanLyXiNghiepMay.Forms.Features
 {
-    partial class XtraReportSanPhamSanXuatCuaTungPhanXuong
+    partial class ReportSanPhamSanXuatCuaTungPhanXuong
     {
         /// <summary>
         /// Required designer variable.
@@ -42,7 +42,7 @@
             DevExpress.DataAccess.Sql.ColumnExpression columnExpression3 = new DevExpress.DataAccess.Sql.ColumnExpression();
             DevExpress.DataAccess.Sql.Column column4 = new DevExpress.DataAccess.Sql.Column();
             DevExpress.DataAccess.Sql.ColumnExpression columnExpression4 = new DevExpress.DataAccess.Sql.ColumnExpression();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(XtraReportSanPhamSanXuatCuaTungPhanXuong));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportSanPhamSanXuatCuaTungPhanXuong));
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();

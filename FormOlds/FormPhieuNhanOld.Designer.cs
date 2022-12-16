@@ -1,6 +1,6 @@
 ﻿namespace QuanLyXiNghiepMay.Form_Detail.Form_Phieu_Nhan
 {
-    partial class FormPhieuNhan
+    partial class FormPhieuNhanOld
     {
         /// <summary>
         /// Required designer variable.

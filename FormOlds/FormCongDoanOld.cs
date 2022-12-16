@@ -7,11 +7,11 @@ using System.Windows.Forms;
 
 namespace QuanLyXiNghiepMay.Form_Child
 {
-    public partial class FormCongDoan : Form
+    public partial class FormCongDoanOld : Form
     {
         private bool isUpdate = false;
 
-        public FormCongDoan()
+        public FormCongDoanOld()
         {
             InitializeComponent();
         }

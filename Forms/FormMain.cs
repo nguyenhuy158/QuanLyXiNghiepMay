@@ -36,7 +36,7 @@ namespace QuanLyXiNghiepMay
 
         private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
         {
-            ControlerMain.openForm(this, typeof(XtraFormSanPham));
+            ControlerMain.openForm(this, typeof(FormSanPham));
             //ControlerMain.showForm(this, new XtraFormSanPham());
         }
 
@@ -139,17 +139,17 @@ namespace QuanLyXiNghiepMay
             switch (e.Index)
             {
                 case 0:
-                    XtraReportBaoCaoPhanCongTheoNgay xtraReportBaoCaoPhanCongTheoNgay = new XtraReportBaoCaoPhanCongTheoNgay();
+                    ReportBaoCaoPhanCongTheoNgay xtraReportBaoCaoPhanCongTheoNgay = new ReportBaoCaoPhanCongTheoNgay();
 
                     xtraReportBaoCaoPhanCongTheoNgay.ShowPreview();
                     break;
                 case 1:
-                    XtraReportPhanXuongKyNhan xtraReportPhanXuongKyNhan = new XtraReportPhanXuongKyNhan();
+                    ReportPhanXuongKyNhan xtraReportPhanXuongKyNhan = new ReportPhanXuongKyNhan();
 
                     xtraReportPhanXuongKyNhan.ShowPreview();
                     break;
                 case 2:
-                    XtraReportSanPhamSanXuatCuaTungPhanXuong xtraReportSanPhamSanXuatCuaTungPhanXuong = new XtraReportSanPhamSanXuatCuaTungPhanXuong();
+                    ReportSanPhamSanXuatCuaTungPhanXuong xtraReportSanPhamSanXuatCuaTungPhanXuong = new ReportSanPhamSanXuatCuaTungPhanXuong();
 
                     xtraReportSanPhamSanXuatCuaTungPhanXuong.ShowPreview();
                     break;

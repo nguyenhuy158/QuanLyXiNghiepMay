@@ -1,6 +1,6 @@
 ﻿namespace QuanLyXiNghiepMay
 {
-    partial class FormDinhMuc
+    partial class FormDinhMucOld
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDinhMuc));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDinhMucOld));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.comboBoxDonViTinh = new System.Windows.Forms.ComboBox();

@@ -6,11 +6,11 @@ using System.Windows.Forms;
 
 namespace QuanLyXiNghiepMay
 {
-    public partial class FormDinhMuc : Form
+    public partial class FormDinhMucOld : Form
     {
         private bool isUpdate = false;
 
-        public FormDinhMuc()
+        public FormDinhMucOld()
         {
             InitializeComponent();
         }

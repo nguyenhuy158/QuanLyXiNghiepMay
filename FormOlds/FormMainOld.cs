@@ -24,18 +24,18 @@ namespace QuanLyXiNghiepMay
 
         private void nguyênLiệuToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ControlerMain.showForm(this, new FormNguyenLieu());
+            ControlerMain.showForm(this, new FormNguyenLieuOld());
         }
 
 
         private void sảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ControlerMain.showForm(this, new FormSanPham());
+            ControlerMain.showForm(this, new FormSanPhamOld());
         }
 
         private void địnhMứcToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ControlerMain.showForm(this, new FormDinhMuc());
+            ControlerMain.showForm(this, new FormDinhMucOld());
         }
 
         private void thôngTinTácGiảToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -50,32 +50,32 @@ namespace QuanLyXiNghiepMay
 
         private void phânXưởngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ControlerMain.showForm(this, new FormPhanXuong());
+            ControlerMain.showForm(this, new FormPhanXuongOld());
         }
 
         private void côngĐoạnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ControlerMain.showForm(this, new FormCongDoan());
+            ControlerMain.showForm(this, new FormCongDoanOld());
         }
 
         private void phiếuNhậnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ControlerMain.showForm(this, new FormPhieuNhan());
+            ControlerMain.showForm(this, new FormPhieuNhanOld());
         }
 
         private void chiTiếtPhiếuNhậnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ControlerMain.showForm(this, new FormChiTietPhieuNhan());
+            ControlerMain.showForm(this, new FormChiTietPhieuNhanOld());
         }
 
         private void phiếuPhânCôngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ControlerMain.showForm(this, new FormPhieuPhanCong());
+            ControlerMain.showForm(this, new FormPhieuPhanCongOld());
         }
 
         private void chiTiếtPhiếuPhânCôngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ControlerMain.showForm(this, new FormChiTietPhieuPhanCong());
+            ControlerMain.showForm(this, new FormChiTietPhieuPhanCongOld());
         }
 
         private void inToolStripMenuItem_Click(object sender, EventArgs e)
