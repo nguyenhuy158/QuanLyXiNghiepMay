@@ -59,13 +59,13 @@
             this.textEditGhiChu = new DevExpress.XtraEditors.TextEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlGroup10 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlGroup10 = new DevExpress.XtraLayout.LayoutControlGroup();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -79,13 +79,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEditGhiChu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup10)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl1
@@ -303,6 +303,8 @@
             // gridColumnMucTienLuong
             // 
             this.gridColumnMucTienLuong.Caption = "Mức tiền lương";
+            this.gridColumnMucTienLuong.DisplayFormat.FormatString = "N0";
+            this.gridColumnMucTienLuong.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumnMucTienLuong.FieldName = "mucTienLuong";
             this.gridColumnMucTienLuong.Name = "gridColumnMucTienLuong";
             this.gridColumnMucTienLuong.OptionsColumn.AllowEdit = false;
@@ -354,8 +356,14 @@
             // 
             // textEditMucTienLuong
             // 
+            this.textEditMucTienLuong.EditValue = "0";
             this.textEditMucTienLuong.Location = new System.Drawing.Point(125, 116);
             this.textEditMucTienLuong.Name = "textEditMucTienLuong";
+            this.textEditMucTienLuong.Properties.DisplayFormat.FormatString = "N0";
+            this.textEditMucTienLuong.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.textEditMucTienLuong.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.textEditMucTienLuong.Properties.MaskSettings.Set("mask", "N0");
+            this.textEditMucTienLuong.Properties.UseMaskAsDisplayFormat = true;
             this.textEditMucTienLuong.Size = new System.Drawing.Size(645, 28);
             this.textEditMucTienLuong.StyleController = this.layoutControl1;
             this.textEditMucTienLuong.TabIndex = 4;
@@ -398,69 +406,6 @@
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
-            // layoutControlItem3
-            // 
-            this.layoutControlItem3.Control = this.textEditSoCongDoan;
-            this.layoutControlItem3.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.layoutControlItem3.CustomizationFormText = "Số công đoạn";
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(748, 34);
-            this.layoutControlItem3.Text = "Số công đoạn";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(81, 13);
-            // 
-            // layoutControlItem5
-            // 
-            this.layoutControlItem5.Control = this.textEditMucTienLuong;
-            this.layoutControlItem5.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.layoutControlItem5.CustomizationFormText = "Mức tiền lương";
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 61);
-            this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(748, 34);
-            this.layoutControlItem5.Text = "Mức tiền lương";
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(81, 13);
-            // 
-            // layoutControlItem6
-            // 
-            this.layoutControlItem6.Control = this.textEditYeuCauKyThuat;
-            this.layoutControlItem6.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.layoutControlItem6.CustomizationFormText = "Yêu cầu kỹ thuật";
-            this.layoutControlItem6.Location = new System.Drawing.Point(0, 95);
-            this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(748, 34);
-            this.layoutControlItem6.Text = "Yêu cầu kỹ thuật";
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(81, 13);
-            // 
-            // layoutControlItem7
-            // 
-            this.layoutControlItem7.Control = this.textEditGhiChu;
-            this.layoutControlItem7.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.layoutControlItem7.CustomizationFormText = "Ghi chú";
-            this.layoutControlItem7.Location = new System.Drawing.Point(0, 129);
-            this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(748, 34);
-            this.layoutControlItem7.Text = "Ghi chú";
-            this.layoutControlItem7.TextSize = new System.Drawing.Size(81, 13);
-            // 
-            // layoutControlItem9
-            // 
-            this.layoutControlItem9.Control = this.comboBoxMaSanPham;
-            this.layoutControlItem9.Location = new System.Drawing.Point(0, 34);
-            this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(374, 27);
-            this.layoutControlItem9.Text = "Mã sản phẩm";
-            this.layoutControlItem9.TextSize = new System.Drawing.Size(81, 13);
-            // 
-            // layoutControlItem4
-            // 
-            this.layoutControlItem4.Control = this.comboBoxTenSanPham;
-            this.layoutControlItem4.CustomizationFormText = "Tên sản phẩm";
-            this.layoutControlItem4.Location = new System.Drawing.Point(374, 34);
-            this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(374, 27);
-            this.layoutControlItem4.Text = "Tên sản phẩm";
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(81, 13);
-            // 
             // layoutControlGroup10
             // 
             this.layoutControlGroup10.AppearanceGroup.Font = new System.Drawing.Font("Tahoma", 8.25F);
@@ -494,6 +439,69 @@
             this.layoutControlGroup10.Spacing = new DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2);
             this.layoutControlGroup10.Text = "Nhập thông tin";
             // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.textEditSoCongDoan;
+            this.layoutControlItem3.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.layoutControlItem3.CustomizationFormText = "Số công đoạn";
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(748, 34);
+            this.layoutControlItem3.Text = "Số công đoạn";
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(81, 13);
+            // 
+            // layoutControlItem9
+            // 
+            this.layoutControlItem9.Control = this.comboBoxMaSanPham;
+            this.layoutControlItem9.Location = new System.Drawing.Point(0, 34);
+            this.layoutControlItem9.Name = "layoutControlItem9";
+            this.layoutControlItem9.Size = new System.Drawing.Size(374, 27);
+            this.layoutControlItem9.Text = "Mã sản phẩm";
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(81, 13);
+            // 
+            // layoutControlItem5
+            // 
+            this.layoutControlItem5.Control = this.textEditMucTienLuong;
+            this.layoutControlItem5.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.layoutControlItem5.CustomizationFormText = "Mức tiền lương";
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 61);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.Size = new System.Drawing.Size(748, 34);
+            this.layoutControlItem5.Text = "Mức tiền lương";
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(81, 13);
+            // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.Control = this.comboBoxTenSanPham;
+            this.layoutControlItem4.CustomizationFormText = "Tên sản phẩm";
+            this.layoutControlItem4.Location = new System.Drawing.Point(374, 34);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(374, 27);
+            this.layoutControlItem4.Text = "Tên sản phẩm";
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(81, 13);
+            // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.Control = this.textEditYeuCauKyThuat;
+            this.layoutControlItem6.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.layoutControlItem6.CustomizationFormText = "Yêu cầu kỹ thuật";
+            this.layoutControlItem6.Location = new System.Drawing.Point(0, 95);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(748, 34);
+            this.layoutControlItem6.Text = "Yêu cầu kỹ thuật";
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(81, 13);
+            // 
+            // layoutControlItem7
+            // 
+            this.layoutControlItem7.Control = this.textEditGhiChu;
+            this.layoutControlItem7.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.layoutControlItem7.CustomizationFormText = "Ghi chú";
+            this.layoutControlItem7.Location = new System.Drawing.Point(0, 129);
+            this.layoutControlItem7.Name = "layoutControlItem7";
+            this.layoutControlItem7.Size = new System.Drawing.Size(748, 34);
+            this.layoutControlItem7.Text = "Ghi chú";
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(81, 13);
+            // 
             // FormCongDoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -518,13 +526,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEditGhiChu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup10)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

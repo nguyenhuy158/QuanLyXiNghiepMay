@@ -158,7 +158,7 @@ namespace QuanLyXiNghiepMay.Forms.Form_Tables.Form_Parent
         private void gridView11_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
         {
             int rowHandle = e.RowHandle;
-            NguyenLieu nguyenLieu = (NguyenLieu)gridView11.GetRow(e.RowHandle);
+            NguyenLieu nguyenLieu = (NguyenLieu)gridView1.GetRow(e.RowHandle);
 
 
             textEditMaNguyenLieu.Text = nguyenLieu.ma;

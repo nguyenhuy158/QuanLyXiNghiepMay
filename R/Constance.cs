@@ -8,7 +8,12 @@ namespace QuanLyXiNghiepMay.R
 {
     internal class Constance
     {
-        
+        public static string STUDENT1_GITHUB = "https://github.com/nguyenhuy158";
+        public static string STUDENT2_GITHUB = "https://github.com/vhduck";
+        public static string STUDENT1_FACEBOOK = "https://facebook.com/nguyenhuy158";
+        public static string STUDENT2_FACEBOOK = "https://facebook.com/profile.php?id=100010775236674";
+
+
         public static string USERNAME = "admin";
         public static string PASSWORD = "123";
         public static int TIME_OUT = 3000;

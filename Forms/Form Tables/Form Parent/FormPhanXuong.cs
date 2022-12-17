@@ -166,7 +166,7 @@ namespace QuanLyXiNghiepMay.Forms.Form_Tables.Form_Parent
         private void gridView11_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
         {
             int rowHandle = e.RowHandle;
-            PhanXuong phanXuong = (PhanXuong)gridView11.GetRow(e.RowHandle);
+            PhanXuong phanXuong = (PhanXuong)gridView1.GetRow(e.RowHandle);
 
             textEditMaPhanXuong.Text = phanXuong.ma;
             textEditTenPhanXuong.Text = phanXuong.ten;

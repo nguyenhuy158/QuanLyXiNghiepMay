@@ -43,10 +43,10 @@
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumnSoPhieuNhan = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumnMaNguyenLieu = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumnTenNguyenLieu = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumnSoLuong = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemButtonEdit11 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.repositoryItemButtonEditRemove = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.textEditSoLuong = new DevExpress.XtraEditors.TextEdit();
@@ -224,47 +224,49 @@
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn1,
-            this.gridColumn2,
-            this.gridColumn4,
-            this.gridColumn3});
+            this.gridColumnSoPhieuNhan,
+            this.gridColumnMaNguyenLieu,
+            this.gridColumnTenNguyenLieu,
+            this.gridColumnSoLuong});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsView.ShowAutoFilterRow = true;
             this.gridView1.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridView11_RowCellClick);
             // 
-            // gridColumn1
+            // gridColumnSoPhieuNhan
             // 
-            this.gridColumn1.Caption = "Số phiếu nhận";
-            this.gridColumn1.FieldName = "soPhieuNhan";
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
+            this.gridColumnSoPhieuNhan.Caption = "Số phiếu nhận";
+            this.gridColumnSoPhieuNhan.FieldName = "soPhieuNhan";
+            this.gridColumnSoPhieuNhan.Name = "gridColumnSoPhieuNhan";
+            this.gridColumnSoPhieuNhan.Visible = true;
+            this.gridColumnSoPhieuNhan.VisibleIndex = 0;
             // 
-            // gridColumn2
+            // gridColumnMaNguyenLieu
             // 
-            this.gridColumn2.Caption = "Mã Nguyên Liệu";
-            this.gridColumn2.FieldName = "maNguyenLieu";
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
+            this.gridColumnMaNguyenLieu.Caption = "Mã Nguyên Liệu";
+            this.gridColumnMaNguyenLieu.FieldName = "maNguyenLieu";
+            this.gridColumnMaNguyenLieu.Name = "gridColumnMaNguyenLieu";
+            this.gridColumnMaNguyenLieu.Visible = true;
+            this.gridColumnMaNguyenLieu.VisibleIndex = 1;
             // 
-            // gridColumn4
+            // gridColumnTenNguyenLieu
             // 
-            this.gridColumn4.Caption = "Tên nguyên liệu";
-            this.gridColumn4.FieldName = "NguyenLieu.ten";
-            this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 2;
+            this.gridColumnTenNguyenLieu.Caption = "Tên nguyên liệu";
+            this.gridColumnTenNguyenLieu.FieldName = "NguyenLieu.ten";
+            this.gridColumnTenNguyenLieu.Name = "gridColumnTenNguyenLieu";
+            this.gridColumnTenNguyenLieu.Visible = true;
+            this.gridColumnTenNguyenLieu.VisibleIndex = 2;
             // 
-            // gridColumn3
+            // gridColumnSoLuong
             // 
-            this.gridColumn3.Caption = "Số lượng";
-            this.gridColumn3.FieldName = "soLuong";
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 3;
+            this.gridColumnSoLuong.Caption = "Số lượng";
+            this.gridColumnSoLuong.DisplayFormat.FormatString = "N0";
+            this.gridColumnSoLuong.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumnSoLuong.FieldName = "soLuong";
+            this.gridColumnSoLuong.Name = "gridColumnSoLuong";
+            this.gridColumnSoLuong.Visible = true;
+            this.gridColumnSoLuong.VisibleIndex = 3;
             // 
             // repositoryItemButtonEdit11
             // 
@@ -284,8 +286,12 @@
             // 
             // textEditSoLuong
             // 
+            this.textEditSoLuong.EditValue = "0";
             this.textEditSoLuong.Location = new System.Drawing.Point(120, 110);
             this.textEditSoLuong.Name = "textEditSoLuong";
+            this.textEditSoLuong.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.textEditSoLuong.Properties.MaskSettings.Set("mask", "N0");
+            this.textEditSoLuong.Properties.UseMaskAsDisplayFormat = true;
             this.textEditSoLuong.Size = new System.Drawing.Size(650, 28);
             this.textEditSoLuong.StyleController = this.layoutControl1;
             this.textEditSoLuong.TabIndex = 3;
@@ -480,10 +486,10 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumnSoPhieuNhan;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumnMaNguyenLieu;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumnTenNguyenLieu;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumnSoLuong;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup10;
     }
 }

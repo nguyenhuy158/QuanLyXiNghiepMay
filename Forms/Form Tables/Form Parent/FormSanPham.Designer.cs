@@ -401,8 +401,8 @@
             // 
             // ribbonPageGroup3
             // 
-            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem7);
             this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem4);
+            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem7);
             this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItemPrint, true);
             this.ribbonPageGroup3.ItemLinks.Add(this.barCheckItemWindown);
             this.ribbonPageGroup3.ItemLinks.Add(this.barCheckItemHighlightEvenRow);

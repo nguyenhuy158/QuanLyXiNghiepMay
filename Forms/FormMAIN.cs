@@ -46,11 +46,12 @@ namespace QuanLyXiNghiepMay
             {
                 Dispose();
             }
-            
+
         }
 
         private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
         {
+
             ControlerMain.openForm(this, typeof(FormDinhMuc));
         }
 
@@ -66,6 +67,7 @@ namespace QuanLyXiNghiepMay
 
         private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
         {
+
             ControlerMain.openForm(this, typeof(FormPhieuNhan));
         }
 
@@ -158,7 +160,7 @@ namespace QuanLyXiNghiepMay
             }
         }
 
-       
+
         private void backstageViewTabItem2_SelectedChanged(object sender, BackstageViewItemEventArgs e)
         {
 
@@ -175,6 +177,31 @@ namespace QuanLyXiNghiepMay
             this.Dispose();
             var form = new FormLogin();
             form.Show();
+        }
+
+        private void FormMAIN_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+        }
+
+        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start(Constance.STUDENT1_GITHUB);
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start(Constance.STUDENT1_FACEBOOK);
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start(Constance.STUDENT2_GITHUB);
+        }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start(Constance.STUDENT2_FACEBOOK);
         }
     }
 }

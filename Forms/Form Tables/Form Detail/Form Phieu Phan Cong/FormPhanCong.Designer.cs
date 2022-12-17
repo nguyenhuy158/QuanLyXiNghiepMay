@@ -45,10 +45,10 @@
             this.comboBoxMaPhanXuong = new System.Windows.Forms.ComboBox();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumnSoPhieuPhanCong = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumnMaPhanXuong = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumnTenPhanXuong = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumnNgayTao = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemButtonEdit11 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.repositoryItemButtonEditRemove = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.textEditSoPhieuPhanCong = new DevExpress.XtraEditors.TextEdit();
@@ -247,49 +247,49 @@
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn1,
-            this.gridColumn2,
-            this.gridColumn4,
-            this.gridColumn3});
+            this.gridColumnSoPhieuPhanCong,
+            this.gridColumnMaPhanXuong,
+            this.gridColumnTenPhanXuong,
+            this.gridColumnNgayTao});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsView.ShowAutoFilterRow = true;
             this.gridView1.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridView11_RowCellClick);
             // 
-            // gridColumn1
+            // gridColumnSoPhieuPhanCong
             // 
-            this.gridColumn1.Caption = "Số phiếu phân công";
-            this.gridColumn1.FieldName = "so";
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
+            this.gridColumnSoPhieuPhanCong.Caption = "Số phiếu phân công";
+            this.gridColumnSoPhieuPhanCong.FieldName = "so";
+            this.gridColumnSoPhieuPhanCong.Name = "gridColumnSoPhieuPhanCong";
+            this.gridColumnSoPhieuPhanCong.Visible = true;
+            this.gridColumnSoPhieuPhanCong.VisibleIndex = 0;
             // 
-            // gridColumn2
+            // gridColumnMaPhanXuong
             // 
-            this.gridColumn2.Caption = "Mã phân xưởng";
-            this.gridColumn2.FieldName = "maPhanXuong";
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
+            this.gridColumnMaPhanXuong.Caption = "Mã phân xưởng";
+            this.gridColumnMaPhanXuong.FieldName = "maPhanXuong";
+            this.gridColumnMaPhanXuong.Name = "gridColumnMaPhanXuong";
+            this.gridColumnMaPhanXuong.Visible = true;
+            this.gridColumnMaPhanXuong.VisibleIndex = 1;
             // 
-            // gridColumn4
+            // gridColumnTenPhanXuong
             // 
-            this.gridColumn4.Caption = "Tên phân xưởng";
-            this.gridColumn4.FieldName = "PhanXuong.ten";
-            this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 2;
+            this.gridColumnTenPhanXuong.Caption = "Tên phân xưởng";
+            this.gridColumnTenPhanXuong.FieldName = "PhanXuong.ten";
+            this.gridColumnTenPhanXuong.Name = "gridColumnTenPhanXuong";
+            this.gridColumnTenPhanXuong.Visible = true;
+            this.gridColumnTenPhanXuong.VisibleIndex = 2;
             // 
-            // gridColumn3
+            // gridColumnNgayTao
             // 
-            this.gridColumn3.Caption = "Ngày tạo";
-            this.gridColumn3.DisplayFormat.FormatString = "dd/MM/yyyy";
-            this.gridColumn3.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.gridColumn3.FieldName = "ngayTao";
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 3;
+            this.gridColumnNgayTao.Caption = "Ngày tạo";
+            this.gridColumnNgayTao.DisplayFormat.FormatString = "dd/MM/yyyy";
+            this.gridColumnNgayTao.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.gridColumnNgayTao.FieldName = "ngayTao";
+            this.gridColumnNgayTao.Name = "gridColumnNgayTao";
+            this.gridColumnNgayTao.Visible = true;
+            this.gridColumnNgayTao.VisibleIndex = 3;
             // 
             // repositoryItemButtonEdit11
             // 
@@ -331,7 +331,8 @@
             this.dateEditNgayTao.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dateEditNgayTao.Properties.EditFormat.FormatString = "dd/MM/yyyy";
             this.dateEditNgayTao.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dateEditNgayTao.Properties.MaskSettings.Set("mask", "dd / MM/ yyyy");
+            this.dateEditNgayTao.Properties.MaskSettings.Set("mask", "dd/MM/yyyy");
+            this.dateEditNgayTao.Properties.UseMaskAsDisplayFormat = true;
             this.dateEditNgayTao.Size = new System.Drawing.Size(647, 28);
             this.dateEditNgayTao.StyleController = this.layoutControl1;
             this.dateEditNgayTao.TabIndex = 4;
@@ -491,10 +492,10 @@
         private System.Windows.Forms.ComboBox comboBoxMaPhanXuong;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumnSoPhieuPhanCong;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumnMaPhanXuong;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumnNgayTao;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumnTenPhanXuong;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup10;
     }
 }
