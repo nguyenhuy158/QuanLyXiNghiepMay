@@ -33,6 +33,7 @@
             this.backstageViewControl1 = new DevExpress.XtraBars.Ribbon.BackstageViewControl();
             this.backstageViewClientControl5 = new DevExpress.XtraBars.Ribbon.BackstageViewClientControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
@@ -48,9 +49,8 @@
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.backstageViewClientControl2 = new DevExpress.XtraBars.Ribbon.BackstageViewClientControl();
             this.backstageViewControl2 = new DevExpress.XtraBars.Ribbon.BackstageViewControl();
             this.backstageViewClientControl3 = new DevExpress.XtraBars.Ribbon.BackstageViewClientControl();
@@ -102,6 +102,7 @@
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage6 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.repositoryItemComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
@@ -116,6 +117,7 @@
             this.backstageViewClientControl5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
@@ -124,9 +126,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             this.backstageViewClientControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.backstageViewControl2)).BeginInit();
             this.backstageViewControl2.SuspendLayout();
@@ -219,6 +220,7 @@
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.pictureEdit1);
             this.layoutControl1.Controls.Add(this.labelControl3);
             this.layoutControl1.Controls.Add(this.labelControl2);
             this.layoutControl1.Controls.Add(this.labelControl1);
@@ -229,17 +231,31 @@
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
-            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(230, 100, 650, 400);
+            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(104, 284, 650, 400);
             this.layoutControl1.Root = this.Root;
             this.layoutControl1.Size = new System.Drawing.Size(656, 261);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // pictureEdit1
+            // 
+            this.pictureEdit1.EditValue = global::QuanLyXiNghiepMay.Properties.Resources.black_logo;
+            this.pictureEdit1.Location = new System.Drawing.Point(16, 16);
+            this.pictureEdit1.MenuManager = this.ribbon;
+            this.pictureEdit1.Name = "pictureEdit1";
+            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
+            this.pictureEdit1.Size = new System.Drawing.Size(769, 74);
+            this.pictureEdit1.StyleController = this.layoutControl1;
+            this.pictureEdit1.TabIndex = 11;
+            // 
             // labelControl3
             // 
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("Segoe UI", 20F);
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Segoe UI", 35F);
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(16, 16);
+            this.labelControl3.Appearance.Options.UseTextOptions = true;
+            this.labelControl3.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.labelControl3.Location = new System.Drawing.Point(16, 96);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(769, 37);
             this.labelControl3.StyleController = this.layoutControl1;
@@ -250,7 +266,7 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Segoe UI", 20F);
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(468, 76);
+            this.labelControl2.Location = new System.Drawing.Point(468, 139);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(317, 37);
             this.labelControl2.StyleController = this.layoutControl1;
@@ -261,7 +277,7 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI", 20F);
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(16, 76);
+            this.labelControl1.Location = new System.Drawing.Point(16, 139);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(436, 37);
             this.labelControl1.StyleController = this.layoutControl1;
@@ -270,7 +286,7 @@
             // 
             // linkLabel1
             // 
-            this.linkLabel1.Location = new System.Drawing.Point(468, 119);
+            this.linkLabel1.Location = new System.Drawing.Point(468, 182);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(317, 20);
             this.linkLabel1.TabIndex = 7;
@@ -280,7 +296,7 @@
             // 
             // linkLabel3
             // 
-            this.linkLabel3.Location = new System.Drawing.Point(468, 145);
+            this.linkLabel3.Location = new System.Drawing.Point(468, 208);
             this.linkLabel3.Name = "linkLabel3";
             this.linkLabel3.Size = new System.Drawing.Size(317, 20);
             this.linkLabel3.TabIndex = 6;
@@ -290,7 +306,7 @@
             // 
             // linkLabel4
             // 
-            this.linkLabel4.Location = new System.Drawing.Point(16, 119);
+            this.linkLabel4.Location = new System.Drawing.Point(16, 182);
             this.linkLabel4.Name = "linkLabel4";
             this.linkLabel4.Size = new System.Drawing.Size(436, 20);
             this.linkLabel4.TabIndex = 5;
@@ -300,7 +316,7 @@
             // 
             // linkLabel2
             // 
-            this.linkLabel2.Location = new System.Drawing.Point(16, 145);
+            this.linkLabel2.Location = new System.Drawing.Point(16, 208);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(436, 20);
             this.linkLabel2.TabIndex = 4;
@@ -320,9 +336,8 @@
             this.layoutControlItem6,
             this.layoutControlItem7,
             this.layoutControlItem2,
-            this.emptySpaceItem1,
             this.emptySpaceItem3,
-            this.emptySpaceItem5});
+            this.layoutControlItem8});
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(801, 244);
             this.Root.TextVisible = false;
@@ -330,7 +345,7 @@
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.linkLabel2;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 129);
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 192);
             this.layoutControlItem1.MinSize = new System.Drawing.Size(273, 26);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Size = new System.Drawing.Size(442, 26);
@@ -341,7 +356,7 @@
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.linkLabel1;
-            this.layoutControlItem3.Location = new System.Drawing.Point(452, 103);
+            this.layoutControlItem3.Location = new System.Drawing.Point(452, 166);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(323, 26);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
@@ -350,7 +365,7 @@
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.linkLabel3;
-            this.layoutControlItem4.Location = new System.Drawing.Point(452, 129);
+            this.layoutControlItem4.Location = new System.Drawing.Point(452, 192);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(323, 26);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
@@ -359,7 +374,7 @@
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.labelControl1;
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 60);
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 123);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(442, 43);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
@@ -368,7 +383,7 @@
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.labelControl2;
-            this.layoutControlItem6.Location = new System.Drawing.Point(452, 60);
+            this.layoutControlItem6.Location = new System.Drawing.Point(452, 123);
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.Size = new System.Drawing.Size(323, 43);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
@@ -377,7 +392,7 @@
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.labelControl3;
-            this.layoutControlItem7.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem7.Location = new System.Drawing.Point(0, 80);
             this.layoutControlItem7.MinSize = new System.Drawing.Size(467, 43);
             this.layoutControlItem7.Name = "layoutControlItem7";
             this.layoutControlItem7.Size = new System.Drawing.Size(775, 43);
@@ -388,35 +403,29 @@
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.linkLabel4;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 103);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 166);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(442, 26);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
-            // emptySpaceItem1
-            // 
-            this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 155);
-            this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(775, 63);
-            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
-            // 
             // emptySpaceItem3
             // 
             this.emptySpaceItem3.AllowHotTrack = false;
-            this.emptySpaceItem3.Location = new System.Drawing.Point(442, 60);
+            this.emptySpaceItem3.Location = new System.Drawing.Point(442, 123);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
             this.emptySpaceItem3.Size = new System.Drawing.Size(10, 95);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // emptySpaceItem5
+            // layoutControlItem8
             // 
-            this.emptySpaceItem5.AllowHotTrack = false;
-            this.emptySpaceItem5.Location = new System.Drawing.Point(0, 43);
-            this.emptySpaceItem5.Name = "emptySpaceItem5";
-            this.emptySpaceItem5.Size = new System.Drawing.Size(775, 17);
-            this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem8.Control = this.pictureEdit1;
+            this.layoutControlItem8.ImageOptions.Image = global::QuanLyXiNghiepMay.Properties.Resources.black_logo;
+            this.layoutControlItem8.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem8.Name = "layoutControlItem8";
+            this.layoutControlItem8.Size = new System.Drawing.Size(775, 80);
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem8.TextVisible = false;
             // 
             // backstageViewClientControl2
             // 
@@ -534,11 +543,13 @@
             // 
             this.backstageViewButtonItem2.Caption = "Sao lưu";
             this.backstageViewButtonItem2.Name = "backstageViewButtonItem2";
+            this.backstageViewButtonItem2.ItemClick += new DevExpress.XtraBars.Ribbon.BackstageViewItemEventHandler(this.backstageViewButtonItem2_ItemClick);
             // 
             // backstageViewButtonItem3
             // 
             this.backstageViewButtonItem3.Caption = "Phục hồi";
             this.backstageViewButtonItem3.Name = "backstageViewButtonItem3";
+            this.backstageViewButtonItem3.ItemClick += new DevExpress.XtraBars.Ribbon.BackstageViewItemEventHandler(this.backstageViewButtonItem3_ItemClick);
             // 
             // backstageViewItemSeparator1
             // 
@@ -806,16 +817,22 @@
             // ribbonPage6
             // 
             this.ribbonPage6.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup7});
+            this.ribbonPageGroup7,
+            this.ribbonPageGroup9});
             this.ribbonPage6.Name = "ribbonPage6";
             this.ribbonPage6.Text = "Tùy chỉnh";
             // 
             // ribbonPageGroup7
             // 
             this.ribbonPageGroup7.ItemLinks.Add(this.skinRibbonGalleryBarItem1);
-            this.ribbonPageGroup7.ItemLinks.Add(this.skinPaletteRibbonGalleryBarItem1);
             this.ribbonPageGroup7.Name = "ribbonPageGroup7";
             this.ribbonPageGroup7.Text = "Giao diện";
+            // 
+            // ribbonPageGroup9
+            // 
+            this.ribbonPageGroup9.ItemLinks.Add(this.skinPaletteRibbonGalleryBarItem1);
+            this.ribbonPageGroup9.Name = "ribbonPageGroup9";
+            this.ribbonPageGroup9.Text = "Bảng màu";
             // 
             // repositoryItemComboBox1
             // 
@@ -873,6 +890,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Zoom;
+            this.BackgroundImageStore = global::QuanLyXiNghiepMay.Properties.Resources.black_logo;
             this.ClientSize = new System.Drawing.Size(831, 565);
             this.Controls.Add(this.backstageViewControl1);
             this.Controls.Add(this.ribbonStatusBar);
@@ -893,6 +912,7 @@
             this.backstageViewClientControl5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
@@ -901,9 +921,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             this.backstageViewClientControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.backstageViewControl2)).EndInit();
             this.backstageViewControl2.ResumeLayout(false);
@@ -998,8 +1017,9 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem5;
+        private DevExpress.XtraEditors.PictureEdit pictureEdit1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
     }
 }

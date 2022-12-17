@@ -1,5 +1,6 @@
 ﻿using DevExpress.XtraBars;
 using DevExpress.XtraBars.Ribbon;
+using DevExpress.XtraCharts.Native;
 using DevExpress.XtraEditors;
 using DevExpress.XtraReports.UI;
 using QuanLyXiNghiepMay.Forms.Features;
@@ -13,8 +14,11 @@ using QuanLyXiNghiepMay.R.ControlerForForm;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -202,6 +206,54 @@ namespace QuanLyXiNghiepMay
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start(Constance.STUDENT2_FACEBOOK);
+        }
+
+        private void backstageViewButtonItem2_ItemClick(object sender, BackstageViewItemEventArgs e)
+        {
+            // Vì entity framwork không backup được database nên em mới dùng cách này.
+
+            try
+            {
+                var filePath = string.Empty;
+                using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+                {
+                    saveFileDialog.InitialDirectory = "c:\\";
+                    saveFileDialog.Filter = "Backup files (*.bak)|*.bak|All files (*.*)|*.*";
+                    saveFileDialog.FilterIndex = 2;
+                    saveFileDialog.RestoreDirectory = true;
+                    saveFileDialog.FileName = "backup.bak";
+
+                    if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+
+                        //Get the path of specified file
+                        filePath = Path.GetFullPath(saveFileDialog.FileName);
+                        query(Constance.QUERY_BACKUP_DATABASE + "'" + filePath + "'");
+                    }
+                }
+
+                XtraMessageBox.Show(filePath, "Backup success", MessageBoxButtons.OK);
+            }
+            catch (Exception)
+            {
+                XtraMessageBox.Show("Try again!!!", "Backup failed", MessageBoxButtons.OK);
+                throw;
+            }
+
+        }
+
+        private void query(string query)
+        {
+            SqlConnection sqlConnection = new SqlConnection(Constance.CONNECTION_STRING);
+            sqlConnection.Open();
+
+            SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+            sqlCommand.ExecuteNonQuery();
+        }
+
+        private void backstageViewButtonItem3_ItemClick(object sender, BackstageViewItemEventArgs e)
+        {
+            XtraMessageBox.Show("Restore database", "Coming soon", MessageBoxButtons.OK);
         }
     }
 }

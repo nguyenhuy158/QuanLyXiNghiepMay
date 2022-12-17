@@ -60,7 +60,7 @@
             // peImage
             // 
             this.peImage.Dock = System.Windows.Forms.DockStyle.Top;
-            this.peImage.EditValue = global::QuanLyXiNghiepMay.Properties.Resources.back_logo;
+            this.peImage.EditValue = global::QuanLyXiNghiepMay.Properties.Resources.black_logo;
             this.peImage.Location = new System.Drawing.Point(1, 1);
             this.peImage.Name = "peImage";
             this.peImage.Properties.AllowFocused = false;

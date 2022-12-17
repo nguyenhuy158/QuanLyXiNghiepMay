@@ -63,16 +63,6 @@ namespace QuanLyXiNghiepMay.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap back_logo {
-            get {
-                object obj = ResourceManager.GetObject("back_logo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap background_templace_1 {
             get {
                 object obj = ResourceManager.GetObject("background_templace_1", resourceCulture);
@@ -86,6 +76,16 @@ namespace QuanLyXiNghiepMay.Properties {
         internal static System.Drawing.Bitmap background_templace_2 {
             get {
                 object obj = ResourceManager.GetObject("background_templace_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap black_logo {
+            get {
+                object obj = ResourceManager.GetObject("black_logo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -8,6 +8,10 @@ namespace QuanLyXiNghiepMay.R
 {
     internal class Constance
     {
+        public static string CONNECTION_STRING = "Data Source=(local)\\SQLEXPRESS;Initial Catalog=QuanLyVatTuCuaXiNghiepMay;Integrated Security=True";
+        public static string QUERY_BACKUP_DATABASE = "Backup database QuanLyVatTuCuaXiNghiepMay to disk=";
+
+
         public static string STUDENT1_GITHUB = "https://github.com/nguyenhuy158";
         public static string STUDENT2_GITHUB = "https://github.com/vhduck";
         public static string STUDENT1_FACEBOOK = "https://facebook.com/nguyenhuy158";
