@@ -4,16 +4,16 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="9a1b8d8f26b24d448f5c2915ebbb7046" Name="Diagram1">
-        <EntityTypeShape EntityType="QuanLyVatTuCuaXiNghiepMayModel.ChiTietPhieuNhan" Width="1.5" PointX="5.25" PointY="3.125" IsExpanded="false" />
-        <EntityTypeShape EntityType="QuanLyVatTuCuaXiNghiepMayModel.ChiTietPhieuPhanCong" Width="1.5" PointX="3.5" PointY="3.125" IsExpanded="false" />
-        <EntityTypeShape EntityType="QuanLyVatTuCuaXiNghiepMayModel.CongDoan" Width="1.5" PointX="1.625" PointY="2.25" IsExpanded="false" />
-        <EntityTypeShape EntityType="QuanLyVatTuCuaXiNghiepMayModel.DinhMuc" Width="1.5" PointX="7.125" PointY="2.375" IsExpanded="false" />
-        <EntityTypeShape EntityType="QuanLyVatTuCuaXiNghiepMayModel.NguyenLieu" Width="1.5" PointX="7.125" PointY="4.125" IsExpanded="false" />
-        <EntityTypeShape EntityType="QuanLyVatTuCuaXiNghiepMayModel.PhanXuong" Width="1.5" PointX="1.625" PointY="4.125" IsExpanded="false" />
-        <EntityTypeShape EntityType="QuanLyVatTuCuaXiNghiepMayModel.PhieuNhan" Width="1.5" PointX="5.25" PointY="4.125" IsExpanded="false" />
-        <EntityTypeShape EntityType="QuanLyVatTuCuaXiNghiepMayModel.PhieuPhanCong" Width="1.5" PointX="1.625" PointY="3.125" IsExpanded="false" />
-        <EntityTypeShape EntityType="QuanLyVatTuCuaXiNghiepMayModel.SanPham" Width="1.5" PointX="4.25" PointY="2.25" IsExpanded="false" />
+      <Diagram DiagramId="9a1b8d8f26b24d448f5c2915ebbb7046" Name="Diagram1" ZoomLevel="86">
+        <EntityTypeShape EntityType="QuanLyVatTuCuaXiNghiepMayModel.ChiTietPhieuNhan" Width="1.5" PointX="5.25" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyVatTuCuaXiNghiepMayModel.ChiTietPhieuPhanCong" Width="1.5" PointX="3.5" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyVatTuCuaXiNghiepMayModel.CongDoan" Width="1.5" PointX="1.625" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyVatTuCuaXiNghiepMayModel.DinhMuc" Width="1.5" PointX="7.125" PointY="0.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyVatTuCuaXiNghiepMayModel.NguyenLieu" Width="1.5" PointX="7.125" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyVatTuCuaXiNghiepMayModel.PhanXuong" Width="1.5" PointX="1.625" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyVatTuCuaXiNghiepMayModel.PhieuNhan" Width="1.5" PointX="5.25" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyVatTuCuaXiNghiepMayModel.PhieuPhanCong" Width="1.5" PointX="1.625" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyVatTuCuaXiNghiepMayModel.SanPham" Width="1.5" PointX="3.5" PointY="0.5" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanLyVatTuCuaXiNghiepMayModel.sysdiagram" Width="1.5" PointX="7.75" PointY="8" IsExpanded="true" />
         <AssociationConnector Association="QuanLyVatTuCuaXiNghiepMayModel.FK_ChiTietPhieuNhan_maNguyenLieu" ManuallyRouted="false" />
         <AssociationConnector Association="QuanLyVatTuCuaXiNghiepMayModel.FK_ChiTietPhieuNhan_soPhieuNhan" ManuallyRouted="false" />

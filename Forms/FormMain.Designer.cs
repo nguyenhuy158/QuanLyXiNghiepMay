@@ -111,6 +111,7 @@
             this.barButtonItem16 = new DevExpress.XtraBars.BarButtonItem();
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.backstageViewManager1 = new DevExpress.XtraBars.Ribbon.BackstageViewManager();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backstageViewControl1)).BeginInit();
             this.backstageViewControl1.SuspendLayout();
@@ -204,8 +205,8 @@
             this.backstageViewControl1.Location = new System.Drawing.Point(0, 203);
             this.backstageViewControl1.Name = "backstageViewControl1";
             this.backstageViewControl1.OwnerControl = this.ribbon;
-            this.backstageViewControl1.SelectedTab = this.backstageViewTabItem5;
-            this.backstageViewControl1.SelectedTabIndex = 0;
+            this.backstageViewControl1.SelectedTab = this.backstageViewTabItem2;
+            this.backstageViewControl1.SelectedTabIndex = 1;
             this.backstageViewControl1.Size = new System.Drawing.Size(831, 325);
             this.backstageViewControl1.TabIndex = 4;
             this.backstageViewControl1.VisibleInDesignTime = true;
@@ -430,9 +431,9 @@
             // backstageViewClientControl2
             // 
             this.backstageViewClientControl2.Controls.Add(this.backstageViewControl2);
-            this.backstageViewClientControl2.Location = new System.Drawing.Point(157, 62);
+            this.backstageViewClientControl2.Location = new System.Drawing.Point(157, 63);
             this.backstageViewClientControl2.Name = "backstageViewClientControl2";
-            this.backstageViewClientControl2.Size = new System.Drawing.Size(657, 263);
+            this.backstageViewClientControl2.Size = new System.Drawing.Size(656, 261);
             this.backstageViewClientControl2.TabIndex = 2;
             // 
             // backstageViewControl2
@@ -448,15 +449,15 @@
             this.backstageViewControl2.Name = "backstageViewControl2";
             this.backstageViewControl2.SelectedTab = this.backstageViewTabItem1;
             this.backstageViewControl2.SelectedTabIndex = 2;
-            this.backstageViewControl2.Size = new System.Drawing.Size(657, 263);
+            this.backstageViewControl2.Size = new System.Drawing.Size(656, 261);
             this.backstageViewControl2.TabIndex = 3;
             // 
             // backstageViewClientControl3
             // 
             this.backstageViewClientControl3.Controls.Add(this.documentViewer1);
-            this.backstageViewClientControl3.Location = new System.Drawing.Point(132, 0);
+            this.backstageViewClientControl3.Location = new System.Drawing.Point(223, 0);
             this.backstageViewClientControl3.Name = "backstageViewClientControl3";
-            this.backstageViewClientControl3.Size = new System.Drawing.Size(525, 263);
+            this.backstageViewClientControl3.Size = new System.Drawing.Size(433, 261);
             this.backstageViewClientControl3.TabIndex = 1;
             // 
             // documentViewer1
@@ -466,15 +467,15 @@
             this.documentViewer1.IsMetric = false;
             this.documentViewer1.Location = new System.Drawing.Point(0, 0);
             this.documentViewer1.Name = "documentViewer1";
-            this.documentViewer1.Size = new System.Drawing.Size(525, 263);
+            this.documentViewer1.Size = new System.Drawing.Size(433, 261);
             this.documentViewer1.TabIndex = 2;
             // 
             // backstageViewClientControl4
             // 
             this.backstageViewClientControl4.Controls.Add(this.documentViewer2);
-            this.backstageViewClientControl4.Location = new System.Drawing.Point(132, 0);
+            this.backstageViewClientControl4.Location = new System.Drawing.Point(223, 0);
             this.backstageViewClientControl4.Name = "backstageViewClientControl4";
-            this.backstageViewClientControl4.Size = new System.Drawing.Size(525, 263);
+            this.backstageViewClientControl4.Size = new System.Drawing.Size(433, 261);
             this.backstageViewClientControl4.TabIndex = 2;
             // 
             // documentViewer2
@@ -484,15 +485,15 @@
             this.documentViewer2.IsMetric = false;
             this.documentViewer2.Location = new System.Drawing.Point(0, 0);
             this.documentViewer2.Name = "documentViewer2";
-            this.documentViewer2.Size = new System.Drawing.Size(525, 263);
+            this.documentViewer2.Size = new System.Drawing.Size(433, 261);
             this.documentViewer2.TabIndex = 0;
             // 
             // backstageViewClientControl1
             // 
             this.backstageViewClientControl1.Controls.Add(this.documentViewer3);
-            this.backstageViewClientControl1.Location = new System.Drawing.Point(132, 0);
+            this.backstageViewClientControl1.Location = new System.Drawing.Point(238, 0);
             this.backstageViewClientControl1.Name = "backstageViewClientControl1";
-            this.backstageViewClientControl1.Size = new System.Drawing.Size(525, 263);
+            this.backstageViewClientControl1.Size = new System.Drawing.Size(418, 261);
             this.backstageViewClientControl1.TabIndex = 3;
             // 
             // documentViewer3
@@ -502,25 +503,25 @@
             this.documentViewer3.IsMetric = false;
             this.documentViewer3.Location = new System.Drawing.Point(0, 0);
             this.documentViewer3.Name = "documentViewer3";
-            this.documentViewer3.Size = new System.Drawing.Size(525, 263);
+            this.documentViewer3.Size = new System.Drawing.Size(418, 261);
             this.documentViewer3.TabIndex = 0;
             // 
             // backstageViewTabItem3
             // 
-            this.backstageViewTabItem3.Caption = "Báo cáo";
+            this.backstageViewTabItem3.Caption = "Báo cáo phân công theo ngày";
             this.backstageViewTabItem3.ContentControl = this.backstageViewClientControl3;
             this.backstageViewTabItem3.Name = "backstageViewTabItem3";
             // 
             // backstageViewTabItem4
             // 
-            this.backstageViewTabItem4.Caption = "Báo cáo";
+            this.backstageViewTabItem4.Caption = "Báo cáo phân xưởng ký nhận";
             this.backstageViewTabItem4.ContentControl = this.backstageViewClientControl4;
             this.backstageViewTabItem4.Name = "backstageViewTabItem4";
             this.backstageViewTabItem4.SelectedChanged += new DevExpress.XtraBars.Ribbon.BackstageViewItemEventHandler(this.backstageViewTabItem4_SelectedChanged);
             // 
             // backstageViewTabItem1
             // 
-            this.backstageViewTabItem1.Caption = "Báo cáo";
+            this.backstageViewTabItem1.Caption = "Báo cáo sao kê theo phân xưởng";
             this.backstageViewTabItem1.ContentControl = this.backstageViewClientControl1;
             this.backstageViewTabItem1.Name = "backstageViewTabItem1";
             this.backstageViewTabItem1.Selected = true;
@@ -530,13 +531,13 @@
             this.backstageViewTabItem5.Caption = "Thông tin tác giả";
             this.backstageViewTabItem5.ContentControl = this.backstageViewClientControl5;
             this.backstageViewTabItem5.Name = "backstageViewTabItem5";
-            this.backstageViewTabItem5.Selected = true;
             // 
             // backstageViewTabItem2
             // 
             this.backstageViewTabItem2.Caption = "In báo cáo";
             this.backstageViewTabItem2.ContentControl = this.backstageViewClientControl2;
             this.backstageViewTabItem2.Name = "backstageViewTabItem2";
+            this.backstageViewTabItem2.Selected = true;
             this.backstageViewTabItem2.SelectedChanged += new DevExpress.XtraBars.Ribbon.BackstageViewItemEventHandler(this.backstageViewTabItem2_SelectedChanged);
             // 
             // backstageViewButtonItem2
@@ -886,6 +887,10 @@
             this.ribbonPageGroup8.Name = "ribbonPageGroup8";
             this.ribbonPageGroup8.Text = "Giao diện";
             // 
+            // backstageViewManager1
+            // 
+            this.backstageViewManager1.BackstageView = this.backstageViewControl1;
+            // 
             // FormMAIN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1021,5 +1026,6 @@
         private DevExpress.XtraEditors.PictureEdit pictureEdit1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
+        private DevExpress.XtraBars.Ribbon.BackstageViewManager backstageViewManager1;
     }
 }
