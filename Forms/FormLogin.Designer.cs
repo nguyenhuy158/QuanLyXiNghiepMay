@@ -67,7 +67,7 @@
             // 
             // textEditUsername
             // 
-            this.textEditUsername.EditValue = "Tài khoảng";
+            this.textEditUsername.EditValue = "Tài khoản";
             this.textEditUsername.Location = new System.Drawing.Point(15, 15);
             this.textEditUsername.Name = "textEditUsername";
             this.textEditUsername.Size = new System.Drawing.Size(268, 28);
