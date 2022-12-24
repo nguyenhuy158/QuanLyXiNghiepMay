@@ -8,10 +8,10 @@ using System.Windows.Forms;
 
 namespace QuanLyXiNghiepMay.R.ControlerForForm
 {
-    internal class ControlerMain
+    public class ControlerMain
     {
 
-        internal static void openForm(FormMAIN ribbonFormMain, Type formType)
+        public static void openForm(FormMAIN ribbonFormMain, Type formType)
         {
             foreach (Form form in ribbonFormMain.MdiChildren)
             {
