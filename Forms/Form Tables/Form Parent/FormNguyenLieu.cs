@@ -145,14 +145,27 @@ namespace QuanLyXiNghiepMay.Forms.Form_Tables.Form_Parent
             }
         }
 
+        public bool addNguyenLieuToDataBase(NguyenLieu nguyenLieu)
+        {
+            try
+            {
+                Precenter.data.NguyenLieux.Add(nguyenLieu);
+                Precenter.data.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+                throw;
+            }
+        }
         private void addNguyenLieu()
         {
             NguyenLieu nguyenLieu = new NguyenLieu();
             nguyenLieu.ma = textEditMaNguyenLieu.Text.Trim();
             nguyenLieu.ten = textEditTenNguyenLieu.Text.Trim();
             nguyenLieu.ghiChu = textEditGhiChu.Text.Trim();
-            Precenter.data.NguyenLieux.Add(nguyenLieu);
-            Precenter.data.SaveChanges();
+            addNguyenLieuToDataBase(nguyenLieu);
         }
 
         private void gridView11_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)

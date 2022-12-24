@@ -28,10 +28,15 @@ namespace QuanLyXiNghiepMay
             this.AcceptButton = simpleButtonLogin;
         }
 
+        public bool CheckLogin(string username, string password)
+        {
+            return username == Constance.USERNAME
+                && password == Constance.PASSWORD;
+        }
+
         private void simpleButtonLogin_Click(object sender, EventArgs e)
         {
-            if (textEditUsername.Text == Constance.USERNAME
-                && textEditPassword.Text == Constance.PASSWORD)
+            if (CheckLogin(textEditUsername.Text, textEditPassword.Text ))
             {
                 // close current form and open new form
                 this.Hide();
