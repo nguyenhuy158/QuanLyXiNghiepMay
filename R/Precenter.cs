@@ -17,82 +17,82 @@ using ComboBox = System.Windows.Forms.ComboBox;
 
 namespace QuanLyXiNghiepMay
 {
-    internal class Precenter
+    public class Precenter
     {
         public static QuanLyVatTuCuaXiNghiepMayEntities data = new QuanLyVatTuCuaXiNghiepMayEntities();
 
-        internal static string getMaPhieuPhanCong()
+        public static string getMaPhieuPhanCong()
         {
             return data.Database.SqlQuery<String>("Select dbo.TaoMaPhieuPhanCong();").FirstOrDefault();
         }
 
-        internal static string getMaPhieuNhan()
+        public static string getMaPhieuNhan()
         {
             return data.Database.SqlQuery<String>("Select dbo.TaoMaPhieuNhan();").FirstOrDefault();
         }
 
-        internal static string getMaNguyenLieu()
+        public static string getMaNguyenLieu()
         {
             return data.Database.SqlQuery<String>("Select dbo.TaoMaNguyenLieu();").FirstOrDefault();
         }
 
 
-        internal static string getMaCongDoan()
+        public static string getMaCongDoan()
         {
             return data.Database.SqlQuery<String>("Select dbo.TaoMaCongDoan();").FirstOrDefault();
         }
 
-        internal static string getMaPhanXuong()
+        public static string getMaPhanXuong()
         {
             return data.Database.SqlQuery<String>("Select dbo.TaoMaPhanXuong();").FirstOrDefault();
         }
 
-        internal static string getMaSanPham()
+        public static string getMaSanPham()
         {
             return data.Database.SqlQuery<String>("Select dbo.TaoMaSanPham();").FirstOrDefault();
         }
 
-        internal static void reloadDataSource(FormPhanXuong ribbonFormPhanXuong, GridControl gridControl1)
+        public static void reloadDataSource(FormPhanXuong ribbonFormPhanXuong, GridControl gridControl1)
         {
             gridControl1.DataSource = data.PhanXuongs.ToList();
         }
 
-        internal static void reloadDataSource(FormNguyenLieu ribbonFormNguyenLieu, GridControl gridControl1)
+        public static void reloadDataSource(FormNguyenLieu ribbonFormNguyenLieu, GridControl gridControl1)
         {
             gridControl1.DataSource = data.NguyenLieux.ToList();
         }
 
-        internal static void reloadDataSource(FormCongDoan ribbonFormCongDoan, GridControl gridControl1)
+        public static void reloadDataSource(FormCongDoan ribbonFormCongDoan, GridControl gridControl1)
         {
             gridControl1.DataSource = data.CongDoans.ToList();
         }
 
-        internal static void reloadDataSource(FormDinhMuc ribbonFormDinhMuc, GridControl gridControl1)
+        public static void reloadDataSource(FormDinhMuc ribbonFormDinhMuc, GridControl gridControl1)
         {
             gridControl1.DataSource = data.DinhMucs.ToList();
         }
 
-        internal static void reloadDataSource(FormPhieuNhan ribbonFormPhieuNhan, GridControl gridControl1)
+        public static void reloadDataSource(FormPhieuNhan ribbonFormPhieuNhan, GridControl gridControl1)
         {
             gridControl1.DataSource = data.PhieuNhans.ToList();
         }
 
-        internal static void reloadDataSource(FormChiTietPhieuNhan ribbonFormChiTietPhieuNhan, GridControl gridControl1)
+        public static void reloadDataSource(FormChiTietPhieuNhan ribbonFormChiTietPhieuNhan, GridControl gridControl1)
         {
             gridControl1.DataSource = data.ChiTietPhieuNhans.ToList();
         }
 
-        internal static void reloadDataSource(RibbonFormPhieuPhanCong ribbonFormPhieuPhanCong, GridControl gridControl1)
+        public static void reloadDataSource(RibbonFormPhieuPhanCong ribbonFormPhieuPhanCong, GridControl gridControl1)
         {
             gridControl1.DataSource = data.PhieuPhanCongs.ToList();
         }
 
-        internal static void reloadDataSource(FormChiTietPhieuPhanCong ribbonFormChiTietPhieuPhanCong, GridControl gridControl1)
+        public static void reloadDataSource(FormChiTietPhieuPhanCong ribbonFormChiTietPhieuPhanCong, GridControl gridControl1)
         {
             gridControl1.DataSource = data.ChiTietPhieuPhanCongs.ToList();
         }
 
-        internal static void reloadDataSource(FormSanPham xtraFormSanPham, GridControl gridControl1)
+        public static void reloadDataSource(FormSanPham xtraFormSanPham, GridControl gridControl1)
         {
             gridControl1.DataSource = data.SanPhams.ToList();
         }
@@ -228,7 +228,7 @@ namespace QuanLyXiNghiepMay
             dataGridView.AutoResizeColumns();
         }
 
-        internal static void loadDataSourceComboBox(ComboBox comboBoxEdit, string key)
+        public static void loadDataSourceComboBox(ComboBox comboBoxEdit, string key)
         {
             if (key == Constance.KEY_MA_SAN_PHAM)
             {
