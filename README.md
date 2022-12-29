@@ -1,6 +1,6 @@
 # QuanLyXiNghiepMay
 
-description about application
+Đề tài phát triển ứng dụng quản lí xí nghiệp may
 
 
 ## Database Diagrams
